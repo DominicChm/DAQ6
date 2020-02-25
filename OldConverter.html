@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Converter</title>
+        <!-- type="javascript/worker" -->
+        <script id="conversionWorker">
+            let timeStarted; 
+            let sliceSize = 1024 * 10 ;
+            let converting = false;
+            let goodPackets = 0;
+            let badParses = 0;
+            let currentChunkStart = 0;
+            let file;
+            let props = ["time", "analogSens", "marker"];
+            let csvStr = props.join(", ") + "\n";
+
+            onmessage = function (e) {
+                switch(e.data.type) {
+                    case "start":
+                        timeStarted = Date.now();
+                        converting = true;
+                        file = e.data.file;
+                        currentChunkStart = 0;
+                        goodPackets = 0;
+                        badParses = 0;
+                        readAndParse(0, file, new Uint8Array(0));
+                        break;
+                    case "abort" :
+                        converting = false;
+                        break;
+                }
+            }
+
+            function postUpdate() {
+                postMessage({
+                    type: "update",
+                    good: goodPackets,
+                    bad : badParses,
+                    progress: currentChunkStart / file.size * 100,
+                })
+            }
+
+            function finish() {
+                postMessage({
+                    type: "finish",
+                    packets: goodPackets,
+                    bad: badParses,
+                    fileName: file.name,
+                    duration: (Date.now() - timeStarted) / 1000,
+                    csv: csvStr,
+                });
+                csvStr = props.join(", ") + "\n";
+                
+            }
+
+            function concatenate(resultConstructor, ...arrays) {
+                let totalLength = 0;
+                for (const arr of arrays) {
+                    totalLength += arr.length;
+                }
+                const result = new resultConstructor(totalLength);
+                let offset = 0;
+                for (const arr of arrays) {
+                    result.set(arr, offset);
+                    offset += arr.length;
+                }
+                return result;
+            }
+            
+            //https://codepen.io/mihalik/pen/QExVBX
+            function checksum(byteArr) {
+                let c = 0
+                const table = [ 0, 94, 188, 226, 97, 63, 221, 131, 194, 156, 126, 32, 163, 253, 31, 65, 157, 195, 33, 127, 252, 162, 64, 30, 95, 1, 227, 189, 62, 96, 130, 220, 35, 125, 159, 193, 66, 28, 254, 160, 225, 191, 93, 3, 128, 222, 60, 98, 190, 224, 2, 92, 223, 129, 99, 61, 124, 34, 192, 158, 29, 67, 161, 255, 70, 24, 250, 164, 39, 121, 155, 197, 132, 218, 56, 102, 229, 187, 89, 7, 219, 133, 103, 57, 186, 228, 6, 88, 25, 71, 165, 251, 120, 38, 196, 154, 101, 59, 217, 135, 4, 90, 184, 230, 167, 249, 27, 69, 198, 152, 122, 36, 248, 166, 68, 26, 153, 199, 37, 123, 58, 100, 134, 216, 91, 5, 231, 185, 140, 210, 48, 110, 237, 179, 81, 15, 78, 16, 242, 172, 47, 113, 147, 205, 17, 79, 173, 243, 112, 46, 204, 146, 211, 141, 111, 49, 178, 236, 14, 80, 175, 241, 19, 77, 206, 144, 114, 44, 109, 51, 209, 143, 12, 82, 176, 238, 50, 108, 142, 208, 83, 13, 239, 177, 240, 174, 76, 18, 145, 207, 45, 115, 202, 148, 118, 40, 171, 245, 23, 73, 8, 86, 180, 234, 105, 55, 213, 139, 87, 9, 235, 181, 54, 104, 138, 212, 149, 203, 41, 119, 244, 170, 72, 22, 233, 183, 85, 11, 136, 214, 52, 106, 43, 117, 151, 201, 74, 20, 246, 168, 116, 42, 200, 150, 21, 75, 169, 247, 182, 232, 10, 84, 215, 137, 107, 53];
+                
+                for (var i = 0; i < byteArr.length; i++) {
+                    c = table[(c ^ byteArr[i]) % 256];
+                }
+                return c;
+            }
+
+            function bufferToHex (buffer) {
+                return Array
+                    .from (new Uint8Array (buffer))
+                    .map (b => b.toString (16).padStart (2, "0"))
+                    .join (",");
+            }
+
+            function parsePacket(packet) {
+                let p = packet.slice(1, packet.length - 1); //Get only the data meat inside the packet
+                let converted = "";
+                let obj = {};
+                while(p.length > 1) {
+                    let dv = new DataView(typedArrayToBuffer(p));
+                    switch(p[0]) {
+                        case 0x01: //TimeSens
+                            obj.time = dv.getInt32(1);
+                            p = p.slice(5);
+                            break;
+                        case 0x02: //AnalogSens
+                            obj.analogSens = dv.getInt16(1);
+                            p = p.slice(3);
+                            break;
+                        case 0x03: //Marker
+                            obj.marker = dv.getUint8(1);
+                            p = p.slice(2);
+                            break;
+                    }
+                }
+                addDataToCsv(obj);
+            }
+
+            function addDataToCsv(data) {
+                props.forEach((prop) => {
+                    csvStr += data.hasOwnProperty(prop) ? `${data[prop]}, ` : `,`;
+                });
+                csvStr += "\n";
+              }
+
+            function typedArrayToBuffer(array){
+                return array.buffer.slice(array.byteOffset, array.byteLength + array.byteOffset)
+            }
+
+            function readAndParse(startByte, file, prepend) {
+                const fr = new FileReader();
+                const blob = file.slice(startByte, startByte + sliceSize + 1);
+                fr.onloadend = (e) => {
+                    let inArr = new Uint8Array(e.target.result);
+                    if(inArr <= 1 || !converting) {
+                        finish();
+                        
+                        return;
+                    }
+                    let buf = concatenate(Uint8Array, prepend, inArr);
+
+                    while(buf[0] <= buf.length) {
+                        let packetBuf = buf.slice(0, buf[0]);
+                        let cs = checksum(packetBuf.slice(0, packetBuf.length - 1));
+                        if(!(packetBuf[packetBuf.length - 1] === cs)) { 
+                            buf = buf.slice(1);
+                            badParses++;
+                        } 
+                        else {
+                            parsePacket(packetBuf);
+                            buf = buf.slice(packetBuf.length);
+                            goodPackets++;
+                        }
+                    }
+                    currentChunkStart = startByte;
+                    postUpdate();
+                    readAndParse(startByte + sliceSize + 1, file, buf.slice(0));
+                }
+                fr.readAsArrayBuffer(blob);
+            }
+
+
+            
+        </script>
+        <script>
+            let fileStream, readableStream;
+
+            let workerBlob = new Blob([
+                    document.getElementById('conversionWorker').textContent
+                ], { type: "text/javascript" })
+            let worker = new Worker(window.URL.createObjectURL(workerBlob));
+            worker.onmessage = (e) => {
+                switch(e.data.type) {
+                    case "update":
+                        document.getElementById("spanPrecentDone").innerHTML = `Progress: ${e.data.progress.toFixed(2)}%`;
+                        document.getElementById("spanGoodReadings").innerHTML = `Good Packets: ${e.data.good.toLocaleString()}`;
+                        document.getElementById("spanBadReadings").innerHTML = `Bad Parses: ${e.data.bad.toLocaleString()}`;
+                        break;
+                    case "finish":
+                        document.getElementById("spanFileName").innerHTML = `File: ${e.data.fileName}`;
+                        document.getElementById("spanSizeDuration").innerHTML = `Packets: ${e.data.packets.toLocaleString()}`;
+                        document.getElementById("spanPacketNumber").innerHTML = `Bad Parses: ${e.data.bad}`;
+                        document.getElementById("spanBadPacketNumber").innerHTML = `Conversion Duration: ${e.data.duration.toFixed(2)}s`;
+                        download(e.data.csv, `${e.data.fileName.split(".")[0]}.csv`, "text/csv");
+                        conversionEnded();
+                        break;
+                }
+            }
+
+            let filesToConvert = [];
+            let currentFile;
+
+            function startConversion() {
+                if(filesToConvert[0]) {
+                    conversionStarted();
+                    currentFile = filesToConvert[0];
+                    document.getElementById("spanCurrentFile").innerHTML = `Currently Converting: ${currentFile.name}`;
+                    worker.postMessage({
+                        type: "start",
+                        file: currentFile,
+                    });
+                }
+            }
+
+            function abortConversion() {
+                worker.postMessage({
+                    type: "abort"
+                });
+            }
+
+            function conversionStarted() {
+                document.getElementById("fileSelectionDiag").classList.add("hidden");
+                document.getElementById("conversionStatusDiag").classList.remove("hidden");
+            }
+
+            function conversionEnded() {  
+                document.getElementById("conversionStatusDiag").classList.add("hidden");
+                document.getElementById("resultDiag").classList.remove("hidden");
+            }
+
+            function handleFiles(files) {
+                filesToConvert = files;
+            }
+
+            function reset() {
+                document.getElementById("resultDiag").classList.add("hidden");
+                document.getElementById("fileSelectionDiag").classList.remove("hidden");
+            }      
+
+            function download(data, filename, type) {
+                var file = new Blob([data], {type: type});
+                if (window.navigator.msSaveOrOpenBlob) // IE10+
+                    window.navigator.msSaveOrOpenBlob(file, filename);
+                else { // Others
+                    var a = document.createElement("a"),
+                            url = URL.createObjectURL(file);
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    setTimeout(function() {
+                        document.body.removeChild(a);
+                        window.URL.revokeObjectURL(url);  
+                    }, 0); 
+                }
+            }
+
+        </script>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-flow: column;
+            }
+
+            h1 {
+                padding: .5rem;
+                margin: 0;
+            }
+
+            #mainDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                flex: 1;
+                border: dashed;
+                border-width: 2px;
+                border-radius: 2rem;
+                margin: 1rem;
+                stroke: black;
+            }
+
+            #fileSelectionDiag {
+                width: 14rem;
+            }
+
+            #loadBarContainer {
+                width: 50%;
+                height: 2rem;
+                background-color: lightgray;
+                outline: solid;
+            }
+
+            #loadBar {
+                width: 10%;
+                height: 100%;
+                background-color: green;
+            }
+
+            .hidden {
+                display: none;
+            }
+        
+        
+        
+        
+        
+        
+        
+        </style>
+    </head>
+
+    <body>
+        <h1 class="page-title">aDAQ BIN to CSV converter</h1>
+        <div id="mainDiv">
+            <div id="fileSelectionDiag" class="">
+                <form class="my-form">
+                  <p>Select "Upload File" to upload and convert one or more aDAQ bin files</p>
+                  <input type="file" id="fileElem" multiple accept=".bin" onchange="handleFiles(this.files)">
+                  <input type="button" value="Start" id="btnStartConversion" onclick="startConversion()" >
+                </form>
+              </div>
+              <div id="conversionStatusDiag" class="hidden">
+                  <span id="spanCurrentFile" ></span><br>
+                  <span id="spanPrecentDone"></span><br>
+                  <span id="spanGoodReadings" style="color: lime;"></span><br>
+                  <span id="spanBadReadings" style="color: red;"></span><br>
+                  <button onclick="abortConversion()">Abort</button>
+
+              </div>  
+
+              <div id="resultDiag" class="hidden">
+                <span>Finished Conversion</span><br>
+                <span id="spanFileName"></span><br>
+                <span id="spanSizeDuration"></span><br>
+                <span id="spanPacketNumber"></span><br>
+                <span id="spanBadPacketNumber"></span><br>
+                <button onclick="reset()">OK</button>
+
+            </div>  
+
+        </div>
+
+        
+
+    </body>
+
+</html>
