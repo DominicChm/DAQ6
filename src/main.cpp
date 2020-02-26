@@ -1,119 +1,42 @@
-#include <Arduino.h>
 #include <SdFat.h>
-#include "ChRt.h"
-
-#include "ledThread.h"
-#include "readerThread.h"
-#include "writerThread.h"
-#include "controlThread.h"
-
-#include "ThreadShare.h" // <--  ALL VARIABLES ARE STORED HERE FOR WHEN I BREAK THIS INTO MULTIPLE FILES!!!
-
-#include "SensorRotSpeeds.h"
-#include "SensorMarker.h"
-#include "SensorTime.h"
-
-#include "macros.h"
+//https://github.com/sdesalas/Arduino-Queue.h
+#include <queue.h>
 #include "config.h"
-#include "Sensor.h"
-#include "util.h"
-#include "LED.h"
 
+//The queues hold pointers to the starting addresses of each block of size BLOCK_SIZE.
+//This is done to optimize performance and simplify later code.
+//These pointers, once initialized, will basically go back and forth between
+//the emptyQueue and the writeQueue
+Queue<uint8_t*> writeQueue = Queue<uint8_t*>(BLOCK_COUNT);
+Queue<uint8_t*> emptyQueue = Queue<uint8_t*>(BLOCK_COUNT);
 
+uint8_t blockBuf[BUFFER_SIZE];
 
-SensorRotSpeeds* sRotSpeeds;
+SdExFat sd;
+ExFatFile binFile;
 
-
-
-/**ISRS**/
-#ifdef SENSOR_WHEELSPEED
-CH_FAST_IRQ_HANDLER(engineSpeedISR)  {sRotSpeeds->calcESpeed();}
-CH_FAST_IRQ_HANDLER(rWheelsSpeedISR) {sRotSpeeds->calcRWheels();}
-CH_FAST_IRQ_HANDLER(flWheelSpeedISR) {sRotSpeeds->calcFLWheel();}
-CH_FAST_IRQ_HANDLER(frWheelSpeedISR) {sRotSpeeds->calcFRWheel();}
-#endif
-
-
-
-void setupSensors() {
-  /*SETUP SENSORS*/
-  #ifdef SENSOR_TIME
-    sensors[NUM_SENSORS++] = new SensorTime(); 
-  #endif
-  #ifdef SENSOR_MARKER
-    sensors[NUM_SENSORS++] = new SensorMarker(PIN_MARKER_BTN); 
-  #endif
-  #ifdef SENSOR_WHEELSPEED
-    //Hold a reference in a var to call interrupts on the sensor obj.
-    sensors[NUM_SENSORS++] = sRotSpeeds = new SensorRotSpeeds(); 
-
-    //Credit to Rahul. yoink.
-
-    attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_ENG),  engineSpeedISR, RISING);
-    attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_RGO), rWheelsSpeedISR, RISING);
-    attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFL), flWheelSpeedISR, RISING);
-    attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFR), frWheelSpeedISR, RISING);
-  #endif
-}
-
-
-
-
-
-void chSetup() {
-
-  setupSensors();
-  
-  /*SETUP AND START THREADS*/
-  chThdCreateStatic(waReaderThread, sizeof(waReaderThread),
-      READER_PRIORITY, ReaderThread, NULL);
-
-  chThdCreateStatic(waWriterThread, sizeof(waWriterThread),
-      WRITER_PRIORITY, WriterThread, NULL);
-      
-  chThdCreateStatic(waControlThread, sizeof(waControlThread),
-      CONTRL_PRIORITY, ControlThread, NULL);
-
-  chThdCreateStatic(waLEDThread, sizeof(waLEDThread),
-      LEDDRV_PRIORITY, LEDThread, NULL);
-
-
-}
 
 void setup() {
-  /*SETUP SERIAL*/
-  Serial.begin(250000);
-  while (!Serial) {;} 
-  debugl("Starting DAQ...");
-  
-  pinMode(PIN_MARKER_BTN, INPUT_PULLUP);
-  
-  /*Sensor Setup*/
-  
-
-
-  /*SETUP SD*/ //Will eventually move file creation into its own function.
-  if (sd.begin(254)) {
-    SelectNextFilename((char*) &fileName, &sd);                 
-    if(!file.open((char*) &fileName, O_RDWR | O_CREAT)){ //Open the file. Don't ever bother closing it B/C we'll be writing pretty much constantly.
-      debugl("File open err");
-    } else {
-      debugl("Filed opened successfully");
-    }
-    ledTeensy.setState(LED::FAST_BLINK);
-
-  } else {
-    debugl("SD FAILED TO INITIALIZE - Running in SD-less mode!");;
-    sd.initErrorHalt(&Serial);
-    ledTeensy.setState(LED::FAST_BLINK);
+  //Populate the empty queue with pointers to each 512 byte-long buffer.
+  for(uint32_t i = 0; i < BLOCK_COUNT; i++) {
+      uint8_t* bufIndex = &blockBuf[i * BLOCK_SIZE]; //Pointer generated to be at the start of each block.
+      emptyQueue.push(bufIndex);
   }
-
-  
-  chBegin(chSetup);
 }
 
-/*=*=*=*SECTION LOOP*=*=*=*/
+static int state = 0;
 void loop() {
-  
+    switch (state)
+    {
+    case 0: //Waiting to read.
+        /* code */
+        break;
+    
+    default:
+        break;
+    }
 }
 
+void readSensors() {
+
+}

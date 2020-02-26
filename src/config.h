@@ -5,7 +5,10 @@
 #define DEBUG
 
 /*BUFFER CONFIG*/
-#define BUFFER_SIZE 10000
+#define BLOCK_SIZE 512
+
+
+#define BLOCK_COUNT 100
 #define MAX_PACKET_SIZE 1024
 
 /*FILE CONFIG*/
@@ -89,6 +92,10 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 #define SD_TYPE SdExFat
 #define FILE_TYPE ExFatFile
+
+#define BUFFER_SIZE BLOCK_COUNT * BLOCK_SIZE
+/*This defines how many blocks there are. To simplify block tracking behavior, */
+#define OVERFLOW_BIT 8
 /*=*=*=*SECTION COMPILE-TIME CHECKS*=*=*=*/
 
 
