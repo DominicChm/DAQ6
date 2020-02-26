@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <SdFat.h>
+#include "Sensor.h"
 
 #include "macros.h"
 
@@ -21,13 +22,13 @@ void SelectNextFilename(char *buffer, SD_TYPE* sd) { //Passed buff should be of 
         strcpy(buffer, FILENAME_PREFIX);
         strcat(buffer, fileNumber);
         strcat(buffer, FILENAME_SUFFIX);
-        debugl(buffer);
+        //debugl(buffer);
         if(!sd->exists(buffer)) {
             debug("Will write to ");
             debugl(buffer);
             return;
         }
-        debugl("pass");
+        //debugl("pass");
     }
 
 }

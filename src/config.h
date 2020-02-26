@@ -8,7 +8,7 @@
 #define BLOCK_SIZE 512
 
 
-#define BLOCK_COUNT 100
+#define BLOCK_COUNT 10
 #define MAX_PACKET_SIZE 1024
 
 /*FILE CONFIG*/
