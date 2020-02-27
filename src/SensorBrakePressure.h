@@ -4,46 +4,28 @@
 #include "ChRt.h"
 #include "macros.h"
 
-class SensorBrakePressure : public Sensor
+class SensorBrakePressures : public Sensor
 {
 private:
-    int pin;
+    int pin1, pin2;
     const uint8_t id = 0x04;
 public:
-    SensorBrakePressure() {
-        
+    SensorBrakePressures(int pin1, int pin2) {
+        pinMode(pin1, INPUT);
+        pinMode(pin2, INPUT);
+        this->pin1 = pin1;
+        this->pin2 = pin2;
     };
 
     virtual uint16_t readPacketBlock(uint8_t* buffer){
-        static uint16_t ews  = 0;
-        static uint16_t rws  = 0;
-        static uint16_t flws = 0;
-        static uint16_t frws = 0;
-
-        uint16_t tews  = ews;
-        uint16_t trws  = rws;
-        uint16_t tflws = flws;
-        uint16_t tfrws = frws;
-
-        if(ews != tews || rws != trws || flws != tflws || frws != tfrws) { //Only write if somthing's changed
-            buffer[0] = id;
-
-            buffer[1] = hiByte(ews);
-            buffer[2] = loByte(ews);
-
-            buffer[3] = hiByte(rws);
-            buffer[4] = loByte(rws);
-
-            buffer[5] = hiByte(flws);
-            buffer[6] = loByte(flws);
-
-            buffer[7] = hiByte(frws);
-            buffer[8] = loByte(frws);
-
-            return 9;
-        }
-
-        return 0;
+        uint16_t p1 = analogRead(pin1);
+        uint16_t p2 = analogRead(pin2);
+        buffer[0] = id;
+        buffer[1] = hiByte(p1);
+        buffer[2] = lowByte(p1);
+        buffer[3] = hiByte(p2);
+        buffer[4] = lowByte(p2);
+        return 5;
         
     } //Writes a packet to the buffer, returns the size of data written.
 };
