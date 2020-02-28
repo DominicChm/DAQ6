@@ -14,3 +14,6 @@
 
 #define hiByte(num) {(uint8_t)(num & 0xFF)}
 #define loByte(num) {(uint8_t)((num >> 8) & 0xFF)}
+
+#define SET_STATE_IF(conditional, newstate) {if(conditional){state = newstate; break;}}
+#define SET_STATE_EXEC_IF(conditional, newstate, execute) {if(conditional){state = newstate; execute break;}}

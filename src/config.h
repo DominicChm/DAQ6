@@ -4,7 +4,7 @@
 
 #define DEBUG
 
-/*BUFFER CONFIG*/
+/*BUFFER QUEUE CONFIG*/
 #define BLOCK_SIZE 512
 
 
@@ -29,15 +29,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 */
 
 /*THREADING CONFIG*/
-#define LEDDRV_PRIORITY NORMALPRIO      + 10 
-#define CONTRL_PRIORITY WRITER_PRIORITY + 10
-#define WRITER_PRIORITY LEDDRV_PRIORITY + 10
-#define READER_PRIORITY CONTRL_PRIORITY + 10
-
-//Interval between LED driver thread runs in ms.
-#define LEDTHD_INTERVAL 50
-
-#define CONTROLTHD_INTERVAL 100
+#define READER_PRIORITY NORMALPRIO + 10
 
 
 /***PIN CONFIG***/
@@ -65,14 +57,20 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 
 /*SENSOR CONFIG*/
+
+//Sample interval in ms.
 #define SAMPLE_INTERVAL 1
 
 //Comment a define to disable a sensor.
 #define SENSOR_TIME
 
+#define SENSOR_ECVT
+
 #define SENSOR_MARKER
 
-#define SENSOR_WHEELSPEED
+#define SENSOR_BRAKEPRESSURE
+
+#define SENSOR_ROTATIONSPEEDS
 
 
 /*CONTROLS CONFIG*/
@@ -88,14 +86,13 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 #define SENSOR_ARR_SIZE 20
 
-#define ABS_BUFFER_SIZE BUFFER_SIZE + MAX_PACKET_SIZE
-
+//Type of 
 #define SD_TYPE SdExFat
 #define FILE_TYPE ExFatFile
 
+//Defines size of contiguous buffer that holds blocks. Basically one big array accessed in chunks.
 #define BUFFER_SIZE BLOCK_COUNT * BLOCK_SIZE
-/*This defines how many blocks there are. To simplify block tracking behavior, */
-#define OVERFLOW_BIT 8
+
 /*=*=*=*SECTION COMPILE-TIME CHECKS*=*=*=*/
 
 

@@ -3,10 +3,15 @@
 #include <queue.h>
 #include "config.h"
 #include "util.h"
+#include "macros.h"
 
 /*Sensors*/
 #include "Sensor.h"
 #include "SensorTime.h"
+#include "SensorMarker.h"
+#include "SensorBrakePressure.h"
+#include "SensorRotSpeeds.h"
+#include "DebouncedButton.h"
 
 
 /*ChibiOS*/
@@ -22,19 +27,28 @@ MUTEX_DECL(QueueMod_Mtx);
 Queue<uint8_t*> writeQueue = Queue<uint8_t*>(BLOCK_COUNT);
 Queue<uint8_t*> emptyQueue = Queue<uint8_t*>(BLOCK_COUNT);
 
+//Holds the blocks accessed through pointers in the write/empty queue
 uint8_t blockBuf[BUFFER_SIZE];
 
-SdExFat sd;
-ExFatFile binFile;
+
+SD_TYPE sd;
+FILE_TYPE binFile;
 
 
-const uint16_t numSensors = 1;
-Sensor* sensors[20];
+Sensor* sensors[SENSOR_ARR_SIZE];
+uint16_t numSensors = 0;
+
+
 uint8_t packetBuf[MAX_PACKET_SIZE];
+
 
 const uint32_t PREALLOCATE_SIZE_MiB = 2UL;
 const uint64_t PREALLOCATE_SIZE  =  (uint64_t)PREALLOCATE_SIZE_MiB << 20;
 
+
+
+/*Func defs*/
+void fsmWriter();
 
 
 void queueBuf(uint8_t* buf, uint16_t size) {
@@ -85,50 +99,10 @@ THD_FUNCTION(reader, arg) {
 
 
 void chMain() {
-    static uint32_t falls = 0;
-    chThdCreateStatic(  readerWa,
-                        sizeof(readerWa),
-                        NORMALPRIO + 10,
-                        reader,
-                        NULL);
-
-
-
-
     while(true) {
 
-        if(!sd.card()->isBusy() && writeQueue.count() > 0) { //If card not busy and data availible, write.
-            Serial.println("Writing...");
+        fsmWriter();
 
-            //Pop a block pointer from the write queue, and write it to SD.
-            chMtxLock(&QueueMod_Mtx);
-            uint8_t* poppedBlock = writeQueue.pop();
-            chMtxUnlock(&QueueMod_Mtx);
-
-            size_t written = binFile.write(poppedBlock, BLOCK_SIZE);
-            if(written != BLOCK_SIZE) Serial.println("Write Failed! :(");
-            
-            //Once done, put the written back on the empty queue to be used again.
-            chMtxLock(&QueueMod_Mtx);
-            emptyQueue.push(poppedBlock);
-            chMtxUnlock(&QueueMod_Mtx);
-        }
-
-
-
-        if(Serial.available() > 0) {
-            binFile.truncate();
-            binFile.sync();
-            Serial.println("Finished.");
-            Serial.print("Skipped ");
-            Serial.print(falls);
-            Serial.print("ms over ");
-            Serial.print(millis());
-            Serial.print("ms for a ");
-            Serial.print(((float) falls / (float) millis()) * 100);
-            Serial.println("% failiure rate.");
-            return; //Kill the thread.
-        }
     }
 }
 
@@ -137,28 +111,37 @@ void setup() {
     while(!Serial){;}
     Serial.println("Starting...");
 
-    if(!sd.begin(254)) {
-        sd.initErrorHalt(&Serial);
-    }
-    char fileName[FILENAME_SIZE];
-    SelectNextFilename( fileName , &sd);
-
-    if(!binFile.open(fileName, O_RDWR | O_CREAT)) {
-        Serial.println("File Open Err.");
-    }
-
-    if(!binFile.preAllocate(PREALLOCATE_SIZE)) {
-        Serial.println("Preallocation Err.");
-    }
-
-    
-    Serial.print(F("preAllocated: "));
-    Serial.print(PREALLOCATE_SIZE_MiB);
-    Serial.println(F(" MiB"));
-
-
     /*Sensors*/
-    sensors[0] = new SensorTime();
+    #ifdef SENSOR_TIME 
+        sensors[numSensors++] = new SensorTime();
+    #endif
+    
+    #ifdef SENSOR_ECVT 
+        Serial.println("ECVT not yet implmented..");
+    #endif
+    
+    #ifdef SENSOR_MARKER 
+        sensors[numSensors++] = new SensorMarker(PIN_MARKER_BTN);
+    #endif
+    
+    #ifdef SENSOR_BRAKEPRESSURE 
+        sensors[numSensors++] = new SensorBrakePressures(PIN_BPRESSURE_F, PIN_BPRESSURE_R);
+    #endif
+    
+    #ifdef SENSOR_ROTATIONSPEEDS 
+        static uint16_t index = numSensors++;
+        sensors[index] = new SensorRotSpeeds();
+
+        auto engineISR = [](){ ((SensorRotSpeeds*) sensors[index])-> calcESpeed(); };
+        auto rWheelISR = [](){ ((SensorRotSpeeds*) sensors[index])->calcRWheels(); };
+        auto lFrontISR = [](){ ((SensorRotSpeeds*) sensors[index])->calcFLWheel(); };
+        auto rFrontISR = [](){ ((SensorRotSpeeds*) sensors[index])->calcFRWheel(); };
+
+        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_ENG), engineISR, RISING);
+        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_RGO), rWheelISR, RISING);
+        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFL), lFrontISR, RISING);
+        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFR), rFrontISR, RISING);
+    #endif
 
 
     //Populate the empty queue with pointers to each 512 byte-long buffer.
@@ -167,11 +150,115 @@ void setup() {
         emptyQueue.push(bufIndex);
     }
 
+    chThdCreateStatic(readerWa, sizeof(readerWa), READER_PRIORITY, reader, NULL);
+
     chBegin(chMain);
 }
 
 
 
 void loop() {
+
+}
+
+
+
+void fsmWriter() {
+    static const int STATE_WAITING_TO_START = 0; 
+    static const int STATE_STARTING = 1; 
+    static const int STATE_WAITING_TO_STOP = 2; 
+    static const int STATE_WRITING = 3; 
+    static const int STATE_STOPPING = 4; 
+    static DebouncedButton loggerBtn(PIN_LOGGER_BTN);
+
+    static int state = -1;
+
+    static SD_TYPE sd;
+    static FILE_TYPE file;
+
+
+    
+    if(state < 0) {
+        /*Writer initial setup*/
+        if(!sd.begin(254)) {
+            sd.initErrorHalt(&Serial);
+        }
+        state = STATE_STARTING;
+    }
+
+
+
+    switch (state)
+    {
+    case STATE_WAITING_TO_START: //WAITING TO START
+        SET_STATE_IF(loggerBtn.isTriggered(), STATE_STARTING);
+        break;
+
+
+
+    case STATE_STARTING: {
+        char fileName[FILENAME_SIZE];
+        SelectNextFilename( fileName , &sd);
+        
+        //open the file
+        SET_STATE_EXEC_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_WAITING_TO_START, {Serial.println("Error Opening File!");} );
+
+        //preallocate storage.
+        if(!file.preAllocate(PREALLOCATE_SIZE)) {
+            Serial.println("Preallocation Err.");
+            state = STATE_WAITING_TO_START;
+            break;
+        }
+
+        Serial.print(F("preAllocated: "));
+        Serial.print(PREALLOCATE_SIZE_MiB);
+        Serial.println(F(" MiB"));
+        
+        state = STATE_WAITING_TO_STOP;
+        break;
+    } 
+
+
+
+    case STATE_WAITING_TO_STOP: {
+
+        SET_STATE_IF(!sd.card()->isBusy() && writeQueue.count() > 0, STATE_WRITING);  //If card not busy and data availible, write.
+        SET_STATE_IF(loggerBtn.isTriggered(), STATE_STOPPING);
+        break;
+    }
+
+    case STATE_WRITING: {
+        Serial.println("Writing...");
+
+        //Pop a block pointer from the write queue, and write it to SD. 
+        //Prevent anything from touching the queue while this happens through the mtx.
+        chMtxLock(&QueueMod_Mtx);
+        uint8_t* poppedBlock = writeQueue.pop();
+        chMtxUnlock(&QueueMod_Mtx);
+
+        size_t written = binFile.write(poppedBlock, BLOCK_SIZE); //Can do this w/o checking block B/C if we're here, data is guarenteed to be in queue.
+        if(written != BLOCK_SIZE) Serial.println("Write Failed! :(");
+        
+        //Once done, put the written back on the empty queue to be used again.
+        chMtxLock(&QueueMod_Mtx);
+        emptyQueue.push(poppedBlock);
+        chMtxUnlock(&QueueMod_Mtx);
+
+        
+        state = STATE_WAITING_TO_STOP;
+        break;
+    }
+
+    case STATE_STOPPING: {
+        file.truncate();
+        file.sync();
+        state = STATE_WAITING_TO_START;
+    }
+
+
+
+    default:
+        break;
+    }
 
 }
