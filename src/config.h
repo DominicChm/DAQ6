@@ -31,7 +31,6 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 /*THREADING CONFIG*/
 #define READER_PRIORITY NORMALPRIO + 10
 
-
 /***PIN CONFIG***/
     //Pin config for logger control - toggling and status.
         #define PIN_LOGGER_LED 4
@@ -41,7 +40,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
         #define PIN_STATUS_LED 13
 
     //Marker button pin. 
-        #define PIN_MARKER_BTN 5
+        #define PIN_MARKER_BTN 3
     
     //Pins for the wheelspeed sensors. These are just hall effect sensors.
     //ENG = engine, RGO = Rear Gearbox Output, WFL = Wheel Front Left, WFR = Wheel Front Right
@@ -59,12 +58,12 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 /*SENSOR CONFIG*/
 
 //Sample interval in ms.
-#define SAMPLE_INTERVAL 1
+#define SAMPLE_INTERVAL 100
 
 //Comment a define to disable a sensor.
 #define SENSOR_TIME
 
-#define SENSOR_ECVT
+//#define SENSOR_ECVT
 
 #define SENSOR_MARKER
 

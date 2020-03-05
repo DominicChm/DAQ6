@@ -13,9 +13,12 @@ public:
     };
 
     virtual uint16_t readPacketBlock(uint8_t* buffer){
-        if(!digitalRead(pin)) {
+        if(digitalRead(pin)) {
             buffer[0] = id;
-            return 1;
+            buffer[1] = 0x01;
+            debug("Marker;\t");
+            return 2;
+            
         } else {
             return 0;
         }

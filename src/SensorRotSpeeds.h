@@ -34,12 +34,15 @@ public:
         uint16_t tflws = flws;
         uint16_t tfrws = frws;
 
+        noInterrupts();
         ews  = eWheelSpeed ->read();
         rws  = rWheelsSpeed->read();
         flws = flWheelSpeed->read();
         frws = frWheelSpeed->read();
+        interrupts();
 
-        if(ews != tews || rws != trws || flws != tflws || frws != tfrws) { //Only write if somthing's changed
+        if(ews != tews || rws != trws || flws != tflws || frws != tfrws || true) { //Only write if somthing's changed
+            
             buffer[0] = id;
 
             buffer[1] = hiByte(ews);
@@ -53,6 +56,34 @@ public:
 
             buffer[7] = hiByte(frws);
             buffer[8] = loByte(frws);
+            
+/*
+            buffer[0] = id;
+
+            buffer[1] = 0xFF;
+            buffer[2] = 0xFF;
+
+            buffer[3] = 0xFF;
+            buffer[4] = 0xFF;
+
+            buffer[5] = 0xFF;
+            buffer[6] = 0xFF;
+
+            buffer[7] = 0xFF;
+            buffer[8] = 0xFF;
+*/
+
+            debug("RotSpeeds: ");
+            debug(ews);
+            debug(", ");
+            debug(rws);
+            debug(", ");
+            debug(flws);
+            debug(", ");
+            debug(frws);
+            debug(";\t");
+
+            debug(digitalRead(PIN_RSPEED_RGO));
 
             return 9;
         }

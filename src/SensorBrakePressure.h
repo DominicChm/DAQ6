@@ -8,7 +8,7 @@ class SensorBrakePressures : public Sensor
 {
 private:
     int pin1, pin2;
-    const uint8_t id = 0x04;
+    const uint8_t id = 0x05;
 public:
     SensorBrakePressures(int pin1, int pin2) {
         pinMode(pin1, INPUT);
@@ -25,6 +25,14 @@ public:
         buffer[2] = lowByte(p1);
         buffer[3] = hiByte(p2);
         buffer[4] = lowByte(p2);
+        
+        
+        debug("Sensor Pressure: ");
+        debug(p1);
+        debug(", ");
+        debug(p2);
+        debug(";\t");
+        
         return 5;
         
     } //Writes a packet to the buffer, returns the size of data written.
