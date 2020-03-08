@@ -4,6 +4,8 @@
 
 #define DEBUG
 
+#define PRINT_SENSORS
+
 /*BUFFER QUEUE CONFIG*/
 #define BLOCK_SIZE 512
 
@@ -91,6 +93,8 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 //Defines size of contiguous buffer that holds blocks. Basically one big array accessed in chunks.
 #define BUFFER_SIZE BLOCK_COUNT * BLOCK_SIZE
+
+#define SERIAL_TIMEOUT 20000
 
 /*=*=*=*SECTION COMPILE-TIME CHECKS*=*=*=*/
 

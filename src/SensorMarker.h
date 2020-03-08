@@ -16,7 +16,7 @@ public:
         if(digitalRead(pin)) {
             buffer[0] = id;
             buffer[1] = 0x01;
-            debug("Marker;\t");
+            sensorPrint("Marker;\t");
             return 2;
             
         } else {

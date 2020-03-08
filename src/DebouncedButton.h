@@ -9,7 +9,7 @@ private:
     uint8_t pinmode      ;
     uint32_t debounceMs  ;
 public:
-    DebouncedButton(uint8_t buttonPin, uint8_t pinmode = INPUT_PULLUP, uint32_t debounceMs = 1000) {
+    DebouncedButton(uint8_t buttonPin, bool inverted = false, uint8_t pinmode = INPUT_PULLUP, uint32_t debounceMs = 1000) {
         this->buttonPin = buttonPin;
         this->pinmode = pinmode;
         this->debounceMs = debounceMs;
@@ -17,10 +17,10 @@ public:
         switch (pinmode)
         {
             case INPUT_PULLUP:
-                triggeredOn = LOW;
+                triggeredOn = inverted ? HIGH : LOW;
                 break;
             case INPUT_PULLDOWN:
-                triggeredOn = HIGH;
+                triggeredOn = inverted ? LOW : HIGH;
                 break;
         }
 

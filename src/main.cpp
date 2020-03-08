@@ -19,7 +19,7 @@
 #include <ChRt.h>
 MUTEX_DECL(QueueMod_Mtx);
 
-//The queues hold pointers to the starting addresses of each block of size BLOCK_SIZE.
+//The queues hold pointers to the starting addresses of each block of size BLOCK_SIZE is blockBuf.
 //This is done to optimize performance and simplify later code.
 //These pointers, once initialized, will basically go back and forth between
 //the emptyQueue and the writeQueue
@@ -83,7 +83,7 @@ THD_FUNCTION(reader, arg) {
     while(true) {
         if(isLogging) {
             uint16_t size = BufferPacket(packetBuf, sensors, numSensors);
-            debug("\n");
+            sensorPrint("\n");
             chMtxLock(&QueueMod_Mtx);
             queueBuf(packetBuf, size);
             chMtxUnlock(&QueueMod_Mtx);
@@ -107,11 +107,14 @@ void chMain() {
 }
 
 void setup() {
-    Serial.begin(115200);
-    while(!Serial){;}
-    Serial.println("Starting...");
+    Serial.begin(250000);
 
-    /*Sensors*/
+    uint32_t timeoutAt = millis() + SERIAL_TIMEOUT;
+    statusLed.setState(LED::FAST_BLINK);
+    while(!Serial && timeoutAt > millis()){statusLed.tick();}
+    debugl("Starting...");
+
+    /*Sensor setups*/
     #ifdef SENSOR_TIME 
         sensors[numSensors++] = new SensorTime();
     #endif
@@ -129,9 +132,9 @@ void setup() {
     #endif
     
     #ifdef SENSOR_ROTATIONSPEEDS 
-        static uint16_t index = numSensors++;
+        static uint16_t index = numSensors++; //Get an index to reference the rotationspeed sensor.
         sensors[index] = new SensorRotSpeeds();
-        
+
         auto engineISR = [](){ ((SensorRotSpeeds*) sensors[index])-> calcESpeed(); };
         auto rWheelISR = [](){ ((SensorRotSpeeds*) sensors[index])->calcRWheels(); };
         auto lFrontISR = [](){ ((SensorRotSpeeds*) sensors[index])->calcFLWheel(); };
@@ -168,43 +171,63 @@ void loop() {
 
 void fsmWriter() {
     //Positive states are OK states
-    static const int STATE_WAITING_TO_START = 0; 
-    static const int STATE_STARTING = 1; 
-    static const int STATE_WAITING_TO_STOP = 2; 
-    static const int STATE_WRITING = 3; 
-    static const int STATE_STOPPING = 4; 
+    static const int INITIALIZING_SD = 0;
+    static const int STATE_WAITING_TO_START = 1; 
+    static const int STATE_STARTING = 2; 
+    static const int STATE_WAITING_TO_STOP = 3; 
+    static const int STATE_WRITING = 4; 
+    static const int STATE_STOPPING = 5; 
 
-    //Neative states are error states
-    static const int STATE_SD_INIT_ERR = -1;
+    //Negitive states are error states
+    static const int STATE_WAITING_FOR_SD_INIT = -1;
+    static const int STATE_SIGNAL_SD_ERR = -2;
 
 
 
-    static DebouncedButton loggerBtn(PIN_LOGGER_BTN);
+    static DebouncedButton loggerBtn(PIN_LOGGER_BTN, true);
 
-    static int state = -100; //Initialization State
+    STATE_DEFINITIONS;
 
     static SD_TYPE sd;
     static FILE_TYPE file;
 
     static LED writerLed(PIN_LOGGER_LED);
-    
-    if(state == -100) {
-        /*Writer initial setup*/
-        if(sd.begin(254)) {
-            state = STATE_STARTING;
-        } else {
-            Serial.println("SD INTIALIZATION ERROR - RUNNING IN SD-LESS MODE!");
-            sd.printSdError(&Serial);
-            state = STATE_SD_INIT_ERR;
-            writerLed.setState(LED::SOS_BLINK);
+
+    switch (state){
+        case INITIALIZING_SD: {
+            if(sd.begin(254)) {
+                SET_STATE(STATE_STARTING);
+            } else {
+                Serial.println("SD INTIALIZATION ERROR - RUNNING IN SD-LESS MODE!");
+                sd.printSdError(&Serial);
+                SET_STATE(STATE_SIGNAL_SD_ERR);
+            }
+            break;
         }
-        
-    }
 
+        case STATE_WAITING_FOR_SD_INIT: {
+            ON_STATE_ENTER({
+                writerLed.setState(LED::OFF);
+            });
 
+            if(loggerBtn.isTriggered()) {
+                SET_STATE(INITIALIZING_SD);
+            }
+        }
+        break;
 
-    switch (state)
-        {
+        case STATE_SIGNAL_SD_ERR: {
+            static int timeout = 0;
+            ON_STATE_ENTER({
+                writerLed.setState(LED::FAST_BLINK);
+                timeout = millis() + 1000;
+            });
+
+            if(millis() > timeout) {
+                SET_STATE(STATE_WAITING_FOR_SD_INIT);
+            }
+        }
+
         case STATE_WAITING_TO_START: //WAITING TO START
             SET_STATE_IF(loggerBtn.isTriggered(), STATE_STARTING);
             break;
@@ -213,25 +236,18 @@ void fsmWriter() {
 
         case STATE_STARTING: {
             char fileName[FILENAME_SIZE];
-            SelectNextFilename( fileName , &sd);
+            SelectNextFilename( fileName, &sd);
             
-            //open the file
-            SET_STATE_EXEC_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_WAITING_TO_START, {Serial.println("Error Opening File!");} );
+            //Open the selected fileName
+            SET_STATE_EXEC_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_WAITING_TO_START, {
+                debugl("Error Opening File!");
+                });
 
-            //preallocate storage.
-            if(!file.preAllocate(PREALLOCATE_SIZE)) {
-                Serial.println("Preallocation Err.");
-                state = STATE_WAITING_TO_START;
-                break;
-            }
-
-            Serial.print(F("preAllocated: "));
-            Serial.print(PREALLOCATE_SIZE_MiB);
-            Serial.println(F(" MiB"));
-            
+            //preallocate storage.            
             writerLed.setState(LED::ON);
             isLogging = true;
-            state = STATE_WAITING_TO_STOP;
+
+            SET_STATE(STATE_WAITING_TO_STOP);
             break;
         } 
 
@@ -245,13 +261,15 @@ void fsmWriter() {
 
         case STATE_WRITING: {
             //Pop a block pointer from the write queue, and write it to SD. 
-            //Prevent anything from touching the queue while this happens through the mtx.
+            //Prevent other threads from touching the queue while this happens through the mtx.
             chMtxLock(&QueueMod_Mtx);
             uint8_t* poppedBlock = writeQueue.pop();
             chMtxUnlock(&QueueMod_Mtx);
 
             size_t written = file.write(poppedBlock, BLOCK_SIZE); //Can do this w/o checking block B/C if we're here, data is guarenteed to be in queue.
-            if(written != BLOCK_SIZE) {Serial.println("Write Failed! :(");}
+            if(written != BLOCK_SIZE) {
+                debugl("Write Failed! :(");
+                }
             
             //Once done, put the written back on the empty queue to be used again.
             chMtxLock(&QueueMod_Mtx);
@@ -270,12 +288,12 @@ void fsmWriter() {
             file.close();
             Serial.println("Stopping logging!");
             writerLed.setState(LED::OFF);
-            state = STATE_WAITING_TO_START;
+
+            SET_STATE(STATE_WAITING_TO_START);
         }
     }
 
     writerLed.tick();
-
 }
 
 

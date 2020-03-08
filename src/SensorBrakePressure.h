@@ -27,11 +27,11 @@ public:
         buffer[4] = lowByte(p2);
         
         
-        debug("Sensor Pressure: ");
-        debug(p1);
-        debug(", ");
-        debug(p2);
-        debug(";\t");
+        sensorPrint("Sensor Pressure: ");
+        sensorPrint(p1);
+        sensorPrint(", ");
+        sensorPrint(p2);
+        sensorPrint(";\t");
         
         return 5;
         
