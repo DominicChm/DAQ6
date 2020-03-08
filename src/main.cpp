@@ -195,14 +195,30 @@ void fsmWriter() {
 
     switch (state){
         case INITIALIZING_SD: {
+            ON_STATE_ENTER({
+                if(file) {file.close();}
+            });
+            
             if(sd.begin(254)) {
                 SET_STATE(STATE_STARTING);
             } else {
-                Serial.println("SD INTIALIZATION ERROR - RUNNING IN SD-LESS MODE!");
+                Serial.println("SD INTIALIZATION ERROR");
                 sd.printSdError(&Serial);
                 SET_STATE(STATE_SIGNAL_SD_ERR);
             }
             break;
+        }
+
+        case STATE_SIGNAL_SD_ERR: {
+            static uint32_t timeout = 0;
+            ON_STATE_ENTER({
+                writerLed.setState(LED::FAST_BLINK);
+                timeout = millis() + 1000;
+            });
+
+            if(millis() > timeout) {
+                SET_STATE(STATE_WAITING_FOR_SD_INIT);
+            }
         }
 
         case STATE_WAITING_FOR_SD_INIT: {
@@ -216,17 +232,7 @@ void fsmWriter() {
         }
         break;
 
-        case STATE_SIGNAL_SD_ERR: {
-            static int timeout = 0;
-            ON_STATE_ENTER({
-                writerLed.setState(LED::FAST_BLINK);
-                timeout = millis() + 1000;
-            });
 
-            if(millis() > timeout) {
-                SET_STATE(STATE_WAITING_FOR_SD_INIT);
-            }
-        }
 
         case STATE_WAITING_TO_START: //WAITING TO START
             SET_STATE_IF(loggerBtn.isTriggered(), STATE_STARTING);
@@ -239,7 +245,7 @@ void fsmWriter() {
             SelectNextFilename( fileName, &sd);
             
             //Open the selected fileName
-            SET_STATE_EXEC_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_WAITING_TO_START, {
+            SET_STATE_EXEC_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_WAITING_FOR_SD_INIT, {
                 debugl("Error Opening File!");
                 });
 
@@ -269,6 +275,7 @@ void fsmWriter() {
             size_t written = file.write(poppedBlock, BLOCK_SIZE); //Can do this w/o checking block B/C if we're here, data is guarenteed to be in queue.
             if(written != BLOCK_SIZE) {
                 debugl("Write Failed! :(");
+                SET_STATE(STATE_WAITING_FOR_SD_INIT);
                 }
             
             //Once done, put the written back on the empty queue to be used again.
