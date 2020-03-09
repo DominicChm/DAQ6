@@ -13,7 +13,7 @@ public:
     };
 
     virtual uint16_t readPacketBlock(uint8_t* buffer){
-        if(digitalRead(pin)) {
+        if(!digitalRead(pin)) {
             buffer[0] = id;
             buffer[1] = 0x01;
             sensorPrint("Marker;\t");
@@ -23,4 +23,6 @@ public:
             return 0;
         }
     } //Writes a packet to the buffer, returns the size of data written.
+    virtual void start(){;}
+    virtual void stop(){;}
 };

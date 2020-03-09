@@ -3,7 +3,7 @@
 class DebouncedButton
 {
 private:
-    uint32_t lastToggled = 0;
+    uint32_t nextTriggerable = 0;
     bool triggeredOn     = LOW; 
     uint8_t buttonPin    ;
     uint8_t pinmode      ;
@@ -26,12 +26,12 @@ public:
 
 
         pinMode(buttonPin, pinmode);
-        lastToggled = millis();
+        nextTriggerable = millis();
     };
 
     bool isTriggered() { //TODO - Consider using an interrupt? Would make the lib less portable...
-        if( (millis() > (lastToggled + debounceMs) ) && (digitalRead(buttonPin) == triggeredOn) ) {
-            lastToggled = millis();
+        if( (millis() > nextTriggerable ) && (digitalRead(buttonPin) == triggeredOn) ) {
+            nextTriggerable = millis() + debounceMs;
             return true;
         } else return false;
         

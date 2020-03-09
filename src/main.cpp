@@ -115,7 +115,7 @@ void setup() {
     debugl("Starting...");
 
     /*Sensor setups*/
-    #ifdef SENSOR_TIME 
+    #ifdef SENSOR_TIME
         sensors[numSensors++] = new SensorTime();
     #endif
     
@@ -184,7 +184,7 @@ void fsmWriter() {
 
 
 
-    static DebouncedButton loggerBtn(PIN_LOGGER_BTN, true);
+    static DebouncedButton loggerBtn(PIN_LOGGER_BTN, false);
 
     STATE_DEFINITIONS;
 
@@ -193,14 +193,18 @@ void fsmWriter() {
 
     static LED writerLed(PIN_LOGGER_LED);
 
+    //debugl(state);
+
     switch (state){
         case INITIALIZING_SD: {
             ON_STATE_ENTER({
-                if(file) {file.close();}
+                //if(file) {file.close();}
             });
             
+            debugl("Trying start...");
             if(sd.begin(254)) {
                 SET_STATE(STATE_STARTING);
+                debugl("starting...");
             } else {
                 Serial.println("SD INTIALIZATION ERROR");
                 sd.printSdError(&Serial);
@@ -224,6 +228,7 @@ void fsmWriter() {
         case STATE_WAITING_FOR_SD_INIT: {
             ON_STATE_ENTER({
                 writerLed.setState(LED::OFF);
+                isLogging = false;
             });
 
             if(loggerBtn.isTriggered()) {
@@ -234,22 +239,31 @@ void fsmWriter() {
 
 
 
+
         case STATE_WAITING_TO_START: //WAITING TO START
-            SET_STATE_IF(loggerBtn.isTriggered(), STATE_STARTING);
+            SET_STATE_IF(loggerBtn.isTriggered(), INITIALIZING_SD);
             break;
 
 
 
         case STATE_STARTING: {
             char fileName[FILENAME_SIZE];
+            
             SelectNextFilename( fileName, &sd);
             
             //Open the selected fileName
-            SET_STATE_EXEC_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_WAITING_FOR_SD_INIT, {
-                debugl("Error Opening File!");
-                });
+            SET_STATE_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_SIGNAL_SD_ERR);
 
-            //preallocate storage.            
+            //Initialize all sensors for this run.
+            for(uint8_t i = 0; i < numSensors; i++) {
+                sensors[i]->start();
+            }
+
+            //Place all the previously populated blocks into the empty queue
+            for(uint16_t i = 0; i < writeQueue.count(); i++) {
+                emptyQueue.push(writeQueue.pop());
+            }
+
             writerLed.setState(LED::ON);
             isLogging = true;
 
@@ -261,6 +275,7 @@ void fsmWriter() {
 
         case STATE_WAITING_TO_STOP: {
             SET_STATE_IF(!sd.card()->isBusy() && writeQueue.count() > 0, STATE_WRITING);  //If card not busy and data availible, write.
+            //debugl(digitalRead(PIN_LOGGER_BTN));
             SET_STATE_IF(loggerBtn.isTriggered(), STATE_STOPPING);
             break;
         }
@@ -293,6 +308,10 @@ void fsmWriter() {
             file.truncate();
             file.sync();
             file.close();
+            //Denitialize all sensors for this run.
+            for(uint8_t i = 0; i < numSensors; i++) {
+                sensors[i]->stop();
+            }
             Serial.println("Stopping logging!");
             writerLed.setState(LED::OFF);
 

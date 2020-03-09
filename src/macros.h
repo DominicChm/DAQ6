@@ -22,8 +22,8 @@
 
 #define safeSet(var, val) {cli(); var = val; sei();}
 
-#define hiByte(num) {(uint8_t)(num & 0xFF)}
-#define loByte(num) {(uint8_t)((num >> 8) & 0xFF)}
+#define hiByte(num) {(uint8_t)((num >> 8) & 0xFF)}
+#define loByte(num) {(uint8_t)(num & 0xFF)}
 
 #define SET_STATE(newstate) {lastState = state; state=newstate;}
 #define SET_STATE_IF(conditional, newstate) {if(conditional){SET_STATE(newstate); break;}}

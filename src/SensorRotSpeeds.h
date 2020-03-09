@@ -57,7 +57,7 @@ public:
             buffer[7] = hiByte(frws);
             buffer[8] = loByte(frws);
 
-            
+
             sensorPrint("RotSpeeds: ");
             sensorPrint(ews);
             sensorPrint(", ");
@@ -84,4 +84,7 @@ public:
     void calcFLWheel() {flWheelSpeed->calc();}
 
     void calcFRWheel() {frWheelSpeed->calc();}
+
+        virtual void start(){;}
+    virtual void stop(){;}
 };

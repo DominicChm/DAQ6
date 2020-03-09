@@ -94,7 +94,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 //Defines size of contiguous buffer that holds blocks. Basically one big array accessed in chunks.
 #define BUFFER_SIZE BLOCK_COUNT * BLOCK_SIZE
 
-#define SERIAL_TIMEOUT 20000
+#define SERIAL_TIMEOUT 10000
 
 /*=*=*=*SECTION COMPILE-TIME CHECKS*=*=*=*/
 

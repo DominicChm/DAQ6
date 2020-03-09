@@ -46,5 +46,6 @@ public:
         */
        return 0;
     } //Writes a packet to the buffer, returns the size of data written.
-
+        virtual void start(){;}
+    virtual void stop(){;}
 };
