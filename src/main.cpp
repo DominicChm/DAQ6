@@ -19,18 +19,18 @@
 #include <ChRt.h>
 MUTEX_DECL(QueueMod_Mtx);
 
-//The queues hold pointers to the starting addresses of each block of size BLOCK_SIZE is blockBuf.
+//The queues hold pointers to the starting addresses of each block of size BLOCK_SIZE in blockBuf.
 //This is done to optimize performance and simplify later code.
-//These pointers, once initialized, will basically go back and forth between
+//These pointers, once initialized, will basically be passed back and forth between
 //the emptyQueue and the writeQueue
 Queue<uint8_t*> writeQueue = Queue<uint8_t*>(BLOCK_COUNT);
 Queue<uint8_t*> emptyQueue = Queue<uint8_t*>(BLOCK_COUNT);
 
-//Holds the blocks accessed through pointers in the write/empty queue
+//Holds the actual memeory of the blocks accessed through pointers in the write/empty queue
 uint8_t blockBuf[BUFFER_SIZE];
 
 Sensor* sensors[SENSOR_ARR_SIZE];
-uint16_t numSensors = 0;
+uint16_t numSensors = 0; //BC sensors are semi-dynamically created (through config),
 
 
 uint8_t packetBuf[MAX_PACKET_SIZE];
@@ -46,7 +46,9 @@ volatile bool isLogging = false;
 /*Func defs*/
 void fsmWriter();
 
-
+/*Takes two paremeters - a pointer to a buffer and a size - and
+writes the passed buffer into blocks within the block buffer, moving blocks from 
+the empty buffer to the full buffer as they fill.*/
 void queueBuf(uint8_t* buf, uint16_t size) {
     static uint8_t* currentBlock = emptyQueue.pop(); //On init, get an empty block.
     static uint32_t currentInd = 0;
@@ -58,7 +60,6 @@ void queueBuf(uint8_t* buf, uint16_t size) {
 
         //If we have filled the block, push it to the write queue and get an empty one.
         if(currentInd >= BLOCK_SIZE) {
-            //Serial.println("Block filled, getting new.");
 
             //If there's an empty block we can write to, pop it make it ours owo.
             if(emptyQueue.count() > 0) {
@@ -76,7 +77,7 @@ void queueBuf(uint8_t* buf, uint16_t size) {
     }
 }
 
-
+/*Reader Thread - every SAMPLE_INTERVAL ms this function will run, recording sensor data into the block buffer.*/
 THD_WORKING_AREA(readerWa, 512);
 THD_FUNCTION(reader, arg) {
     static systime_t nextRead = chVTGetSystemTime();
@@ -251,7 +252,7 @@ void fsmWriter() {
             
             SelectNextFilename( fileName, &sd);
             
-            //Open the selected fileName
+            //Open the selected fileName. If there's an error, signal it.
             SET_STATE_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_SIGNAL_SD_ERR);
 
             //Initialize all sensors for this run.
@@ -308,6 +309,7 @@ void fsmWriter() {
             file.truncate();
             file.sync();
             file.close();
+
             //Denitialize all sensors for this run.
             for(uint8_t i = 0; i < numSensors; i++) {
                 sensors[i]->stop();
