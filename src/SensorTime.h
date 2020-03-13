@@ -25,4 +25,5 @@ public:
         offset = millis();
     }
     virtual void stop(){;}
+    virtual void loop(){;}
 };

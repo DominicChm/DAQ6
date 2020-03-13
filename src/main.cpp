@@ -6,12 +6,15 @@
 #include "macros.h"
 #include "LED.h"
 
+
 /*Sensors*/
 #include "Sensor.h"
 #include "SensorTime.h"
 #include "SensorMarker.h"
 #include "SensorBrakePressure.h"
 #include "SensorRotSpeeds.h"
+#include "SensorMPU6050.h"
+
 #include "DebouncedButton.h"
 
 
@@ -36,9 +39,6 @@ uint16_t numSensors = 0; //BC sensors are semi-dynamically created (through conf
 uint8_t packetBuf[MAX_PACKET_SIZE];
 
 LED statusLed(PIN_STATUS_LED);
-
-const uint32_t PREALLOCATE_SIZE_MiB = 2UL;
-const uint64_t PREALLOCATE_SIZE  =  (uint64_t)PREALLOCATE_SIZE_MiB << 20;
 
 volatile bool isLogging = false;
 
@@ -77,18 +77,23 @@ void queueBuf(uint8_t* buf, uint16_t size) {
     }
 }
 
+
+
+
 /*Reader Thread - every SAMPLE_INTERVAL ms this function will run, recording sensor data into the block buffer.*/
 THD_WORKING_AREA(readerWa, 512);
 THD_FUNCTION(reader, arg) {
     static systime_t nextRead = chVTGetSystemTime();
     while(true) {
+        uint16_t size = BufferPacket(packetBuf, sensors, numSensors);
+        sensorPrint("\n");
         if(isLogging) {
-            uint16_t size = BufferPacket(packetBuf, sensors, numSensors);
-            sensorPrint("\n");
             chMtxLock(&QueueMod_Mtx);
             queueBuf(packetBuf, size);
             chMtxUnlock(&QueueMod_Mtx);
         }
+
+
         nextRead += TIME_MS2I(SAMPLE_INTERVAL);
         chThdSleepUntil(nextRead);
     }
@@ -96,16 +101,22 @@ THD_FUNCTION(reader, arg) {
 }
 
 
+
+
 void chMain() {
     Serial.println("Starting!");
     chThdCreateStatic(readerWa, sizeof(readerWa), READER_PRIORITY, reader, NULL);
 
     while(true) {
-
+        for(int i = 0; i < numSensors; i++) {
+            sensors[i]->loop();
+        }
         fsmWriter();
         statusLed.tick();
     }
 }
+
+
 
 void setup() {
     Serial.begin(250000);
@@ -133,6 +144,7 @@ void setup() {
     #endif
     
     #ifdef SENSOR_ROTATIONSPEEDS 
+    {
         static uint16_t index = numSensors++; //Get an index to reference the rotationspeed sensor.
         sensors[index] = new SensorRotSpeeds();
 
@@ -145,6 +157,19 @@ void setup() {
         attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_RGO), rWheelISR, RISING);
         attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFL), lFrontISR, RISING);
         attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFR), rFrontISR, RISING);
+    }
+    #endif
+
+    #ifdef SENSOR_MPU6050
+    {
+        static uint16_t index = numSensors++; //Get an index to reference the rotationspeed sensor.
+        sensors[index] = new SensorMPU6050();
+
+        
+        auto mpuISR = [](){ ((SensorMPU6050*) sensors[index])->dataReady(); };
+
+        attachInterrupt(digitalPinToInterrupt(20), mpuISR, RISING);
+    }
     #endif
 
     Serial.print(numSensors);
@@ -179,29 +204,22 @@ void fsmWriter() {
     static const int STATE_WRITING = 4; 
     static const int STATE_STOPPING = 5; 
 
-    //Negitive states are error states
+    //Negitive states are error(ish) states
     static const int STATE_WAITING_FOR_SD_INIT = -1;
     static const int STATE_SIGNAL_SD_ERR = -2;
 
-
-
+    //Handles debouncing of the logger toggle button.
     static DebouncedButton loggerBtn(PIN_LOGGER_BTN, false);
 
-    STATE_DEFINITIONS;
+    STATE_DEFINITIONS; //Defines variables needed for state machine function.
 
     static SD_TYPE sd;
     static FILE_TYPE file;
 
     static LED writerLed(PIN_LOGGER_LED);
 
-    //debugl(state);
-
     switch (state){
         case INITIALIZING_SD: {
-            ON_STATE_ENTER({
-                //if(file) {file.close();}
-            });
-            
             debugl("Trying start...");
             if(sd.begin(254)) {
                 SET_STATE(STATE_STARTING);

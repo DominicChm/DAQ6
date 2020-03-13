@@ -29,6 +29,8 @@ public:
         nextTriggerable = millis();
     };
 
+
+    /*When polled, this function will return true once per button press cycle.*/
     bool isTriggered() { //TODO - Consider using an interrupt? Would make the lib less portable...
         if( (millis() > nextTriggerable ) && (digitalRead(buttonPin) == triggeredOn) ) {
             nextTriggerable = millis() + debounceMs;

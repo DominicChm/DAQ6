@@ -48,4 +48,5 @@ public:
     } //Writes a packet to the buffer, returns the size of data written.
         virtual void start(){;}
     virtual void stop(){;}
+    virtual void loop(){;}
 };
