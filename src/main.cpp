@@ -341,6 +341,3 @@ void fsmWriter() {
 
     writerLed.tick();
 }
-
-
-

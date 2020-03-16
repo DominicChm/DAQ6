@@ -11,11 +11,9 @@ private:
     float ypr[3];           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
     Quaternion q;           // [w, x, y, z]         quaternion container
     VectorInt16 aa;         // [x, y, z]            accel sensor measurements
-    VectorInt16 gy;         // [x, y, z]            gyro sensor measurements
     VectorInt16 aaReal;     // [x, y, z]            gravity-free accel sensor measurements
     VectorInt16 aaWorld;    // [x, y, z]            world-frame accel sensor measurements
     VectorFloat gravity;    // [x, y, z]            gravity vector
-    float euler[3];         // [psi, theta, phi]    Euler angle container
 
     MPU6050 mpu;
     uint8_t devStatus;
@@ -29,6 +27,7 @@ private:
 
 public:
     SensorMPU6050() {
+        /*Setup I2C for the MPU*/
         Wire.begin();
         Wire.setClock(400000); 
 
@@ -39,6 +38,7 @@ public:
 
         devStatus = mpu.dmpInitialize();
 
+        /*Set offsets*/
         mpu.setXGyroOffset(51);
         mpu.setYGyroOffset(8);
         mpu.setZGyroOffset(21);
@@ -74,7 +74,6 @@ public:
         sensorPrint(" Roll: ");
         sensorPrint(ypr[2]);
         sensorPrint("\t");
-            
         
         return 0;
     }
@@ -110,7 +109,12 @@ public:
 
 
                     mpu.dmpGetQuaternion(&q, fifoBuffer);
+                    mpu.dmpGetAccel(&aa, fifoBuffer);
                     mpu.dmpGetGravity(&gravity, &q);
+
+                    mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
+                    mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
+
                     mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
                 }
             }
