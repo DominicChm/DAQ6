@@ -1,0 +1,237 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" is a file, not a directory.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/-c" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" is a file, not a directory.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+CMake Error: Parse error in command line argument: -D__CLASSIC_C__
+Should be: VAR:type=value
+
+CMake Error: Problem processing arguments. Aborting.
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/-mcpu=cortex-m3" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" is a file, not a directory.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/-c" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.c" is a file, not a directory.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+1
+CMake Error: Parse error in command line argument: -D__CLASSIC_C__
+Should be: VAR:type=value
+
+CMake Error: Problem processing arguments. Aborting.
+
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: C:/Program Files/CMake/bin/cmake.exe 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+1
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CompilerIdC/-mcpu=cortex-m3" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+  cmake [options] -S <path-to-source> -B <path-to-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+  cmake [options] -S <path-to-source> -B <path-to-build>
+
+Specify a source directory to (re-)generate a build system for it in the
+current working directory.  Specify an existing build directory to
+re-generate its build system.
+
+Run 'cmake --help' for more information.
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_6b013/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_6b013.dir\build.make CMakeFiles/cmTC_6b013.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6b013.dir/CMakeCCompilerABI.c.obj
+C:\PROGRA~1\CMake\bin\cmake.exe    -o CMakeFiles\cmTC_6b013.dir\CMakeCCompilerABI.c.obj -c "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\share\cmake-3.20\Modules\CMakeCCompilerABI.c"
+CMake Error: The source directory "C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp/-c" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+CMakeFiles\cmTC_6b013.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_6b013.dir/CMakeCCompilerABI.c.obj' failed
+mingw32-make.exe[1]: *** [CMakeFiles/cmTC_6b013.dir/CMakeCCompilerABI.c.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6b013/fast' failed
+mingw32-make.exe: *** [cmTC_6b013/fast] Error 2
+
+
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_a9d82/fast && C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_a9d82.dir\build.make CMakeFiles/cmTC_a9d82.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a9d82.dir/CMakeCXXCompilerABI.cpp.obj
+C:\MinGW\bin\g++.exe   -v -o CMakeFiles\cmTC_a9d82.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"
+Using built-in specs.
+COLLECT_GCC=C:\MinGW\bin\g++.exe
+Target: mingw32
+Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --with-gmp=/mingw --with-mpfr=/mingw --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --target=mingw32 --with-arch=i586 --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --with-tune=generic --enable-libgomp --disable-libvtv --enable-nls
+Thread model: win32
+gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a9d82.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/cc1plus.exe -quiet -v -iprefix c:\mingw\bin\../lib/gcc/mingw32/6.3.0/ C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=i586 -auxbase-strip CMakeFiles\cmTC_a9d82.dir\CMakeCXXCompilerABI.cpp.obj -version -o C:\Users\Domo2\AppData\Local\Temp\ccasl08s.s
+GNU C++14 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.2, isl version 0.15
+warning: MPC header version 1.0.2 differs from library version 1.0.3.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include/c++"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include/c++/mingw32"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include/c++/backward"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include"
+ignoring duplicate directory "/mingw/lib/gcc/mingw32/6.3.0/../../../../include"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../include"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include-fixed"
+ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"
+ignoring duplicate directory "/mingw/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed
+ c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include
+End of search list.
+GNU C++14 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.2, isl version 0.15
+warning: MPC header version 1.0.2 differs from library version 1.0.3.
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: af09a87986453bf79da3565f33c7648f
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a9d82.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/as.exe -v -o CMakeFiles\cmTC_a9d82.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\Domo2\AppData\Local\Temp\ccasl08s.s
+GNU assembler version 2.28 (mingw32) using BFD version (GNU Binutils) 2.28
+COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_a9d82.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=i586'
+Linking CXX executable cmTC_a9d82
+"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a9d82.dir\link.txt --verbose=1
+C:\MinGW\bin\g++.exe  -v CMakeFiles/cmTC_a9d82.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_a9d82 
+Using built-in specs.
+COLLECT_GCC=C:\MinGW\bin\g++.exe
+COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
+Target: mingw32
+Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --with-gmp=/mingw --with-mpfr=/mingw --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --target=mingw32 --with-arch=i586 --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --with-tune=generic --enable-libgomp --disable-libvtv --enable-nls
+Thread model: win32
+gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9d82.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\Domo2\AppData\Local\Temp\ccsFv1fJ.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_a9d82.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. CMakeFiles/cmTC_a9d82.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9d82.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp'
+
+
+Cannot copy output executable
+  ''
+to destination specified by COPY_FILE:
+  'C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/3.20.2/CMakeDetermineCompilerABI_CXX.bin'
+Unable to find the executable at any of:
+  C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp/cmTC_a9d82
+  C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp/Debug/cmTC_a9d82
+  C:/Users/Domo2/Documents/PlatformIO/Projects/DAQ6/cmake-build-teensy35/CMakeFiles/CMakeTmp/Development/cmTC_a9d82
+
+

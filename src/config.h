@@ -60,7 +60,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 /*SENSOR CONFIG*/
 
 //Sample interval in ms.
-#define SAMPLE_INTERVAL 10
+#define SAMPLE_INTERVAL 1000/30
 
 //Comment a define to disable a sensor.
 #define SENSOR_TIME

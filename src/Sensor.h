@@ -6,8 +6,8 @@
 class Sensor
 {
 public:
-    Sensor(/* args */) {};
-    ~Sensor() {}
+    Sensor(/* args */) = default;;
+    ~Sensor() = default;
 
     virtual uint16_t readPacketBlock(uint8_t* buffer) = 0; //Writes a packet to the buffer, returns the size of data written.
     virtual void start() = 0;

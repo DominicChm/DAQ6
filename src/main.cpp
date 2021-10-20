@@ -101,9 +101,7 @@ THD_FUNCTION(reader, arg) {
 }
 
 
-
-
-void chMain() {
+[[noreturn]] void chMain() {
     Serial.println("Starting!");
     chThdCreateStatic(readerWa, sizeof(readerWa), READER_PRIORITY, reader, NULL);
 
@@ -119,7 +117,7 @@ void chMain() {
 
 
 void setup() {
-    Serial.begin(250000);
+    Serial.begin(115200);
 
     uint32_t timeoutAt = millis() + SERIAL_TIMEOUT;
     statusLed.setState(LED::FAST_BLINK);
@@ -164,11 +162,8 @@ void setup() {
     {
         static uint16_t index = numSensors++; //Get an index to reference the rotationspeed sensor.
         sensors[index] = new SensorMPU6050();
-
-        
         auto mpuISR = [](){ ((SensorMPU6050*) sensors[index])->dataReady(); };
-
-        attachInterrupt(digitalPinToInterrupt(20), mpuISR, RISING);
+        attachInterrupt(digitalPinToInterrupt(A17), mpuISR, RISING);
     }
     #endif
 
@@ -197,8 +192,8 @@ void loop() {
 
 void fsmWriter() {
     //Positive states are OK states
-    static const int INITIALIZING_SD = 0;
-    static const int STATE_WAITING_TO_START = 1; 
+    static const int STATE_WAITING_TO_START = 0;
+    static const int INITIALIZING_SD = 1;
     static const int STATE_STARTING = 2; 
     static const int STATE_WAITING_TO_STOP = 3; 
     static const int STATE_WRITING = 4; 
