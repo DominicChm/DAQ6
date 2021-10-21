@@ -1,41 +1,41 @@
 #include <Arduino.h>
 
-class DebouncedButton
-{
+class DebouncedButton {
 private:
-    uint32_t nextTriggerable = 0;
-    bool triggeredOn     = LOW; 
-    uint8_t buttonPin    ;
-    uint8_t pinmode      ;
-    uint32_t debounceMs  ;
+    uint32_t next_trigger = 0;
+    bool triggeredOn = LOW;
+    uint8_t buttonPin;
+    uint8_t pin_mode;
+    uint32_t debounceMs;
+    bool debounced{};
 public:
-    DebouncedButton(uint8_t buttonPin, bool inverted = false, uint8_t pinmode = INPUT_PULLUP, uint32_t debounceMs = 1000) {
+    explicit DebouncedButton(uint8_t buttonPin, bool inverted = false, uint8_t pin_mode = INPUT_PULLUP,
+                    uint32_t debounceMs = 1000) {
         this->buttonPin = buttonPin;
-        this->pinmode = pinmode;
+        this->pin_mode = pin_mode;
         this->debounceMs = debounceMs;
 
-        switch (pinmode)
-        {
-            case INPUT_PULLUP:
-                triggeredOn = inverted ? HIGH : LOW;
-                break;
-            case INPUT_PULLDOWN:
-                triggeredOn = inverted ? LOW : HIGH;
-                break;
-        }
+
+        if (pin_mode == INPUT_PULLUP)
+            triggeredOn = inverted ? HIGH : LOW;
+        else
+            triggeredOn = inverted ? LOW : HIGH;
 
 
-        pinMode(buttonPin, pinmode);
-        nextTriggerable = millis();
+        pinMode(buttonPin, pin_mode);
+        next_trigger = millis();
     };
 
 
     /*When polled, this function will return true once per button press cycle.*/
     bool isTriggered() { //TODO - Consider using an interrupt? Would make the lib less portable...
-        if( (millis() > nextTriggerable ) && (digitalRead(buttonPin) == triggeredOn) ) {
-            nextTriggerable = millis() + debounceMs;
+        debounced &= digitalRead(buttonPin) == triggeredOn; //Prevent multiple triggers without at least one state change.
+
+        if ((millis() > next_trigger) && (digitalRead(buttonPin) == triggeredOn) && !debounced) {
+            next_trigger = millis() + debounceMs;
+            debounced = true;
             return true;
         } else return false;
-        
+
     };
 };

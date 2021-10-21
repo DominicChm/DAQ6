@@ -3,15 +3,19 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
-class Sensor
-{
+class Sensor {
+protected:
+    uint8_t id;
 public:
-    Sensor(/* args */) = default;;
-    ~Sensor() = default;
+    explicit Sensor(uint8_t id) : id(id) {};
 
-    virtual uint16_t readPacketBlock(uint8_t* buffer) = 0; //Writes a packet to the buffer, returns the size of data written.
+    //Writes a packet to the buffer, returns the size of data written.
+    virtual uint16_t readPacketBlock(uint8_t *buffer) = 0;
+
     virtual void start() = 0;
+
     virtual void stop() = 0;
+
     virtual void loop() = 0;
 };
 

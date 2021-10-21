@@ -34,33 +34,44 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 #define READER_PRIORITY NORMALPRIO + 10
 
 /***PIN CONFIG***/
-    //Pin config for logger control - toggling and status.
-        #define PIN_LOGGER_LED 4
-        #define PIN_LOGGER_BTN 2
-    
-    //Pin for auxillary status LED - 13 is internal Teensy LED
-        #define PIN_STATUS_LED 13
+//TODO: SPI.setMOSI(pin), SPI.setMISO(pin), and SPI.setSCK(pin)
+//NRF24l01+ Pin Config
+#define PIN_NRF_CE 35
+#define PIN_NRF_CS 15
+#define PIN_NRF_IRQ 12
 
-    //Marker button pin. 
-        #define PIN_MARKER_BTN 3
-    
-    //Pins for the wheelspeed sensors. These are just hall effect sensors.
-    //ENG = engine, RGO = Rear Gearbox Output, WFL = Wheel Front Left, WFR = Wheel Front Right
-        #define PIN_RSPEED_ENG  5
-        #define PIN_RSPEED_RGO  6
-        #define PIN_RSPEED_WFL 29
-        #define PIN_RSPEED_WFR 30
-    
-    //Brake Pressure transducer pins
-        #define PIN_BPRESSURE_F 34
-        #define PIN_BPRESSURE_R 33
+//SD Card config - 254 is Teensy default CS pin.
+#define PIN_SD_CS 254
 
+//Pin config for logger control - toggling and status.
+#define PIN_LOGGER_LED 4
+#define PIN_LOGGER_BTN 2
 
+//Pin for auxillary status LED - 13 is internal Teensy LED
+#define PIN_STATUS_LED 13
+
+//Marker button pin.
+#define PIN_MARKER_BTN 3
+#define PIN_MARKER_LED 17 //<FILL THIS IN LATER!!!!!!>
+
+//Pins for the wheelspeed sensors. These are just hall effect sensors.
+//ENG = engine, RGO = Rear Gearbox Output, WFL = Wheel Front Left, WFR = Wheel Front Right
+#define PIN_RSPEED_ENG  5
+#define PIN_RSPEED_RGO  6
+#define PIN_RSPEED_WFL 29
+#define PIN_RSPEED_WFR 30
+
+//Brake Pressure transducer pins
+#define PIN_BPRESSURE_F 34
+#define PIN_BPRESSURE_R 33
+
+//MPU6050
+#define PIN_MPU6050_IRQ A17
 
 /*SENSOR CONFIG*/
 
 //Sample interval in ms.
-#define SAMPLE_INTERVAL 1000/30
+#define SAMPLE_INTERVAL 1000/10
 
 //Comment a define to disable a sensor.
 #define SENSOR_TIME
@@ -71,7 +82,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 #define SENSOR_BRAKEPRESSURE
 
-#define SENSOR_ROTATIONSPEEDS
+//#define SENSOR_ROTATIONSPEEDS
 
 #define SENSOR_MPU6050
 

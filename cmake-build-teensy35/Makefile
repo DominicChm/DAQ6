@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6
+CMAKE_SOURCE_DIR = C:\Users\Domo2\CLionProjects\DAQ6
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35
+CMAKE_BINARY_DIR = C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35\CMakeFiles C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35\CMakeFiles C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -154,1397 +154,3581 @@ Z_DUMMY_TARGET/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/build
 .PHONY : Z_DUMMY_TARGET/fast
 
-lib/ChRt-master/extra/src_org/arm/chcore_v6m.obj: lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v6m.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.obj
 
-lib/ChRt-master/extra/src_org/arm/chcore_v6m.i: lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.i
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v6m.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.i: .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.i
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.i
 
-lib/ChRt-master/extra/src_org/arm/chcore_v6m.s: lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.s
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v6m.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.s: .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.s
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v6m.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.c.s
 
-lib/ChRt-master/extra/src_org/arm/chcore_v7m.obj: lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v7m.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.obj
 
-lib/ChRt-master/extra/src_org/arm/chcore_v7m.i: lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.i
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v7m.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.i: .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.i
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.i
 
-lib/ChRt-master/extra/src_org/arm/chcore_v7m.s: lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.s
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v7m.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.s: .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.s
-.PHONY : lib/ChRt-master/extra/src_org/arm/chcore_v7m.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.c.s
 
-lib/ChRt-master/extra/src_org/avr/chcore.obj: lib/ChRt-master/extra/src_org/avr/chcore.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/avr/chcore.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/avr/chcore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/avr/chcore.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/avr/chcore.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.obj
 
-lib/ChRt-master/extra/src_org/avr/chcore.i: lib/ChRt-master/extra/src_org/avr/chcore.c.i
-.PHONY : lib/ChRt-master/extra/src_org/avr/chcore.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.i: .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/avr/chcore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/avr/chcore.c.i
-.PHONY : lib/ChRt-master/extra/src_org/avr/chcore.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.i
 
-lib/ChRt-master/extra/src_org/avr/chcore.s: lib/ChRt-master/extra/src_org/avr/chcore.c.s
-.PHONY : lib/ChRt-master/extra/src_org/avr/chcore.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.s: .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/avr/chcore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/avr/chcore.c.s
-.PHONY : lib/ChRt-master/extra/src_org/avr/chcore.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.c.s
 
-lib/ChRt-master/extra/src_org/hal/hal_st.obj: lib/ChRt-master/extra/src_org/hal/hal_st.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/hal/hal_st.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/hal/hal_st.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/hal/hal_st.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/hal/hal_st.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.obj
 
-lib/ChRt-master/extra/src_org/hal/hal_st.i: lib/ChRt-master/extra/src_org/hal/hal_st.c.i
-.PHONY : lib/ChRt-master/extra/src_org/hal/hal_st.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.i: .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/hal/hal_st.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/hal/hal_st.c.i
-.PHONY : lib/ChRt-master/extra/src_org/hal/hal_st.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.i
 
-lib/ChRt-master/extra/src_org/hal/hal_st.s: lib/ChRt-master/extra/src_org/hal/hal_st.c.s
-.PHONY : lib/ChRt-master/extra/src_org/hal/hal_st.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.s: .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/hal/hal_st.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/hal/hal_st.c.s
-.PHONY : lib/ChRt-master/extra/src_org/hal/hal_st.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.c.s
 
-lib/ChRt-master/extra/src_org/oslib/src/chfactory.obj: lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chfactory.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.obj
 
-lib/ChRt-master/extra/src_org/oslib/src/chfactory.i: lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chfactory.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.i
 
-lib/ChRt-master/extra/src_org/oslib/src/chfactory.s: lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chfactory.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chfactory.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.c.s
 
-lib/ChRt-master/extra/src_org/oslib/src/chmboxes.obj: lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmboxes.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.obj
 
-lib/ChRt-master/extra/src_org/oslib/src/chmboxes.i: lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmboxes.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.i
 
-lib/ChRt-master/extra/src_org/oslib/src/chmboxes.s: lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmboxes.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmboxes.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.c.s
 
-lib/ChRt-master/extra/src_org/oslib/src/chmemcore.obj: lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemcore.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.obj
 
-lib/ChRt-master/extra/src_org/oslib/src/chmemcore.i: lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemcore.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.i
 
-lib/ChRt-master/extra/src_org/oslib/src/chmemcore.s: lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemcore.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemcore.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.c.s
 
-lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.obj: lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.obj
 
-lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.i: lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.i
 
-lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.s: lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.c.s
 
-lib/ChRt-master/extra/src_org/oslib/src/chmempools.obj: lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmempools.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.obj
 
-lib/ChRt-master/extra/src_org/oslib/src/chmempools.i: lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmempools.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.i
 
-lib/ChRt-master/extra/src_org/oslib/src/chmempools.s: lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmempools.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chmempools.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.c.s
 
-lib/ChRt-master/extra/src_org/oslib/src/chpipes.obj: lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chpipes.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.obj
 
-lib/ChRt-master/extra/src_org/oslib/src/chpipes.i: lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chpipes.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.i
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.i
 
-lib/ChRt-master/extra/src_org/oslib/src/chpipes.s: lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chpipes.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.s
-.PHONY : lib/ChRt-master/extra/src_org/oslib/src/chpipes.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chcond.obj: lib/ChRt-master/extra/src_org/rt/src/chcond.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chcond.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chcond.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chcond.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chcond.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chcond.i: lib/ChRt-master/extra/src_org/rt/src/chcond.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chcond.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chcond.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chcond.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chcond.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chcond.s: lib/ChRt-master/extra/src_org/rt/src/chcond.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chcond.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chcond.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chcond.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chcond.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chdebug.obj: lib/ChRt-master/extra/src_org/rt/src/chdebug.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdebug.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chdebug.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chdebug.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdebug.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chdebug.i: lib/ChRt-master/extra/src_org/rt/src/chdebug.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdebug.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.i: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chdebug.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chdebug.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdebug.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chdebug.s: lib/ChRt-master/extra/src_org/rt/src/chdebug.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdebug.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.s: .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chdebug.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chdebug.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdebug.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chdynamic.obj: lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdynamic.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chdynamic.i: lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdynamic.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chdynamic.s: lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdynamic.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chdynamic.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chevents.obj: lib/ChRt-master/extra/src_org/rt/src/chevents.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chevents.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chevents.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chevents.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chevents.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chevents.i: lib/ChRt-master/extra/src_org/rt/src/chevents.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chevents.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chevents.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chevents.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chevents.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chevents.s: lib/ChRt-master/extra/src_org/rt/src/chevents.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chevents.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chevents.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chevents.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chevents.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chmsg.obj: lib/ChRt-master/extra/src_org/rt/src/chmsg.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmsg.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chmsg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chmsg.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmsg.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chmsg.i: lib/ChRt-master/extra/src_org/rt/src/chmsg.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmsg.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chmsg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chmsg.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmsg.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chmsg.s: lib/ChRt-master/extra/src_org/rt/src/chmsg.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmsg.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chmsg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chmsg.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmsg.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chmtx.obj: lib/ChRt-master/extra/src_org/rt/src/chmtx.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmtx.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chmtx.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chmtx.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmtx.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chmtx.i: lib/ChRt-master/extra/src_org/rt/src/chmtx.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmtx.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chmtx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chmtx.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmtx.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chmtx.s: lib/ChRt-master/extra/src_org/rt/src/chmtx.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmtx.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chmtx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chmtx.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chmtx.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chregistry.obj: lib/ChRt-master/extra/src_org/rt/src/chregistry.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chregistry.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chregistry.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chregistry.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chregistry.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chregistry.i: lib/ChRt-master/extra/src_org/rt/src/chregistry.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chregistry.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chregistry.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chregistry.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chregistry.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chregistry.s: lib/ChRt-master/extra/src_org/rt/src/chregistry.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chregistry.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chregistry.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chregistry.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chregistry.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chschd.obj: lib/ChRt-master/extra/src_org/rt/src/chschd.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chschd.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chschd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chschd.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chschd.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chschd.i: lib/ChRt-master/extra/src_org/rt/src/chschd.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chschd.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chschd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chschd.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chschd.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chschd.s: lib/ChRt-master/extra/src_org/rt/src/chschd.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chschd.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chschd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chschd.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chschd.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chsem.obj: lib/ChRt-master/extra/src_org/rt/src/chsem.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsem.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chsem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chsem.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsem.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chsem.i: lib/ChRt-master/extra/src_org/rt/src/chsem.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsem.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chsem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chsem.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsem.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chsem.s: lib/ChRt-master/extra/src_org/rt/src/chsem.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsem.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chsem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chsem.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsem.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chstats.obj: lib/ChRt-master/extra/src_org/rt/src/chstats.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chstats.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chstats.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chstats.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chstats.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chstats.i: lib/ChRt-master/extra/src_org/rt/src/chstats.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chstats.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chstats.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chstats.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chstats.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chstats.s: lib/ChRt-master/extra/src_org/rt/src/chstats.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chstats.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chstats.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chstats.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chstats.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chsys.obj: lib/ChRt-master/extra/src_org/rt/src/chsys.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsys.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chsys.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chsys.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsys.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chsys.i: lib/ChRt-master/extra/src_org/rt/src/chsys.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsys.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chsys.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chsys.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsys.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chsys.s: lib/ChRt-master/extra/src_org/rt/src/chsys.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsys.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chsys.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chsys.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chsys.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chthreads.obj: lib/ChRt-master/extra/src_org/rt/src/chthreads.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chthreads.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chthreads.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chthreads.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chthreads.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chthreads.i: lib/ChRt-master/extra/src_org/rt/src/chthreads.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chthreads.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chthreads.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chthreads.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chthreads.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chthreads.s: lib/ChRt-master/extra/src_org/rt/src/chthreads.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chthreads.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chthreads.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chthreads.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chthreads.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chtm.obj: lib/ChRt-master/extra/src_org/rt/src/chtm.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtm.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chtm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chtm.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtm.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chtm.i: lib/ChRt-master/extra/src_org/rt/src/chtm.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtm.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chtm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chtm.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtm.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chtm.s: lib/ChRt-master/extra/src_org/rt/src/chtm.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtm.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chtm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chtm.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtm.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chtrace.obj: lib/ChRt-master/extra/src_org/rt/src/chtrace.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtrace.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chtrace.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chtrace.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtrace.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chtrace.i: lib/ChRt-master/extra/src_org/rt/src/chtrace.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtrace.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chtrace.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chtrace.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtrace.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chtrace.s: lib/ChRt-master/extra/src_org/rt/src/chtrace.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtrace.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chtrace.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chtrace.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chtrace.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.c.s
 
-lib/ChRt-master/extra/src_org/rt/src/chvt.obj: lib/ChRt-master/extra/src_org/rt/src/chvt.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chvt.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.obj
 
 # target to build an object file
-lib/ChRt-master/extra/src_org/rt/src/chvt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chvt.c.obj
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chvt.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.obj
 
-lib/ChRt-master/extra/src_org/rt/src/chvt.i: lib/ChRt-master/extra/src_org/rt/src/chvt.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chvt.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.i
 
 # target to preprocess a source file
-lib/ChRt-master/extra/src_org/rt/src/chvt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chvt.c.i
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chvt.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.i
 
-lib/ChRt-master/extra/src_org/rt/src/chvt.s: lib/ChRt-master/extra/src_org/rt/src/chvt.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chvt.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.s
 
 # target to generate assembly for a file
-lib/ChRt-master/extra/src_org/rt/src/chvt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/extra/src_org/rt/src/chvt.c.s
-.PHONY : lib/ChRt-master/extra/src_org/rt/src/chvt.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.c.s
 
-lib/ChRt-master/src/ChAvrMinSerial.obj: lib/ChRt-master/src/ChAvrMinSerial.cpp.obj
-.PHONY : lib/ChRt-master/src/ChAvrMinSerial.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.obj
 
 # target to build an object file
-lib/ChRt-master/src/ChAvrMinSerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChAvrMinSerial.cpp.obj
-.PHONY : lib/ChRt-master/src/ChAvrMinSerial.cpp.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.obj
 
-lib/ChRt-master/src/ChAvrMinSerial.i: lib/ChRt-master/src/ChAvrMinSerial.cpp.i
-.PHONY : lib/ChRt-master/src/ChAvrMinSerial.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/ChAvrMinSerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChAvrMinSerial.cpp.i
-.PHONY : lib/ChRt-master/src/ChAvrMinSerial.cpp.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.i
 
-lib/ChRt-master/src/ChAvrMinSerial.s: lib/ChRt-master/src/ChAvrMinSerial.cpp.s
-.PHONY : lib/ChRt-master/src/ChAvrMinSerial.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/ChAvrMinSerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChAvrMinSerial.cpp.s
-.PHONY : lib/ChRt-master/src/ChAvrMinSerial.cpp.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.c.s
 
-lib/ChRt-master/src/ChRt.obj: lib/ChRt-master/src/ChRt.c.obj
-.PHONY : lib/ChRt-master/src/ChRt.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.obj
 
 # target to build an object file
-lib/ChRt-master/src/ChRt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChRt.c.obj
-.PHONY : lib/ChRt-master/src/ChRt.c.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.obj
 
-lib/ChRt-master/src/ChRt.i: lib/ChRt-master/src/ChRt.c.i
-.PHONY : lib/ChRt-master/src/ChRt.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/ChRt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChRt.c.i
-.PHONY : lib/ChRt-master/src/ChRt.c.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.i
 
-lib/ChRt-master/src/ChRt.s: lib/ChRt-master/src/ChRt.c.s
-.PHONY : lib/ChRt-master/src/ChRt.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/ChRt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChRt.c.s
-.PHONY : lib/ChRt-master/src/ChRt.c.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.c.s
 
-lib/ChRt-master/src/ChRt.obj: lib/ChRt-master/src/ChRt.cpp.obj
-.PHONY : lib/ChRt-master/src/ChRt.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.obj: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.obj
 
 # target to build an object file
-lib/ChRt-master/src/ChRt.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChRt.cpp.obj
-.PHONY : lib/ChRt-master/src/ChRt.cpp.obj
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.obj
 
-lib/ChRt-master/src/ChRt.i: lib/ChRt-master/src/ChRt.cpp.i
-.PHONY : lib/ChRt-master/src/ChRt.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.i: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/ChRt.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChRt.cpp.i
-.PHONY : lib/ChRt-master/src/ChRt.cpp.i
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.i
 
-lib/ChRt-master/src/ChRt.s: lib/ChRt-master/src/ChRt.cpp.s
-.PHONY : lib/ChRt-master/src/ChRt.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.s: .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/ChRt.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/ChRt.cpp.s
-.PHONY : lib/ChRt-master/src/ChRt.cpp.s
+.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.c.s
 
-lib/ChRt-master/src/arm/chcore_v6m.obj: lib/ChRt-master/src/arm/chcore_v6m.c.obj
-.PHONY : lib/ChRt-master/src/arm/chcore_v6m.obj
+.pio/libdeps/teensy35/ChRt/src/ChRt.obj: .pio/libdeps/teensy35/ChRt/src/ChRt.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.obj
 
 # target to build an object file
-lib/ChRt-master/src/arm/chcore_v6m.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/arm/chcore_v6m.c.obj
-.PHONY : lib/ChRt-master/src/arm/chcore_v6m.c.obj
+.pio/libdeps/teensy35/ChRt/src/ChRt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/ChRt.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.c.obj
 
-lib/ChRt-master/src/arm/chcore_v6m.i: lib/ChRt-master/src/arm/chcore_v6m.c.i
-.PHONY : lib/ChRt-master/src/arm/chcore_v6m.i
+.pio/libdeps/teensy35/ChRt/src/ChRt.i: .pio/libdeps/teensy35/ChRt/src/ChRt.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/arm/chcore_v6m.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/arm/chcore_v6m.c.i
-.PHONY : lib/ChRt-master/src/arm/chcore_v6m.c.i
+.pio/libdeps/teensy35/ChRt/src/ChRt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/ChRt.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.c.i
 
-lib/ChRt-master/src/arm/chcore_v6m.s: lib/ChRt-master/src/arm/chcore_v6m.c.s
-.PHONY : lib/ChRt-master/src/arm/chcore_v6m.s
+.pio/libdeps/teensy35/ChRt/src/ChRt.s: .pio/libdeps/teensy35/ChRt/src/ChRt.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/arm/chcore_v6m.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/arm/chcore_v6m.c.s
-.PHONY : lib/ChRt-master/src/arm/chcore_v6m.c.s
+.pio/libdeps/teensy35/ChRt/src/ChRt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/ChRt.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.c.s
 
-lib/ChRt-master/src/arm/chcore_v7m.obj: lib/ChRt-master/src/arm/chcore_v7m.c.obj
-.PHONY : lib/ChRt-master/src/arm/chcore_v7m.obj
+.pio/libdeps/teensy35/ChRt/src/ChRt.obj: .pio/libdeps/teensy35/ChRt/src/ChRt.cpp.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.obj
 
 # target to build an object file
-lib/ChRt-master/src/arm/chcore_v7m.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/arm/chcore_v7m.c.obj
-.PHONY : lib/ChRt-master/src/arm/chcore_v7m.c.obj
+.pio/libdeps/teensy35/ChRt/src/ChRt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/ChRt.cpp.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.cpp.obj
 
-lib/ChRt-master/src/arm/chcore_v7m.i: lib/ChRt-master/src/arm/chcore_v7m.c.i
-.PHONY : lib/ChRt-master/src/arm/chcore_v7m.i
+.pio/libdeps/teensy35/ChRt/src/ChRt.i: .pio/libdeps/teensy35/ChRt/src/ChRt.cpp.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/arm/chcore_v7m.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/arm/chcore_v7m.c.i
-.PHONY : lib/ChRt-master/src/arm/chcore_v7m.c.i
+.pio/libdeps/teensy35/ChRt/src/ChRt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/ChRt.cpp.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.cpp.i
 
-lib/ChRt-master/src/arm/chcore_v7m.s: lib/ChRt-master/src/arm/chcore_v7m.c.s
-.PHONY : lib/ChRt-master/src/arm/chcore_v7m.s
+.pio/libdeps/teensy35/ChRt/src/ChRt.s: .pio/libdeps/teensy35/ChRt/src/ChRt.cpp.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/arm/chcore_v7m.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/arm/chcore_v7m.c.s
-.PHONY : lib/ChRt-master/src/arm/chcore_v7m.c.s
+.pio/libdeps/teensy35/ChRt/src/ChRt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/ChRt.cpp.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/ChRt.cpp.s
 
-lib/ChRt-master/src/avr/chcore.obj: lib/ChRt-master/src/avr/chcore.c.obj
-.PHONY : lib/ChRt-master/src/avr/chcore.obj
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.obj: .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.obj
 
 # target to build an object file
-lib/ChRt-master/src/avr/chcore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/avr/chcore.c.obj
-.PHONY : lib/ChRt-master/src/avr/chcore.c.obj
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.obj
 
-lib/ChRt-master/src/avr/chcore.i: lib/ChRt-master/src/avr/chcore.c.i
-.PHONY : lib/ChRt-master/src/avr/chcore.i
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.i: .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/avr/chcore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/avr/chcore.c.i
-.PHONY : lib/ChRt-master/src/avr/chcore.c.i
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.i
 
-lib/ChRt-master/src/avr/chcore.s: lib/ChRt-master/src/avr/chcore.c.s
-.PHONY : lib/ChRt-master/src/avr/chcore.s
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.s: .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/avr/chcore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/avr/chcore.c.s
-.PHONY : lib/ChRt-master/src/avr/chcore.c.s
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.c.s
 
-lib/ChRt-master/src/avr/st_lld_avr.obj: lib/ChRt-master/src/avr/st_lld_avr.c.obj
-.PHONY : lib/ChRt-master/src/avr/st_lld_avr.obj
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.obj: .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.obj
 
 # target to build an object file
-lib/ChRt-master/src/avr/st_lld_avr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/avr/st_lld_avr.c.obj
-.PHONY : lib/ChRt-master/src/avr/st_lld_avr.c.obj
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.obj
 
-lib/ChRt-master/src/avr/st_lld_avr.i: lib/ChRt-master/src/avr/st_lld_avr.c.i
-.PHONY : lib/ChRt-master/src/avr/st_lld_avr.i
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.i: .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/avr/st_lld_avr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/avr/st_lld_avr.c.i
-.PHONY : lib/ChRt-master/src/avr/st_lld_avr.c.i
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.i
 
-lib/ChRt-master/src/avr/st_lld_avr.s: lib/ChRt-master/src/avr/st_lld_avr.c.s
-.PHONY : lib/ChRt-master/src/avr/st_lld_avr.s
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.s: .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/avr/st_lld_avr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/avr/st_lld_avr.c.s
-.PHONY : lib/ChRt-master/src/avr/st_lld_avr.c.s
+.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.c.s
 
-lib/ChRt-master/src/hal/hal_st.obj: lib/ChRt-master/src/hal/hal_st.c.obj
-.PHONY : lib/ChRt-master/src/hal/hal_st.obj
+.pio/libdeps/teensy35/ChRt/src/avr/chcore.obj: .pio/libdeps/teensy35/ChRt/src/avr/chcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/chcore.obj
 
 # target to build an object file
-lib/ChRt-master/src/hal/hal_st.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/hal/hal_st.c.obj
-.PHONY : lib/ChRt-master/src/hal/hal_st.c.obj
+.pio/libdeps/teensy35/ChRt/src/avr/chcore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/avr/chcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/chcore.c.obj
 
-lib/ChRt-master/src/hal/hal_st.i: lib/ChRt-master/src/hal/hal_st.c.i
-.PHONY : lib/ChRt-master/src/hal/hal_st.i
+.pio/libdeps/teensy35/ChRt/src/avr/chcore.i: .pio/libdeps/teensy35/ChRt/src/avr/chcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/chcore.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/hal/hal_st.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/hal/hal_st.c.i
-.PHONY : lib/ChRt-master/src/hal/hal_st.c.i
+.pio/libdeps/teensy35/ChRt/src/avr/chcore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/avr/chcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/chcore.c.i
 
-lib/ChRt-master/src/hal/hal_st.s: lib/ChRt-master/src/hal/hal_st.c.s
-.PHONY : lib/ChRt-master/src/hal/hal_st.s
+.pio/libdeps/teensy35/ChRt/src/avr/chcore.s: .pio/libdeps/teensy35/ChRt/src/avr/chcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/chcore.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/hal/hal_st.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/hal/hal_st.c.s
-.PHONY : lib/ChRt-master/src/hal/hal_st.c.s
+.pio/libdeps/teensy35/ChRt/src/avr/chcore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/avr/chcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/chcore.c.s
 
-lib/ChRt-master/src/oslib/src/chfactory.obj: lib/ChRt-master/src/oslib/src/chfactory.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chfactory.obj
+.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.obj: .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.obj
 
 # target to build an object file
-lib/ChRt-master/src/oslib/src/chfactory.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chfactory.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chfactory.c.obj
+.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.obj
 
-lib/ChRt-master/src/oslib/src/chfactory.i: lib/ChRt-master/src/oslib/src/chfactory.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chfactory.i
+.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.i: .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/oslib/src/chfactory.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chfactory.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chfactory.c.i
+.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.i
 
-lib/ChRt-master/src/oslib/src/chfactory.s: lib/ChRt-master/src/oslib/src/chfactory.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chfactory.s
+.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.s: .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/oslib/src/chfactory.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chfactory.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chfactory.c.s
+.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.c.s
 
-lib/ChRt-master/src/oslib/src/chmboxes.obj: lib/ChRt-master/src/oslib/src/chmboxes.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmboxes.obj
+.pio/libdeps/teensy35/ChRt/src/hal/hal_st.obj: .pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/hal/hal_st.obj
 
 # target to build an object file
-lib/ChRt-master/src/oslib/src/chmboxes.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmboxes.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmboxes.c.obj
+.pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.obj
 
-lib/ChRt-master/src/oslib/src/chmboxes.i: lib/ChRt-master/src/oslib/src/chmboxes.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmboxes.i
+.pio/libdeps/teensy35/ChRt/src/hal/hal_st.i: .pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/hal/hal_st.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/oslib/src/chmboxes.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmboxes.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmboxes.c.i
+.pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.i
 
-lib/ChRt-master/src/oslib/src/chmboxes.s: lib/ChRt-master/src/oslib/src/chmboxes.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmboxes.s
+.pio/libdeps/teensy35/ChRt/src/hal/hal_st.s: .pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/hal/hal_st.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/oslib/src/chmboxes.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmboxes.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmboxes.c.s
+.pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/hal/hal_st.c.s
 
-lib/ChRt-master/src/oslib/src/chmemcore.obj: lib/ChRt-master/src/oslib/src/chmemcore.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmemcore.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.obj
 
 # target to build an object file
-lib/ChRt-master/src/oslib/src/chmemcore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmemcore.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmemcore.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.obj
 
-lib/ChRt-master/src/oslib/src/chmemcore.i: lib/ChRt-master/src/oslib/src/chmemcore.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmemcore.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/oslib/src/chmemcore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmemcore.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmemcore.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.i
 
-lib/ChRt-master/src/oslib/src/chmemcore.s: lib/ChRt-master/src/oslib/src/chmemcore.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmemcore.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/oslib/src/chmemcore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmemcore.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmemcore.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.c.s
 
-lib/ChRt-master/src/oslib/src/chmemheaps.obj: lib/ChRt-master/src/oslib/src/chmemheaps.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmemheaps.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.obj
 
 # target to build an object file
-lib/ChRt-master/src/oslib/src/chmemheaps.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmemheaps.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmemheaps.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.obj
 
-lib/ChRt-master/src/oslib/src/chmemheaps.i: lib/ChRt-master/src/oslib/src/chmemheaps.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmemheaps.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/oslib/src/chmemheaps.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmemheaps.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmemheaps.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.i
 
-lib/ChRt-master/src/oslib/src/chmemheaps.s: lib/ChRt-master/src/oslib/src/chmemheaps.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmemheaps.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/oslib/src/chmemheaps.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmemheaps.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmemheaps.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.c.s
 
-lib/ChRt-master/src/oslib/src/chmempools.obj: lib/ChRt-master/src/oslib/src/chmempools.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmempools.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.obj
 
 # target to build an object file
-lib/ChRt-master/src/oslib/src/chmempools.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmempools.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chmempools.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.obj
 
-lib/ChRt-master/src/oslib/src/chmempools.i: lib/ChRt-master/src/oslib/src/chmempools.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmempools.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/oslib/src/chmempools.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmempools.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chmempools.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.i
 
-lib/ChRt-master/src/oslib/src/chmempools.s: lib/ChRt-master/src/oslib/src/chmempools.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmempools.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/oslib/src/chmempools.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chmempools.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chmempools.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.c.s
 
-lib/ChRt-master/src/oslib/src/chpipes.obj: lib/ChRt-master/src/oslib/src/chpipes.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chpipes.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.obj
 
 # target to build an object file
-lib/ChRt-master/src/oslib/src/chpipes.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chpipes.c.obj
-.PHONY : lib/ChRt-master/src/oslib/src/chpipes.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.obj
 
-lib/ChRt-master/src/oslib/src/chpipes.i: lib/ChRt-master/src/oslib/src/chpipes.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chpipes.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/oslib/src/chpipes.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chpipes.c.i
-.PHONY : lib/ChRt-master/src/oslib/src/chpipes.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.i
 
-lib/ChRt-master/src/oslib/src/chpipes.s: lib/ChRt-master/src/oslib/src/chpipes.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chpipes.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/oslib/src/chpipes.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/oslib/src/chpipes.c.s
-.PHONY : lib/ChRt-master/src/oslib/src/chpipes.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.c.s
 
-lib/ChRt-master/src/rt/src/chcond.obj: lib/ChRt-master/src/rt/src/chcond.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chcond.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chcond.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chcond.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chcond.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.obj
 
-lib/ChRt-master/src/rt/src/chcond.i: lib/ChRt-master/src/rt/src/chcond.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chcond.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chcond.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chcond.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chcond.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.i
 
-lib/ChRt-master/src/rt/src/chcond.s: lib/ChRt-master/src/rt/src/chcond.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chcond.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chcond.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chcond.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chcond.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.c.s
 
-lib/ChRt-master/src/rt/src/chdebug.obj: lib/ChRt-master/src/rt/src/chdebug.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chdebug.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chdebug.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chdebug.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chdebug.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.obj
 
-lib/ChRt-master/src/rt/src/chdebug.i: lib/ChRt-master/src/rt/src/chdebug.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chdebug.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chdebug.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chdebug.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chdebug.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.i
 
-lib/ChRt-master/src/rt/src/chdebug.s: lib/ChRt-master/src/rt/src/chdebug.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chdebug.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chdebug.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chdebug.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chdebug.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.c.s
 
-lib/ChRt-master/src/rt/src/chdynamic.obj: lib/ChRt-master/src/rt/src/chdynamic.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chdynamic.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chdynamic.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chdynamic.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chdynamic.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.obj
 
-lib/ChRt-master/src/rt/src/chdynamic.i: lib/ChRt-master/src/rt/src/chdynamic.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chdynamic.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chdynamic.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chdynamic.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chdynamic.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.i
 
-lib/ChRt-master/src/rt/src/chdynamic.s: lib/ChRt-master/src/rt/src/chdynamic.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chdynamic.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chdynamic.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chdynamic.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chdynamic.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.c.s
 
-lib/ChRt-master/src/rt/src/chevents.obj: lib/ChRt-master/src/rt/src/chevents.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chevents.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.obj: .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chevents.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chevents.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chevents.c.obj
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.obj
 
-lib/ChRt-master/src/rt/src/chevents.i: lib/ChRt-master/src/rt/src/chevents.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chevents.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.i: .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chevents.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chevents.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chevents.c.i
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.i
 
-lib/ChRt-master/src/rt/src/chevents.s: lib/ChRt-master/src/rt/src/chevents.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chevents.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.s: .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chevents.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chevents.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chevents.c.s
+.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.c.s
 
-lib/ChRt-master/src/rt/src/chmsg.obj: lib/ChRt-master/src/rt/src/chmsg.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chmsg.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chmsg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chmsg.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chmsg.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.obj
 
-lib/ChRt-master/src/rt/src/chmsg.i: lib/ChRt-master/src/rt/src/chmsg.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chmsg.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chmsg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chmsg.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chmsg.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.i
 
-lib/ChRt-master/src/rt/src/chmsg.s: lib/ChRt-master/src/rt/src/chmsg.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chmsg.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chmsg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chmsg.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chmsg.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.c.s
 
-lib/ChRt-master/src/rt/src/chmtx.obj: lib/ChRt-master/src/rt/src/chmtx.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chmtx.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chmtx.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chmtx.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chmtx.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.obj
 
-lib/ChRt-master/src/rt/src/chmtx.i: lib/ChRt-master/src/rt/src/chmtx.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chmtx.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chmtx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chmtx.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chmtx.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.i
 
-lib/ChRt-master/src/rt/src/chmtx.s: lib/ChRt-master/src/rt/src/chmtx.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chmtx.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chmtx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chmtx.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chmtx.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.c.s
 
-lib/ChRt-master/src/rt/src/chregistry.obj: lib/ChRt-master/src/rt/src/chregistry.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chregistry.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chregistry.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chregistry.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chregistry.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.obj
 
-lib/ChRt-master/src/rt/src/chregistry.i: lib/ChRt-master/src/rt/src/chregistry.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chregistry.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chregistry.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chregistry.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chregistry.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.i
 
-lib/ChRt-master/src/rt/src/chregistry.s: lib/ChRt-master/src/rt/src/chregistry.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chregistry.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chregistry.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chregistry.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chregistry.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.c.s
 
-lib/ChRt-master/src/rt/src/chschd.obj: lib/ChRt-master/src/rt/src/chschd.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chschd.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chschd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chschd.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chschd.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.obj
 
-lib/ChRt-master/src/rt/src/chschd.i: lib/ChRt-master/src/rt/src/chschd.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chschd.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chschd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chschd.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chschd.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.i
 
-lib/ChRt-master/src/rt/src/chschd.s: lib/ChRt-master/src/rt/src/chschd.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chschd.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chschd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chschd.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chschd.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.c.s
 
-lib/ChRt-master/src/rt/src/chsem.obj: lib/ChRt-master/src/rt/src/chsem.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chsem.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chsem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chsem.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chsem.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.obj
 
-lib/ChRt-master/src/rt/src/chsem.i: lib/ChRt-master/src/rt/src/chsem.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chsem.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chsem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chsem.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chsem.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.i
 
-lib/ChRt-master/src/rt/src/chsem.s: lib/ChRt-master/src/rt/src/chsem.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chsem.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chsem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chsem.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chsem.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.c.s
 
-lib/ChRt-master/src/rt/src/chstats.obj: lib/ChRt-master/src/rt/src/chstats.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chstats.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chstats.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chstats.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chstats.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.obj
 
-lib/ChRt-master/src/rt/src/chstats.i: lib/ChRt-master/src/rt/src/chstats.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chstats.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chstats.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chstats.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chstats.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.i
 
-lib/ChRt-master/src/rt/src/chstats.s: lib/ChRt-master/src/rt/src/chstats.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chstats.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chstats.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chstats.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chstats.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.c.s
 
-lib/ChRt-master/src/rt/src/chsys.obj: lib/ChRt-master/src/rt/src/chsys.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chsys.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chsys.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chsys.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chsys.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.obj
 
-lib/ChRt-master/src/rt/src/chsys.i: lib/ChRt-master/src/rt/src/chsys.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chsys.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chsys.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chsys.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chsys.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.i
 
-lib/ChRt-master/src/rt/src/chsys.s: lib/ChRt-master/src/rt/src/chsys.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chsys.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chsys.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chsys.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chsys.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.c.s
 
-lib/ChRt-master/src/rt/src/chthreads.obj: lib/ChRt-master/src/rt/src/chthreads.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chthreads.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chthreads.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chthreads.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chthreads.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.obj
 
-lib/ChRt-master/src/rt/src/chthreads.i: lib/ChRt-master/src/rt/src/chthreads.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chthreads.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chthreads.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chthreads.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chthreads.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.i
 
-lib/ChRt-master/src/rt/src/chthreads.s: lib/ChRt-master/src/rt/src/chthreads.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chthreads.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chthreads.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chthreads.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chthreads.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.c.s
 
-lib/ChRt-master/src/rt/src/chtm.obj: lib/ChRt-master/src/rt/src/chtm.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chtm.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chtm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chtm.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chtm.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.obj
 
-lib/ChRt-master/src/rt/src/chtm.i: lib/ChRt-master/src/rt/src/chtm.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chtm.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chtm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chtm.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chtm.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.i
 
-lib/ChRt-master/src/rt/src/chtm.s: lib/ChRt-master/src/rt/src/chtm.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chtm.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chtm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chtm.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chtm.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.c.s
 
-lib/ChRt-master/src/rt/src/chtrace.obj: lib/ChRt-master/src/rt/src/chtrace.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chtrace.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chtrace.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chtrace.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chtrace.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.obj
 
-lib/ChRt-master/src/rt/src/chtrace.i: lib/ChRt-master/src/rt/src/chtrace.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chtrace.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chtrace.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chtrace.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chtrace.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.i
 
-lib/ChRt-master/src/rt/src/chtrace.s: lib/ChRt-master/src/rt/src/chtrace.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chtrace.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chtrace.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chtrace.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chtrace.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.c.s
 
-lib/ChRt-master/src/rt/src/chvt.obj: lib/ChRt-master/src/rt/src/chvt.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chvt.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.obj
 
 # target to build an object file
-lib/ChRt-master/src/rt/src/chvt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chvt.c.obj
-.PHONY : lib/ChRt-master/src/rt/src/chvt.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.obj
 
-lib/ChRt-master/src/rt/src/chvt.i: lib/ChRt-master/src/rt/src/chvt.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chvt.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/rt/src/chvt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chvt.c.i
-.PHONY : lib/ChRt-master/src/rt/src/chvt.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.i
 
-lib/ChRt-master/src/rt/src/chvt.s: lib/ChRt-master/src/rt/src/chvt.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chvt.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/rt/src/chvt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/rt/src/chvt.c.s
-.PHONY : lib/ChRt-master/src/rt/src/chvt.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.c.s
 
-lib/ChRt-master/src/sam3x/st_lld_sam3x.obj: lib/ChRt-master/src/sam3x/st_lld_sam3x.c.obj
-.PHONY : lib/ChRt-master/src/sam3x/st_lld_sam3x.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.obj
 
 # target to build an object file
-lib/ChRt-master/src/sam3x/st_lld_sam3x.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/sam3x/st_lld_sam3x.c.obj
-.PHONY : lib/ChRt-master/src/sam3x/st_lld_sam3x.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.obj
 
-lib/ChRt-master/src/sam3x/st_lld_sam3x.i: lib/ChRt-master/src/sam3x/st_lld_sam3x.c.i
-.PHONY : lib/ChRt-master/src/sam3x/st_lld_sam3x.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/sam3x/st_lld_sam3x.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/sam3x/st_lld_sam3x.c.i
-.PHONY : lib/ChRt-master/src/sam3x/st_lld_sam3x.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.i
 
-lib/ChRt-master/src/sam3x/st_lld_sam3x.s: lib/ChRt-master/src/sam3x/st_lld_sam3x.c.s
-.PHONY : lib/ChRt-master/src/sam3x/st_lld_sam3x.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/sam3x/st_lld_sam3x.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/sam3x/st_lld_sam3x.c.s
-.PHONY : lib/ChRt-master/src/sam3x/st_lld_sam3x.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.c.s
 
-lib/ChRt-master/src/samd/st_lld_samd.obj: lib/ChRt-master/src/samd/st_lld_samd.c.obj
-.PHONY : lib/ChRt-master/src/samd/st_lld_samd.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.obj
 
 # target to build an object file
-lib/ChRt-master/src/samd/st_lld_samd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/samd/st_lld_samd.c.obj
-.PHONY : lib/ChRt-master/src/samd/st_lld_samd.c.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.obj
 
-lib/ChRt-master/src/samd/st_lld_samd.i: lib/ChRt-master/src/samd/st_lld_samd.c.i
-.PHONY : lib/ChRt-master/src/samd/st_lld_samd.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/samd/st_lld_samd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/samd/st_lld_samd.c.i
-.PHONY : lib/ChRt-master/src/samd/st_lld_samd.c.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.i
 
-lib/ChRt-master/src/samd/st_lld_samd.s: lib/ChRt-master/src/samd/st_lld_samd.c.s
-.PHONY : lib/ChRt-master/src/samd/st_lld_samd.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/samd/st_lld_samd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/samd/st_lld_samd.c.s
-.PHONY : lib/ChRt-master/src/samd/st_lld_samd.c.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.c.s
 
-lib/ChRt-master/src/teensy3/st_lld_teensy3.obj: lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.obj
-.PHONY : lib/ChRt-master/src/teensy3/st_lld_teensy3.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.obj
 
 # target to build an object file
-lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.obj
-.PHONY : lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.obj
 
-lib/ChRt-master/src/teensy3/st_lld_teensy3.i: lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.i
-.PHONY : lib/ChRt-master/src/teensy3/st_lld_teensy3.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.i
-.PHONY : lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.i
 
-lib/ChRt-master/src/teensy3/st_lld_teensy3.s: lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.s
-.PHONY : lib/ChRt-master/src/teensy3/st_lld_teensy3.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.s
-.PHONY : lib/ChRt-master/src/teensy3/st_lld_teensy3.cpp.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.c.s
 
-lib/ChRt-master/src/teensy4/st_lld_teensy4.obj: lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.obj
-.PHONY : lib/ChRt-master/src/teensy4/st_lld_teensy4.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.obj: .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.obj
 
 # target to build an object file
-lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.obj
-.PHONY : lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.obj
+.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.obj
 
-lib/ChRt-master/src/teensy4/st_lld_teensy4.i: lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.i
-.PHONY : lib/ChRt-master/src/teensy4/st_lld_teensy4.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.i: .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.i
 
 # target to preprocess a source file
-lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.i
-.PHONY : lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.i
+.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.i
 
-lib/ChRt-master/src/teensy4/st_lld_teensy4.s: lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.s
-.PHONY : lib/ChRt-master/src/teensy4/st_lld_teensy4.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.s: .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.s
 
 # target to generate assembly for a file
-lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.s
-.PHONY : lib/ChRt-master/src/teensy4/st_lld_teensy4.cpp.s
+.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.c.s
+
+.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.obj: .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.obj
+
+.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.i: .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.i
+
+.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.s: .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.c.s
+
+.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.obj: .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.obj
+
+.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.i: .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.i
+
+.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.s: .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.c.s
+
+.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.obj: .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.obj
+
+.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.i: .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.i
+
+.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.s: .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.c.s
+
+.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.obj: .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.obj
+
+.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.i: .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.i
+
+.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.s: .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.cpp.s
+
+.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.obj: .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.obj
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.obj
+
+.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.i: .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.i
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.i
+
+.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.s: .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.s
+.PHONY : .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.cpp.s
+
+.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.obj: .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.obj
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.obj
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.obj
+
+.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.i: .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.i
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.i
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.i
+
+.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.s: .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.s
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.s
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.cpp.s
+
+.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.obj: .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.obj
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.obj
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.obj
+
+.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.i: .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.i
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.i
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.i
+
+.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.s: .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.s
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.s
+.PHONY : .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.cpp.s
+
+.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.obj: .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.obj
+
+.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.i: .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.i
+
+.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.s: .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.cpp.s
+
+.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.obj: .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.obj
+
+.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.i: .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.i
+
+.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.s: .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.cpp.s
+
+.pio/libdeps/teensy35/JLed/src/esp32_hal.obj: .pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/src/esp32_hal.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.obj
+
+.pio/libdeps/teensy35/JLed/src/esp32_hal.i: .pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/src/esp32_hal.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.i
+
+.pio/libdeps/teensy35/JLed/src/esp32_hal.s: .pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/src/esp32_hal.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/src/esp32_hal.cpp.s
+
+.pio/libdeps/teensy35/JLed/src/jled_base.obj: .pio/libdeps/teensy35/JLed/src/jled_base.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/src/jled_base.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/JLed/src/jled_base.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/src/jled_base.cpp.obj
+.PHONY : .pio/libdeps/teensy35/JLed/src/jled_base.cpp.obj
+
+.pio/libdeps/teensy35/JLed/src/jled_base.i: .pio/libdeps/teensy35/JLed/src/jled_base.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/src/jled_base.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/JLed/src/jled_base.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/src/jled_base.cpp.i
+.PHONY : .pio/libdeps/teensy35/JLed/src/jled_base.cpp.i
+
+.pio/libdeps/teensy35/JLed/src/jled_base.s: .pio/libdeps/teensy35/JLed/src/jled_base.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/src/jled_base.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/JLed/src/jled_base.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/JLed/src/jled_base.cpp.s
+.PHONY : .pio/libdeps/teensy35/JLed/src/jled_base.cpp.s
+
+.pio/libdeps/teensy35/RF24/RF24.obj: .pio/libdeps/teensy35/RF24/RF24.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/RF24.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/RF24.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/RF24.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/RF24.cpp.obj
+
+.pio/libdeps/teensy35/RF24/RF24.i: .pio/libdeps/teensy35/RF24/RF24.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/RF24.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/RF24.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/RF24.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/RF24.cpp.i
+
+.pio/libdeps/teensy35/RF24/RF24.s: .pio/libdeps/teensy35/RF24/RF24.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/RF24.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/RF24.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/RF24.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/RF24.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.obj: .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.i: .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.s: .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.obj: .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.i: .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.s: .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.obj: .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.i: .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.s: .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.obj: .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.i: .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.s: .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.obj: .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.i: .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.s: .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.obj: .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.i: .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.s: .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.obj: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.i: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.s: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.obj: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.i: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.s: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.obj: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.i: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.s: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.obj: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.i: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.s: .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.obj: .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.i: .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.s: .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.obj: .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.i: .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.s: .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.cpp.s
+
+.pio/libdeps/teensy35/RF24/examples_linux/streamingData.obj: .pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/streamingData.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.obj
+
+.pio/libdeps/teensy35/RF24/examples_linux/streamingData.i: .pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/streamingData.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.i
+
+.pio/libdeps/teensy35/RF24/examples_linux/streamingData.s: .pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/streamingData.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/examples_linux/streamingData.cpp.s
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.obj: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.obj
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.i: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.i
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.s: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.cpp.s
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.obj: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.obj
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.i: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.i
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.s: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.cpp.s
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.obj: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.obj
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.i: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.i
+
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.s: .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.obj: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.obj
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.i: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.i
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.s: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.c.s
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.obj: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.i: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.s: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.obj: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.obj
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.i: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.i
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.s: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.c.s
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.obj: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.i: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.s: .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.obj: .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.i: .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.s: .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.obj: .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.i: .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.s: .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/spi.obj: .pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/spi.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/spi.i: .pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/spi.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/MRAA/spi.s: .pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/spi.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/MRAA/spi.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.obj: .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.obj
+
+.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.i: .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.i
+
+.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.s: .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.c.s
+
+.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.obj: .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.i: .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.s: .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.obj: .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.obj
+
+.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.i: .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.i
+
+.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.s: .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.c.s
+
+.pio/libdeps/teensy35/RF24/utility/RPi/spi.obj: .pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/spi.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/RPi/spi.i: .pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/spi.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/RPi/spi.s: .pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/spi.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/RPi/spi.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.obj: .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.i: .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.s: .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.obj: .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.i: .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.s: .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.obj: .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.obj
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.i: .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.i
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.s: .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.c.s
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.obj: .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.i: .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.s: .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.cpp.s
+
+.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.obj: .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.obj
+.PHONY : .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.obj
+
+.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.i: .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.i
+.PHONY : .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.i
+
+.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.s: .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.s
+.PHONY : .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.cpp.s
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.obj: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.i: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.s: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.obj: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.i: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.s: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.obj: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.i: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i
+
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.s: .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.obj: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.i: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.s: .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.obj: .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.i: .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.s: .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FreeStack.obj: .pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FreeStack.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FreeStack.i: .pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FreeStack.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FreeStack.s: .pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FreeStack.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FreeStack.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.obj: .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.i: .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.s: .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.obj: .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.i: .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.s: .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.obj: .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.i: .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.s: .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/MinimumSerial.obj: .pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/MinimumSerial.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/MinimumSerial.i: .pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/MinimumSerial.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/MinimumSerial.s: .pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/MinimumSerial.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/MinimumSerial.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.obj: .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.i: .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.s: .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.obj: .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.i: .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.s: .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.obj: .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.i: .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.s: .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.obj: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.i: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.s: .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.obj: .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.i: .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.s: .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/FsCache.obj: .pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsCache.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/FsCache.i: .pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsCache.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/FsCache.s: .pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsCache.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsCache.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.obj: .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.i: .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.s: .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/FsName.obj: .pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsName.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/FsName.i: .pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsName.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/FsName.s: .pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsName.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsName.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/FsStructs.obj: .pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsStructs.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/FsStructs.i: .pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsStructs.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/FsStructs.s: .pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsStructs.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsStructs.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/FsUtf.obj: .pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsUtf.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/FsUtf.i: .pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsUtf.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/FsUtf.s: .pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsUtf.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/FsUtf.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/common/upcase.obj: .pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/upcase.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/common/upcase.i: .pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/upcase.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/common/upcase.s: .pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/upcase.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/common/upcase.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.obj: .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.i: .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.s: .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.obj: .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.i: .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.s: .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/iostream/istream.obj: .pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/istream.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/iostream/istream.i: .pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/istream.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/iostream/istream.s: .pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/istream.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/istream.cpp.s
+
+.pio/libdeps/teensy35/SdFat/src/iostream/ostream.obj: .pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/ostream.obj
+
+# target to build an object file
+.pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.obj
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.obj
+
+.pio/libdeps/teensy35/SdFat/src/iostream/ostream.i: .pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/ostream.i
+
+# target to preprocess a source file
+.pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.i
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.i
+
+.pio/libdeps/teensy35/SdFat/src/iostream/ostream.s: .pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/ostream.s
+
+# target to generate assembly for a file
+.pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.s
+.PHONY : .pio/libdeps/teensy35/SdFat/src/iostream/ostream.cpp.s
 
 lib/ECVTlibs/src/WheelSpeed.obj: lib/ECVTlibs/src/WheelSpeed.cpp.obj
 .PHONY : lib/ECVTlibs/src/WheelSpeed.obj
@@ -1593,54 +3777,6 @@ lib/I2Cdev/I2Cdev.s: lib/I2Cdev/I2Cdev.cpp.s
 lib/I2Cdev/I2Cdev.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/I2Cdev/I2Cdev.cpp.s
 .PHONY : lib/I2Cdev/I2Cdev.cpp.s
-
-lib/LED/src/LED.obj: lib/LED/src/LED.cpp.obj
-.PHONY : lib/LED/src/LED.obj
-
-# target to build an object file
-lib/LED/src/LED.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/LED/src/LED.cpp.obj
-.PHONY : lib/LED/src/LED.cpp.obj
-
-lib/LED/src/LED.i: lib/LED/src/LED.cpp.i
-.PHONY : lib/LED/src/LED.i
-
-# target to preprocess a source file
-lib/LED/src/LED.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/LED/src/LED.cpp.i
-.PHONY : lib/LED/src/LED.cpp.i
-
-lib/LED/src/LED.s: lib/LED/src/LED.cpp.s
-.PHONY : lib/LED/src/LED.s
-
-# target to generate assembly for a file
-lib/LED/src/LED.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/LED/src/LED.cpp.s
-.PHONY : lib/LED/src/LED.cpp.s
-
-lib/LED/src/TreedStateTracker.obj: lib/LED/src/TreedStateTracker.cpp.obj
-.PHONY : lib/LED/src/TreedStateTracker.obj
-
-# target to build an object file
-lib/LED/src/TreedStateTracker.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/LED/src/TreedStateTracker.cpp.obj
-.PHONY : lib/LED/src/TreedStateTracker.cpp.obj
-
-lib/LED/src/TreedStateTracker.i: lib/LED/src/TreedStateTracker.cpp.i
-.PHONY : lib/LED/src/TreedStateTracker.i
-
-# target to preprocess a source file
-lib/LED/src/TreedStateTracker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/LED/src/TreedStateTracker.cpp.i
-.PHONY : lib/LED/src/TreedStateTracker.cpp.i
-
-lib/LED/src/TreedStateTracker.s: lib/LED/src/TreedStateTracker.cpp.s
-.PHONY : lib/LED/src/TreedStateTracker.s
-
-# target to generate assembly for a file
-lib/LED/src/TreedStateTracker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/LED/src/TreedStateTracker.cpp.s
-.PHONY : lib/LED/src/TreedStateTracker.cpp.s
 
 lib/MPU6050/MPU6050.obj: lib/MPU6050/MPU6050.cpp.obj
 .PHONY : lib/MPU6050/MPU6050.obj
@@ -1738,1062 +3874,6 @@ lib/MPU6050/MPU6050_9Axis_MotionApps41.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/MPU6050/MPU6050_9Axis_MotionApps41.cpp.s
 .PHONY : lib/MPU6050/MPU6050_9Axis_MotionApps41.cpp.s
 
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.obj: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.obj
-
-# target to build an object file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.obj
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.i: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.i
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.s: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.cpp.s
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.obj: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.obj
-
-# target to build an object file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.obj
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.i: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.i
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.s: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.cpp.s
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.obj: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.obj
-
-# target to build an object file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.obj
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.i: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.i
-
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.s: lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s
-.PHONY : lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.i: lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.s: lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFile.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFile.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFile.i: lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFile.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFile.s: lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFile.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFile.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.i: lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.s: lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.i: lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.s: lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.i: lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.s: lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.i: lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.s: lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.obj: lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.i: lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.s: lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.cpp.s
-
-lib/SdFat-beta-master/src/ExFatLib/upcase.obj: lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/upcase.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.obj
-
-lib/SdFat-beta-master/src/ExFatLib/upcase.i: lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/upcase.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.i
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.i
-
-lib/SdFat-beta-master/src/ExFatLib/upcase.s: lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/upcase.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.s
-.PHONY : lib/SdFat-beta-master/src/ExFatLib/upcase.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatDbg.obj: lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatDbg.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatDbg.i: lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatDbg.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatDbg.s: lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatDbg.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatDbg.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatFile.obj: lib/SdFat-beta-master/src/FatLib/FatFile.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFile.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatFile.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFile.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFile.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatFile.i: lib/SdFat-beta-master/src/FatLib/FatFile.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFile.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatFile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFile.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFile.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatFile.s: lib/SdFat-beta-master/src/FatLib/FatFile.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFile.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatFile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFile.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFile.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatFileLFN.obj: lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileLFN.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatFileLFN.i: lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileLFN.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatFileLFN.s: lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileLFN.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileLFN.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatFilePrint.obj: lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFilePrint.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatFilePrint.i: lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFilePrint.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatFilePrint.s: lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFilePrint.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFilePrint.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatFileSFN.obj: lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileSFN.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatFileSFN.i: lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileSFN.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatFileSFN.s: lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileSFN.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFileSFN.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatFormatter.obj: lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFormatter.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatFormatter.i: lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFormatter.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatFormatter.s: lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFormatter.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatFormatter.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatPartition.obj: lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatPartition.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatPartition.i: lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatPartition.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatPartition.s: lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatPartition.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatPartition.cpp.s
-
-lib/SdFat-beta-master/src/FatLib/FatVolume.obj: lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatVolume.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.obj
-
-lib/SdFat-beta-master/src/FatLib/FatVolume.i: lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatVolume.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.i
-
-lib/SdFat-beta-master/src/FatLib/FatVolume.s: lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatVolume.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FatLib/FatVolume.cpp.s
-
-lib/SdFat-beta-master/src/FreeStack.obj: lib/SdFat-beta-master/src/FreeStack.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FreeStack.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FreeStack.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FreeStack.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FreeStack.cpp.obj
-
-lib/SdFat-beta-master/src/FreeStack.i: lib/SdFat-beta-master/src/FreeStack.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FreeStack.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FreeStack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FreeStack.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FreeStack.cpp.i
-
-lib/SdFat-beta-master/src/FreeStack.s: lib/SdFat-beta-master/src/FreeStack.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FreeStack.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FreeStack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FreeStack.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FreeStack.cpp.s
-
-lib/SdFat-beta-master/src/FsLib/FsFile.obj: lib/SdFat-beta-master/src/FsLib/FsFile.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsFile.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FsLib/FsFile.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsFile.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsFile.cpp.obj
-
-lib/SdFat-beta-master/src/FsLib/FsFile.i: lib/SdFat-beta-master/src/FsLib/FsFile.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsFile.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FsLib/FsFile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsFile.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsFile.cpp.i
-
-lib/SdFat-beta-master/src/FsLib/FsFile.s: lib/SdFat-beta-master/src/FsLib/FsFile.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsFile.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FsLib/FsFile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsFile.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsFile.cpp.s
-
-lib/SdFat-beta-master/src/FsLib/FsNew.obj: lib/SdFat-beta-master/src/FsLib/FsNew.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsNew.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FsLib/FsNew.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsNew.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsNew.cpp.obj
-
-lib/SdFat-beta-master/src/FsLib/FsNew.i: lib/SdFat-beta-master/src/FsLib/FsNew.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsNew.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FsLib/FsNew.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsNew.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsNew.cpp.i
-
-lib/SdFat-beta-master/src/FsLib/FsNew.s: lib/SdFat-beta-master/src/FsLib/FsNew.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsNew.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FsLib/FsNew.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsNew.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsNew.cpp.s
-
-lib/SdFat-beta-master/src/FsLib/FsVolume.obj: lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsVolume.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.obj
-
-lib/SdFat-beta-master/src/FsLib/FsVolume.i: lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsVolume.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.i
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.i
-
-lib/SdFat-beta-master/src/FsLib/FsVolume.s: lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsVolume.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.s
-.PHONY : lib/SdFat-beta-master/src/FsLib/FsVolume.cpp.s
-
-lib/SdFat-beta-master/src/MinimumSerial.obj: lib/SdFat-beta-master/src/MinimumSerial.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/MinimumSerial.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/MinimumSerial.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/MinimumSerial.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/MinimumSerial.cpp.obj
-
-lib/SdFat-beta-master/src/MinimumSerial.i: lib/SdFat-beta-master/src/MinimumSerial.cpp.i
-.PHONY : lib/SdFat-beta-master/src/MinimumSerial.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/MinimumSerial.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/MinimumSerial.cpp.i
-.PHONY : lib/SdFat-beta-master/src/MinimumSerial.cpp.i
-
-lib/SdFat-beta-master/src/MinimumSerial.s: lib/SdFat-beta-master/src/MinimumSerial.cpp.s
-.PHONY : lib/SdFat-beta-master/src/MinimumSerial.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/MinimumSerial.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/MinimumSerial.cpp.s
-.PHONY : lib/SdFat-beta-master/src/MinimumSerial.cpp.s
-
-lib/SdFat-beta-master/src/SdCard/SdCardInfo.obj: lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdCardInfo.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.obj
-
-lib/SdFat-beta-master/src/SdCard/SdCardInfo.i: lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdCardInfo.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.i
-
-lib/SdFat-beta-master/src/SdCard/SdCardInfo.s: lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdCardInfo.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdCardInfo.cpp.s
-
-lib/SdFat-beta-master/src/SdCard/SdSpiCard.obj: lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdSpiCard.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.obj
-
-lib/SdFat-beta-master/src/SdCard/SdSpiCard.i: lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdSpiCard.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.i
-
-lib/SdFat-beta-master/src/SdCard/SdSpiCard.s: lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdSpiCard.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdSpiCard.cpp.s
-
-lib/SdFat-beta-master/src/SdCard/SdioTeensy.obj: lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdioTeensy.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.obj
-
-lib/SdFat-beta-master/src/SdCard/SdioTeensy.i: lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdioTeensy.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.i
-
-lib/SdFat-beta-master/src/SdCard/SdioTeensy.s: lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdioTeensy.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SdCard/SdioTeensy.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.cpp.s
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.obj: lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.obj
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.i: lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.i
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.i
-
-lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.s: lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.s
-.PHONY : lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.cpp.s
-
-lib/SdFat-beta-master/src/common/FmtNumber.obj: lib/SdFat-beta-master/src/common/FmtNumber.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/FmtNumber.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/common/FmtNumber.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FmtNumber.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/FmtNumber.cpp.obj
-
-lib/SdFat-beta-master/src/common/FmtNumber.i: lib/SdFat-beta-master/src/common/FmtNumber.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/FmtNumber.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/common/FmtNumber.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FmtNumber.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/FmtNumber.cpp.i
-
-lib/SdFat-beta-master/src/common/FmtNumber.s: lib/SdFat-beta-master/src/common/FmtNumber.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/FmtNumber.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/common/FmtNumber.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FmtNumber.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/FmtNumber.cpp.s
-
-lib/SdFat-beta-master/src/common/FsDateTime.obj: lib/SdFat-beta-master/src/common/FsDateTime.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/FsDateTime.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/common/FsDateTime.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FsDateTime.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/FsDateTime.cpp.obj
-
-lib/SdFat-beta-master/src/common/FsDateTime.i: lib/SdFat-beta-master/src/common/FsDateTime.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/FsDateTime.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/common/FsDateTime.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FsDateTime.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/FsDateTime.cpp.i
-
-lib/SdFat-beta-master/src/common/FsDateTime.s: lib/SdFat-beta-master/src/common/FsDateTime.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/FsDateTime.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/common/FsDateTime.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FsDateTime.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/FsDateTime.cpp.s
-
-lib/SdFat-beta-master/src/common/FsStructs.obj: lib/SdFat-beta-master/src/common/FsStructs.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/FsStructs.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/common/FsStructs.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FsStructs.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/FsStructs.cpp.obj
-
-lib/SdFat-beta-master/src/common/FsStructs.i: lib/SdFat-beta-master/src/common/FsStructs.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/FsStructs.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/common/FsStructs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FsStructs.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/FsStructs.cpp.i
-
-lib/SdFat-beta-master/src/common/FsStructs.s: lib/SdFat-beta-master/src/common/FsStructs.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/FsStructs.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/common/FsStructs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/FsStructs.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/FsStructs.cpp.s
-
-lib/SdFat-beta-master/src/common/PrintBasic.obj: lib/SdFat-beta-master/src/common/PrintBasic.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/PrintBasic.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/common/PrintBasic.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/PrintBasic.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/PrintBasic.cpp.obj
-
-lib/SdFat-beta-master/src/common/PrintBasic.i: lib/SdFat-beta-master/src/common/PrintBasic.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/PrintBasic.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/common/PrintBasic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/PrintBasic.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/PrintBasic.cpp.i
-
-lib/SdFat-beta-master/src/common/PrintBasic.s: lib/SdFat-beta-master/src/common/PrintBasic.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/PrintBasic.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/common/PrintBasic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/PrintBasic.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/PrintBasic.cpp.s
-
-lib/SdFat-beta-master/src/common/SysCallBareUno.obj: lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/SysCallBareUno.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.obj
-
-lib/SdFat-beta-master/src/common/SysCallBareUno.i: lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/SysCallBareUno.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.i
-.PHONY : lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.i
-
-lib/SdFat-beta-master/src/common/SysCallBareUno.s: lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/SysCallBareUno.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.s
-.PHONY : lib/SdFat-beta-master/src/common/SysCallBareUno.cpp.s
-
-lib/SdFat-beta-master/src/iostream/StdioStream.obj: lib/SdFat-beta-master/src/iostream/StdioStream.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/StdioStream.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/iostream/StdioStream.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/StdioStream.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/StdioStream.cpp.obj
-
-lib/SdFat-beta-master/src/iostream/StdioStream.i: lib/SdFat-beta-master/src/iostream/StdioStream.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/StdioStream.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/iostream/StdioStream.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/StdioStream.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/StdioStream.cpp.i
-
-lib/SdFat-beta-master/src/iostream/StdioStream.s: lib/SdFat-beta-master/src/iostream/StdioStream.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/StdioStream.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/iostream/StdioStream.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/StdioStream.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/StdioStream.cpp.s
-
-lib/SdFat-beta-master/src/iostream/StreamBaseClass.obj: lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/StreamBaseClass.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.obj
-
-lib/SdFat-beta-master/src/iostream/StreamBaseClass.i: lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/StreamBaseClass.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.i
-
-lib/SdFat-beta-master/src/iostream/StreamBaseClass.s: lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/StreamBaseClass.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/StreamBaseClass.cpp.s
-
-lib/SdFat-beta-master/src/iostream/istream.obj: lib/SdFat-beta-master/src/iostream/istream.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/istream.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/iostream/istream.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/istream.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/istream.cpp.obj
-
-lib/SdFat-beta-master/src/iostream/istream.i: lib/SdFat-beta-master/src/iostream/istream.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/istream.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/iostream/istream.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/istream.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/istream.cpp.i
-
-lib/SdFat-beta-master/src/iostream/istream.s: lib/SdFat-beta-master/src/iostream/istream.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/istream.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/iostream/istream.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/istream.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/istream.cpp.s
-
-lib/SdFat-beta-master/src/iostream/ostream.obj: lib/SdFat-beta-master/src/iostream/ostream.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/ostream.obj
-
-# target to build an object file
-lib/SdFat-beta-master/src/iostream/ostream.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/ostream.cpp.obj
-.PHONY : lib/SdFat-beta-master/src/iostream/ostream.cpp.obj
-
-lib/SdFat-beta-master/src/iostream/ostream.i: lib/SdFat-beta-master/src/iostream/ostream.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/ostream.i
-
-# target to preprocess a source file
-lib/SdFat-beta-master/src/iostream/ostream.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/ostream.cpp.i
-.PHONY : lib/SdFat-beta-master/src/iostream/ostream.cpp.i
-
-lib/SdFat-beta-master/src/iostream/ostream.s: lib/SdFat-beta-master/src/iostream/ostream.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/ostream.s
-
-# target to generate assembly for a file
-lib/SdFat-beta-master/src/iostream/ostream.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/lib/SdFat-beta-master/src/iostream/ostream.cpp.s
-.PHONY : lib/SdFat-beta-master/src/iostream/ostream.cpp.s
-
-src/fsm/writer.obj: src/fsm/writer.cpp.obj
-.PHONY : src/fsm/writer.obj
-
-# target to build an object file
-src/fsm/writer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/fsm/writer.cpp.obj
-.PHONY : src/fsm/writer.cpp.obj
-
-src/fsm/writer.i: src/fsm/writer.cpp.i
-.PHONY : src/fsm/writer.i
-
-# target to preprocess a source file
-src/fsm/writer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/fsm/writer.cpp.i
-.PHONY : src/fsm/writer.cpp.i
-
-src/fsm/writer.s: src/fsm/writer.cpp.s
-.PHONY : src/fsm/writer.s
-
-# target to generate assembly for a file
-src/fsm/writer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Z_DUMMY_TARGET.dir\build.make CMakeFiles/Z_DUMMY_TARGET.dir/src/fsm/writer.cpp.s
-.PHONY : src/fsm/writer.cpp.s
-
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -2829,192 +3909,459 @@ help:
 	@echo ... Debug
 	@echo ... Production
 	@echo ... Z_DUMMY_TARGET
-	@echo ... lib/ChRt-master/extra/src_org/arm/chcore_v6m.obj
-	@echo ... lib/ChRt-master/extra/src_org/arm/chcore_v6m.i
-	@echo ... lib/ChRt-master/extra/src_org/arm/chcore_v6m.s
-	@echo ... lib/ChRt-master/extra/src_org/arm/chcore_v7m.obj
-	@echo ... lib/ChRt-master/extra/src_org/arm/chcore_v7m.i
-	@echo ... lib/ChRt-master/extra/src_org/arm/chcore_v7m.s
-	@echo ... lib/ChRt-master/extra/src_org/avr/chcore.obj
-	@echo ... lib/ChRt-master/extra/src_org/avr/chcore.i
-	@echo ... lib/ChRt-master/extra/src_org/avr/chcore.s
-	@echo ... lib/ChRt-master/extra/src_org/hal/hal_st.obj
-	@echo ... lib/ChRt-master/extra/src_org/hal/hal_st.i
-	@echo ... lib/ChRt-master/extra/src_org/hal/hal_st.s
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chfactory.obj
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chfactory.i
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chfactory.s
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmboxes.obj
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmboxes.i
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmboxes.s
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmemcore.obj
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmemcore.i
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmemcore.s
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.obj
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.i
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmemheaps.s
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmempools.obj
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmempools.i
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chmempools.s
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chpipes.obj
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chpipes.i
-	@echo ... lib/ChRt-master/extra/src_org/oslib/src/chpipes.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chcond.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chcond.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chcond.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chdebug.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chdebug.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chdebug.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chdynamic.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chdynamic.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chdynamic.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chevents.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chevents.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chevents.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chmsg.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chmsg.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chmsg.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chmtx.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chmtx.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chmtx.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chregistry.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chregistry.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chregistry.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chschd.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chschd.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chschd.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chsem.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chsem.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chsem.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chstats.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chstats.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chstats.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chsys.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chsys.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chsys.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chthreads.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chthreads.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chthreads.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chtm.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chtm.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chtm.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chtrace.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chtrace.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chtrace.s
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chvt.obj
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chvt.i
-	@echo ... lib/ChRt-master/extra/src_org/rt/src/chvt.s
-	@echo ... lib/ChRt-master/src/ChAvrMinSerial.obj
-	@echo ... lib/ChRt-master/src/ChAvrMinSerial.i
-	@echo ... lib/ChRt-master/src/ChAvrMinSerial.s
-	@echo ... lib/ChRt-master/src/ChRt.obj
-	@echo ... lib/ChRt-master/src/ChRt.i
-	@echo ... lib/ChRt-master/src/ChRt.s
-	@echo ... lib/ChRt-master/src/ChRt.obj
-	@echo ... lib/ChRt-master/src/ChRt.i
-	@echo ... lib/ChRt-master/src/ChRt.s
-	@echo ... lib/ChRt-master/src/arm/chcore_v6m.obj
-	@echo ... lib/ChRt-master/src/arm/chcore_v6m.i
-	@echo ... lib/ChRt-master/src/arm/chcore_v6m.s
-	@echo ... lib/ChRt-master/src/arm/chcore_v7m.obj
-	@echo ... lib/ChRt-master/src/arm/chcore_v7m.i
-	@echo ... lib/ChRt-master/src/arm/chcore_v7m.s
-	@echo ... lib/ChRt-master/src/avr/chcore.obj
-	@echo ... lib/ChRt-master/src/avr/chcore.i
-	@echo ... lib/ChRt-master/src/avr/chcore.s
-	@echo ... lib/ChRt-master/src/avr/st_lld_avr.obj
-	@echo ... lib/ChRt-master/src/avr/st_lld_avr.i
-	@echo ... lib/ChRt-master/src/avr/st_lld_avr.s
-	@echo ... lib/ChRt-master/src/hal/hal_st.obj
-	@echo ... lib/ChRt-master/src/hal/hal_st.i
-	@echo ... lib/ChRt-master/src/hal/hal_st.s
-	@echo ... lib/ChRt-master/src/oslib/src/chfactory.obj
-	@echo ... lib/ChRt-master/src/oslib/src/chfactory.i
-	@echo ... lib/ChRt-master/src/oslib/src/chfactory.s
-	@echo ... lib/ChRt-master/src/oslib/src/chmboxes.obj
-	@echo ... lib/ChRt-master/src/oslib/src/chmboxes.i
-	@echo ... lib/ChRt-master/src/oslib/src/chmboxes.s
-	@echo ... lib/ChRt-master/src/oslib/src/chmemcore.obj
-	@echo ... lib/ChRt-master/src/oslib/src/chmemcore.i
-	@echo ... lib/ChRt-master/src/oslib/src/chmemcore.s
-	@echo ... lib/ChRt-master/src/oslib/src/chmemheaps.obj
-	@echo ... lib/ChRt-master/src/oslib/src/chmemheaps.i
-	@echo ... lib/ChRt-master/src/oslib/src/chmemheaps.s
-	@echo ... lib/ChRt-master/src/oslib/src/chmempools.obj
-	@echo ... lib/ChRt-master/src/oslib/src/chmempools.i
-	@echo ... lib/ChRt-master/src/oslib/src/chmempools.s
-	@echo ... lib/ChRt-master/src/oslib/src/chpipes.obj
-	@echo ... lib/ChRt-master/src/oslib/src/chpipes.i
-	@echo ... lib/ChRt-master/src/oslib/src/chpipes.s
-	@echo ... lib/ChRt-master/src/rt/src/chcond.obj
-	@echo ... lib/ChRt-master/src/rt/src/chcond.i
-	@echo ... lib/ChRt-master/src/rt/src/chcond.s
-	@echo ... lib/ChRt-master/src/rt/src/chdebug.obj
-	@echo ... lib/ChRt-master/src/rt/src/chdebug.i
-	@echo ... lib/ChRt-master/src/rt/src/chdebug.s
-	@echo ... lib/ChRt-master/src/rt/src/chdynamic.obj
-	@echo ... lib/ChRt-master/src/rt/src/chdynamic.i
-	@echo ... lib/ChRt-master/src/rt/src/chdynamic.s
-	@echo ... lib/ChRt-master/src/rt/src/chevents.obj
-	@echo ... lib/ChRt-master/src/rt/src/chevents.i
-	@echo ... lib/ChRt-master/src/rt/src/chevents.s
-	@echo ... lib/ChRt-master/src/rt/src/chmsg.obj
-	@echo ... lib/ChRt-master/src/rt/src/chmsg.i
-	@echo ... lib/ChRt-master/src/rt/src/chmsg.s
-	@echo ... lib/ChRt-master/src/rt/src/chmtx.obj
-	@echo ... lib/ChRt-master/src/rt/src/chmtx.i
-	@echo ... lib/ChRt-master/src/rt/src/chmtx.s
-	@echo ... lib/ChRt-master/src/rt/src/chregistry.obj
-	@echo ... lib/ChRt-master/src/rt/src/chregistry.i
-	@echo ... lib/ChRt-master/src/rt/src/chregistry.s
-	@echo ... lib/ChRt-master/src/rt/src/chschd.obj
-	@echo ... lib/ChRt-master/src/rt/src/chschd.i
-	@echo ... lib/ChRt-master/src/rt/src/chschd.s
-	@echo ... lib/ChRt-master/src/rt/src/chsem.obj
-	@echo ... lib/ChRt-master/src/rt/src/chsem.i
-	@echo ... lib/ChRt-master/src/rt/src/chsem.s
-	@echo ... lib/ChRt-master/src/rt/src/chstats.obj
-	@echo ... lib/ChRt-master/src/rt/src/chstats.i
-	@echo ... lib/ChRt-master/src/rt/src/chstats.s
-	@echo ... lib/ChRt-master/src/rt/src/chsys.obj
-	@echo ... lib/ChRt-master/src/rt/src/chsys.i
-	@echo ... lib/ChRt-master/src/rt/src/chsys.s
-	@echo ... lib/ChRt-master/src/rt/src/chthreads.obj
-	@echo ... lib/ChRt-master/src/rt/src/chthreads.i
-	@echo ... lib/ChRt-master/src/rt/src/chthreads.s
-	@echo ... lib/ChRt-master/src/rt/src/chtm.obj
-	@echo ... lib/ChRt-master/src/rt/src/chtm.i
-	@echo ... lib/ChRt-master/src/rt/src/chtm.s
-	@echo ... lib/ChRt-master/src/rt/src/chtrace.obj
-	@echo ... lib/ChRt-master/src/rt/src/chtrace.i
-	@echo ... lib/ChRt-master/src/rt/src/chtrace.s
-	@echo ... lib/ChRt-master/src/rt/src/chvt.obj
-	@echo ... lib/ChRt-master/src/rt/src/chvt.i
-	@echo ... lib/ChRt-master/src/rt/src/chvt.s
-	@echo ... lib/ChRt-master/src/sam3x/st_lld_sam3x.obj
-	@echo ... lib/ChRt-master/src/sam3x/st_lld_sam3x.i
-	@echo ... lib/ChRt-master/src/sam3x/st_lld_sam3x.s
-	@echo ... lib/ChRt-master/src/samd/st_lld_samd.obj
-	@echo ... lib/ChRt-master/src/samd/st_lld_samd.i
-	@echo ... lib/ChRt-master/src/samd/st_lld_samd.s
-	@echo ... lib/ChRt-master/src/teensy3/st_lld_teensy3.obj
-	@echo ... lib/ChRt-master/src/teensy3/st_lld_teensy3.i
-	@echo ... lib/ChRt-master/src/teensy3/st_lld_teensy3.s
-	@echo ... lib/ChRt-master/src/teensy4/st_lld_teensy4.obj
-	@echo ... lib/ChRt-master/src/teensy4/st_lld_teensy4.i
-	@echo ... lib/ChRt-master/src/teensy4/st_lld_teensy4.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v6m.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/arm/chcore_v7m.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/avr/chcore.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/hal/hal_st.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chdelegates.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chfactory.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmboxes.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemcore.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmemheaps.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chmempools.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chobjcaches.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/oslib/src/chpipes.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chcond.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdebug.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chdynamic.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chevents.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmsg.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chmtx.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chregistry.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chschd.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsem.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chstats.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chsys.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chthreads.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtm.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chtrace.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/src/chvt.s
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.i
+	@echo ... .pio/libdeps/teensy35/ChRt/extra/src_org/rt/templates/meta/module.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/ChRt.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/ChRt.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/ChRt.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/ChRt.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/ChRt.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/ChRt.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/arm/chcore_v6m.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/arm/chcore_v7m.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/avr/chcore.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/avr/chcore.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/avr/chcore.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/avr/st_lld_avr.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/hal/hal_st.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/hal/hal_st.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/hal/hal_st.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chdelegates.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chfactory.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmboxes.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemcore.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmemheaps.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chmempools.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chobjcaches.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/oslib/src/chpipes.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chcond.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chdebug.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chdynamic.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chevents.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chmsg.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chmtx.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chregistry.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chschd.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chsem.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chstats.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chsys.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chthreads.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chtm.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chtrace.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/src/chvt.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/rt/templates/meta/module.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/sam3x/st_lld_sam3x.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/samd/st_lld_samd.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/teensy3/st_lld_teensy3.s
+	@echo ... .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.obj
+	@echo ... .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.i
+	@echo ... .pio/libdeps/teensy35/ChRt/src/teensy4/st_lld_teensy4.s
+	@echo ... .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.obj
+	@echo ... .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.i
+	@echo ... .pio/libdeps/teensy35/I2Cdevlib-Core/I2Cdev.s
+	@echo ... .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.obj
+	@echo ... .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.i
+	@echo ... .pio/libdeps/teensy35/I2Cdevlib-MPU6050/MPU6050.s
+	@echo ... .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.obj
+	@echo ... .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.i
+	@echo ... .pio/libdeps/teensy35/JLed/examples/multiled_mbed/multiled_mbed.s
+	@echo ... .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.obj
+	@echo ... .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.i
+	@echo ... .pio/libdeps/teensy35/JLed/examples/raspi_pico/pico_demo.s
+	@echo ... .pio/libdeps/teensy35/JLed/src/esp32_hal.obj
+	@echo ... .pio/libdeps/teensy35/JLed/src/esp32_hal.i
+	@echo ... .pio/libdeps/teensy35/JLed/src/esp32_hal.s
+	@echo ... .pio/libdeps/teensy35/JLed/src/jled_base.obj
+	@echo ... .pio/libdeps/teensy35/JLed/src/jled_base.i
+	@echo ... .pio/libdeps/teensy35/JLed/src/jled_base.s
+	@echo ... .pio/libdeps/teensy35/RF24/RF24.obj
+	@echo ... .pio/libdeps/teensy35/RF24/RF24.i
+	@echo ... .pio/libdeps/teensy35/RF24/RF24.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples/old_backups/recipes/pingpair_maple/main.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/acknowledgementPayloads.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/extra/rpi-hub.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/extra/scanner.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/gettingstarted.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interruptConfigure.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/gettingstarted_call_response_int2.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/pingpair_dyn_int.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/interrupts/transfer_interrupt.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/manualAcknowledgements.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/multiceiverDemo.s
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/streamingData.obj
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/streamingData.i
+	@echo ... .pio/libdeps/teensy35/RF24/examples_linux/streamingData.s
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.obj
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.i
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24.s
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.obj
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.i
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Mesh/pyRF24Mesh.s
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.obj
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.i
+	@echo ... .pio/libdeps/teensy35/RF24/pyRF24/pyRF24Network/pyRF24Network.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/compatibility.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/gpio_helper.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/ATXMegaD3/spi.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/compatibility.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/gpio.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/spi.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/spi.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/MRAA/spi.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/bcm2835.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/compatibility.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/interrupt.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/spi.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/spi.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/RPi/spi.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/compatibility.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/gpio.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/interrupt.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/SPIDEV/spi.s
+	@echo ... .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.obj
+	@echo ... .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.i
+	@echo ... .pio/libdeps/teensy35/RF24/utility/wiringPi/spi.s
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.i
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLogger/UserFunctions.s
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.i
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.s
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.i
+	@echo ... .pio/libdeps/teensy35/SdFat/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatDbg.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFile.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFilePrint.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFileWrite.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatFormatter.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatName.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatPartition.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/ExFatLib/ExFatVolume.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatDbg.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFile.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileLFN.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFilePrint.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFileSFN.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatFormatter.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatName.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatPartition.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FatLib/FatVolume.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FreeStack.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FreeStack.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FreeStack.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsFile.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsNew.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/FsLib/FsVolume.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/MinimumSerial.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/MinimumSerial.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/MinimumSerial.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdCardInfo.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdSpiCard.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SdCard/SdioTeensy.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiArtemis.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiChipSelect.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiDue.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiESP.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiParticle.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiSTM32Core.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/SpiDriver/SdSpiTeensy3.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FmtNumber.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsCache.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsCache.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsCache.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsDateTime.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsName.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsName.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsName.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsStructs.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsStructs.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsStructs.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsUtf.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsUtf.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/FsUtf.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/upcase.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/upcase.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/common/upcase.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/StdioStream.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/StreamBaseClass.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/istream.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/istream.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/istream.s
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/ostream.obj
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/ostream.i
+	@echo ... .pio/libdeps/teensy35/SdFat/src/iostream/ostream.s
 	@echo ... lib/ECVTlibs/src/WheelSpeed.obj
 	@echo ... lib/ECVTlibs/src/WheelSpeed.i
 	@echo ... lib/ECVTlibs/src/WheelSpeed.s
 	@echo ... lib/I2Cdev/I2Cdev.obj
 	@echo ... lib/I2Cdev/I2Cdev.i
 	@echo ... lib/I2Cdev/I2Cdev.s
-	@echo ... lib/LED/src/LED.obj
-	@echo ... lib/LED/src/LED.i
-	@echo ... lib/LED/src/LED.s
-	@echo ... lib/LED/src/TreedStateTracker.obj
-	@echo ... lib/LED/src/TreedStateTracker.i
-	@echo ... lib/LED/src/TreedStateTracker.s
 	@echo ... lib/MPU6050/MPU6050.obj
 	@echo ... lib/MPU6050/MPU6050.i
 	@echo ... lib/MPU6050/MPU6050.s
@@ -3027,138 +4374,6 @@ help:
 	@echo ... lib/MPU6050/MPU6050_9Axis_MotionApps41.obj
 	@echo ... lib/MPU6050/MPU6050_9Axis_MotionApps41.i
 	@echo ... lib/MPU6050/MPU6050_9Axis_MotionApps41.s
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.obj
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.i
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLogger/UserFunctions.s
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.obj
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.i
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerADXL345/UserFunctions.s
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.obj
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.i
-	@echo ... lib/SdFat-beta-master/examples/examplesV1/LowLatencyLoggerMPU6050/UserFunctions.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatDbg.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFile.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFile.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFile.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFilePrint.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFileWrite.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatFormatter.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatPartition.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/ExFatVolume.s
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/upcase.obj
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/upcase.i
-	@echo ... lib/SdFat-beta-master/src/ExFatLib/upcase.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatDbg.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatDbg.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatDbg.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFile.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFile.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFile.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFileLFN.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFileLFN.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFileLFN.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFilePrint.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFilePrint.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFilePrint.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFileSFN.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFileSFN.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFileSFN.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFormatter.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFormatter.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatFormatter.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatPartition.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatPartition.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatPartition.s
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatVolume.obj
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatVolume.i
-	@echo ... lib/SdFat-beta-master/src/FatLib/FatVolume.s
-	@echo ... lib/SdFat-beta-master/src/FreeStack.obj
-	@echo ... lib/SdFat-beta-master/src/FreeStack.i
-	@echo ... lib/SdFat-beta-master/src/FreeStack.s
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsFile.obj
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsFile.i
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsFile.s
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsNew.obj
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsNew.i
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsNew.s
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsVolume.obj
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsVolume.i
-	@echo ... lib/SdFat-beta-master/src/FsLib/FsVolume.s
-	@echo ... lib/SdFat-beta-master/src/MinimumSerial.obj
-	@echo ... lib/SdFat-beta-master/src/MinimumSerial.i
-	@echo ... lib/SdFat-beta-master/src/MinimumSerial.s
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdCardInfo.obj
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdCardInfo.i
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdCardInfo.s
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdSpiCard.obj
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdSpiCard.i
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdSpiCard.s
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdioTeensy.obj
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdioTeensy.i
-	@echo ... lib/SdFat-beta-master/src/SdCard/SdioTeensy.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiArtemis.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiChipSelect.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiDue.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiESP.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiParticle.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiSTM32.s
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.obj
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.i
-	@echo ... lib/SdFat-beta-master/src/SpiDriver/SdSpiTeensy3.s
-	@echo ... lib/SdFat-beta-master/src/common/FmtNumber.obj
-	@echo ... lib/SdFat-beta-master/src/common/FmtNumber.i
-	@echo ... lib/SdFat-beta-master/src/common/FmtNumber.s
-	@echo ... lib/SdFat-beta-master/src/common/FsDateTime.obj
-	@echo ... lib/SdFat-beta-master/src/common/FsDateTime.i
-	@echo ... lib/SdFat-beta-master/src/common/FsDateTime.s
-	@echo ... lib/SdFat-beta-master/src/common/FsStructs.obj
-	@echo ... lib/SdFat-beta-master/src/common/FsStructs.i
-	@echo ... lib/SdFat-beta-master/src/common/FsStructs.s
-	@echo ... lib/SdFat-beta-master/src/common/PrintBasic.obj
-	@echo ... lib/SdFat-beta-master/src/common/PrintBasic.i
-	@echo ... lib/SdFat-beta-master/src/common/PrintBasic.s
-	@echo ... lib/SdFat-beta-master/src/common/SysCallBareUno.obj
-	@echo ... lib/SdFat-beta-master/src/common/SysCallBareUno.i
-	@echo ... lib/SdFat-beta-master/src/common/SysCallBareUno.s
-	@echo ... lib/SdFat-beta-master/src/iostream/StdioStream.obj
-	@echo ... lib/SdFat-beta-master/src/iostream/StdioStream.i
-	@echo ... lib/SdFat-beta-master/src/iostream/StdioStream.s
-	@echo ... lib/SdFat-beta-master/src/iostream/StreamBaseClass.obj
-	@echo ... lib/SdFat-beta-master/src/iostream/StreamBaseClass.i
-	@echo ... lib/SdFat-beta-master/src/iostream/StreamBaseClass.s
-	@echo ... lib/SdFat-beta-master/src/iostream/istream.obj
-	@echo ... lib/SdFat-beta-master/src/iostream/istream.i
-	@echo ... lib/SdFat-beta-master/src/iostream/istream.s
-	@echo ... lib/SdFat-beta-master/src/iostream/ostream.obj
-	@echo ... lib/SdFat-beta-master/src/iostream/ostream.i
-	@echo ... lib/SdFat-beta-master/src/iostream/ostream.s
-	@echo ... src/fsm/writer.obj
-	@echo ... src/fsm/writer.i
-	@echo ... src/fsm/writer.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

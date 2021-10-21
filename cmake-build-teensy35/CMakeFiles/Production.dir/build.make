@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6
+CMAKE_SOURCE_DIR = C:\Users\Domo2\CLionProjects\DAQ6
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35
+CMAKE_BINARY_DIR = C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35
 
 # Utility rule file for Production.
 
@@ -66,7 +66,7 @@ include CMakeFiles/Production.dir/compiler_depend.make
 include CMakeFiles/Production.dir/progress.make
 
 CMakeFiles/Production:
-	cd /d C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6 && platformio -c clion run -eteensy35
+	cd /d C:\Users\Domo2\CLionProjects\DAQ6 && platformio -c clion run -eteensy35
 
 Production: CMakeFiles/Production
 Production: CMakeFiles/Production.dir/build.make
@@ -81,6 +81,6 @@ CMakeFiles/Production.dir/clean:
 .PHONY : CMakeFiles/Production.dir/clean
 
 CMakeFiles/Production.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6 C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6 C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35 C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35 C:\Users\Domo2\Documents\PlatformIO\Projects\DAQ6\cmake-build-teensy35\CMakeFiles\Production.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Domo2\CLionProjects\DAQ6 C:\Users\Domo2\CLionProjects\DAQ6 C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35 C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35 C:\Users\Domo2\CLionProjects\DAQ6\cmake-build-teensy35\CMakeFiles\Production.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Production.dir/depend
 
