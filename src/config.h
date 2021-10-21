@@ -7,10 +7,12 @@
 #define PRINT_SENSORS
 
 /*BUFFER QUEUE CONFIG*/
-#define BLOCK_SIZE 512
+#define SD_BLOCK_SIZE 512
+#define SD_BLOCK_COUNT 10
 
+#define NRF_BLOCK_SIZE 32
+#define NRF_BLOCK_COUNT 30
 
-#define BLOCK_COUNT 10
 #define MAX_PACKET_SIZE 1024
 
 /*FILE CONFIG*/
@@ -34,7 +36,6 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 #define READER_PRIORITY NORMALPRIO + 10
 
 /***PIN CONFIG***/
-//TODO: SPI.setMOSI(pin), SPI.setMISO(pin), and SPI.setSCK(pin)
 //NRF24l01+ Pin Config
 #define PIN_NRF_CE 35
 #define PIN_NRF_CS 15
@@ -93,8 +94,6 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 /**ADVANCED CONFIGURATION**/
 //There be dragons here.
-#define MAX_BUFFER_SIZE 192 * 1024
-
 #define FILENAME_SIZE sizeof(FILENAME_PREFIX) + sizeof(FILENAME_SUFFIX) + 5
 
 #define SENSOR_ARR_SIZE 20
@@ -104,12 +103,14 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 #define FILE_TYPE ExFatFile
 
 //Defines size of contiguous buffer that holds blocks. Basically one big array accessed in chunks.
-#define BUFFER_SIZE BLOCK_COUNT * BLOCK_SIZE
+#define BUFFER_SIZE SD_BLOCK_COUNT * SD_BLOCK_SIZE
 
 #define SERIAL_TIMEOUT 10000
 
+#define NRF_PA_LEVEL RF24_PA_LOW
+#define NRF_CAR_ADDRESS "baja1"
 /*=*=*=*SECTION COMPILE-TIME CHECKS*=*=*=*/
 
 
-
+static_assert(NRF_BLOCK_SIZE <= 32, "NRF24l01 supports maximum packet sizes of 32 bytes!");
 #endif

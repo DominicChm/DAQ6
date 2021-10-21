@@ -8,6 +8,7 @@
 #include "fsm.h"
 #include "SensorManager.h"
 #include "RF24.h"
+#include <ChRt.h>
 
 /*sensors*/
 #include "Sensor.h"
@@ -18,22 +19,11 @@
 #include "sensors/SensorMPU6050.h"
 
 #include "DebouncedButton.h"
+#include "DataBlocker.h"
 
 
-/*ChibiOS*/
-#include <ChRt.h>
-
-MUTEX_DECL(QueueMod_Mtx);
-
-//The queues hold pointers to the starting addresses of each block of size BLOCK_SIZE in blockBuf.
-//This is done to optimize performance and simplify later code.
-//These pointers, once initialized, will basically be passed back and forth between
-//the emptyQueue and the writeQueue
-Queue<uint8_t *> writeQueue = Queue<uint8_t *>(BLOCK_COUNT);
-Queue<uint8_t *> emptyQueue = Queue<uint8_t *>(BLOCK_COUNT);
-
-//Holds the actual memeory of the blocks accessed through pointers in the write/empty queue
-uint8_t blockBuf[BUFFER_SIZE];
+DataBlocker<uint8_t, SD_BLOCK_SIZE, SD_BLOCK_COUNT> sd_blocker;
+DataBlocker<uint8_t, NRF_BLOCK_SIZE, NRF_BLOCK_COUNT> nrf_blocker;
 
 Sensor *sensors[SENSOR_ARR_SIZE];
 uint16_t numSensors = 0; //BC sensors are semi-dynamically created (through config),
@@ -41,44 +31,15 @@ uint16_t numSensors = 0; //BC sensors are semi-dynamically created (through conf
 
 uint8_t packetBuf[MAX_PACKET_SIZE];
 
-
 volatile bool isLogging = false;
+volatile bool radio_enabled = false;
+//SensorManager<10, 512> manager;
 
-SensorManager<10, 512> manager;
+RF24 radio(PIN_NRF_CE, PIN_NRF_CS);
 
 /*Func defs*/
-void fsmWriter();
-
-/*Takes two paremeters - a pointer to a buffer and a size - and
-writes the passed buffer into blocks within the block buffer, moving blocks from 
-the empty buffer to the full buffer as they fill.*/
-void queueBuf(uint8_t *buf, uint16_t size) {
-    static uint8_t *currentBlock = emptyQueue.pop(); //On init, get an empty block.
-    static uint32_t currentInd = 0;
-
-    for (int i = 0; i < size; i++) {
-        //Add a val to the current block...
-        currentBlock[currentInd] = buf[i];
-        currentInd++;
-
-        //If we have filled the block, push it to the write queue and get an empty one.
-        if (currentInd >= BLOCK_SIZE) {
-
-            //If there's an empty block we can write to, pop it make it ours owo.
-            if (emptyQueue.count() > 0) {
-                writeQueue.push(currentBlock);
-                currentBlock = emptyQueue.pop();
-            } else {
-                Serial.println("BUFFER OVERRAN!");
-                SysCall::halt();
-            }
-
-            //Reset the block index.
-            currentInd = 0;
-        }
-
-    }
-}
+void sd_writer_fsm();
+void nrf_writer();
 
 
 
@@ -91,12 +52,11 @@ THD_WORKING_AREA(readerWa, 512);
         uint16_t size = BufferPacket(packetBuf, sensors, numSensors);
         sensorPrint("\n");
 
-        if (isLogging) {
-            chMtxLock(&QueueMod_Mtx);
-            queueBuf(packetBuf, size);
-            chMtxUnlock(&QueueMod_Mtx);
-        }
+        if (isLogging)
+            sd_blocker.write(packetBuf, size);
 
+        if (radio_enabled)
+            nrf_blocker.write(packetBuf, size);
 
         nextRead += TIME_MS2I(SAMPLE_INTERVAL);
         chThdSleepUntil(nextRead);
@@ -113,7 +73,8 @@ THD_WORKING_AREA(readerWa, 512);
         for (int i = 0; i < numSensors; i++)
             sensors[i]->loop();
 
-        fsmWriter();
+        nrf_writer();
+        sd_writer_fsm();
         status_led.Update();
     }
 }
@@ -122,10 +83,27 @@ THD_WORKING_AREA(readerWa, 512);
 void setup() {
     Serial.begin(115200);
 
+    //Wait for serial connection
     uint32_t timeoutAt = millis() + SERIAL_TIMEOUT;
     status_led.Blink(100, 100).Forever();
     while (!Serial && timeoutAt > millis()) { status_led.Update(); }
+
     debugl("Starting...");
+
+    //Set SPI to use alternate pin setup. Done B/C of way PCB was wired. Not necessary if default SPI
+    //pins are routed.
+    SPI.setMOSI(7);
+    SPI.setMISO(8);
+    SPI.setSCK(14);
+
+    radio_enabled = radio.begin();
+    if (radio_enabled) {
+        debugl("NRF24l01+ Connected.");
+        radio.setPayloadSize(NRF_BLOCK_SIZE); // char[7] & uint8_t datatypes occupy 8 bytes
+        radio.setPALevel(NRF_PA_LEVEL); // RF24_PA_MAX is default.
+        radio.openWritingPipe((uint8_t *) NRF_CAR_ADDRESS);
+        radio.stopListening();
+    } else debugl("Failed to init NRF24l01+ radio module. Continuing without.");
 
     /*Sensor setups*/
 #ifdef SENSOR_TIME
@@ -173,18 +151,20 @@ void setup() {
     debug(numSensors);
     debugl(" sensors initialized!");
 
-    //Populate the empty queue with pointers to each 512 byte-long buffer.
-    for (uint32_t i = 0; i < BLOCK_COUNT; i++) {
-        uint8_t *bufIndex = &blockBuf[i * BLOCK_SIZE]; //Pointer generated to be at the start of each block.
-        emptyQueue.push(bufIndex);
-    }
     status_led.Blink(500, 500).Forever();
 
     chBegin(chMain);
 }
 
+void nrf_writer() {
+    if (nrf_blocker.available()) {
+        uint8_t *block = nrf_blocker.checkout_block();
+        radio.write(block, nrf_blocker.size());
+        nrf_blocker.return_block(block);
+    }
+}
 
-void fsmWriter() {
+void sd_writer_fsm() {
     //Positive states are OK states
     enum state_e {
         STATE_WAITING_TO_START,
@@ -192,7 +172,8 @@ void fsmWriter() {
         STATE_WRITING_SD,
         STATE_STOPPING,
         STATE_SIGNAL_SD_ERR,
-        STATE_INIT_LOGGING
+        STATE_INIT_LOGGING,
+        STATE_WRITING_NRF
     };
 
     //Handles debouncing of the logger toggle button.
@@ -241,10 +222,6 @@ void fsmWriter() {
             for (int i = 0; i < numSensors; i++)
                 sensors[i]->start();
 
-            //Place all the previously populated blocks into the empty queue
-            for (int i = 0; i < writeQueue.count(); i++)
-                emptyQueue.push(writeQueue.pop());
-
             logger_led.On();
             isLogging = true;
             SET_STATE(STATE_LOGGING);
@@ -252,7 +229,7 @@ void fsmWriter() {
         }
         case STATE_LOGGING: {
             //If card not busy and data available, write.
-            SET_STATE_IF(!sd.card()->isBusy() && writeQueue.count() > 0, STATE_WRITING_SD);
+            SET_STATE_IF(!sd.card()->isBusy() && sd_blocker.available(), STATE_WRITING_SD);
             SET_STATE_IF(loggerBtn.isTriggered(), STATE_STOPPING);
             break;
         }
@@ -260,13 +237,12 @@ void fsmWriter() {
         case STATE_WRITING_SD: {
             //Pop a block pointer from the write queue, and write it to SD. 
             //Prevent other threads from touching the queue while this happens through the mtx.
-            chMtxLock(&QueueMod_Mtx);
-            uint8_t *poppedBlock = writeQueue.pop();
-            chMtxUnlock(&QueueMod_Mtx);
+            uint8_t *popped_block = sd_blocker.checkout_block();
 
-            size_t written = file.write(poppedBlock,
-                                        BLOCK_SIZE); //Can do this w/o checking block B/C if we're here, data is guarenteed to be in queue.
-            if (written != BLOCK_SIZE) {
+            //Can do this w/o checking block B/C if we're here, data is guarenteed to be in queue.
+            int written = (int) file.write(popped_block, sd_blocker.size());
+
+            if (written != sd_blocker.size()) {
                 debugl("Write Failed! :(");
 
                 for (int i = 0; i < numSensors; i++)
@@ -275,12 +251,8 @@ void fsmWriter() {
                 SET_STATE(STATE_SIGNAL_SD_ERR);
             }
 
-            //Once done, put the written back on the empty queue to be used again.
-            chMtxLock(&QueueMod_Mtx);
-            emptyQueue.push(poppedBlock);
-            chMtxUnlock(&QueueMod_Mtx);
-
             SET_STATE(STATE_LOGGING)
+            sd_blocker.return_block(popped_block);
             break;
         }
 
