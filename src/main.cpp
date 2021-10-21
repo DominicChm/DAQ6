@@ -123,7 +123,7 @@ void setup() {
     Serial.begin(115200);
 
     uint32_t timeoutAt = millis() + SERIAL_TIMEOUT;
-    status_led.Blink(100, 100);
+    status_led.Blink(100, 100).Forever();
     while (!Serial && timeoutAt > millis()) { status_led.Update(); }
     debugl("Starting...");
 
@@ -178,7 +178,7 @@ void setup() {
         uint8_t *bufIndex = &blockBuf[i * BLOCK_SIZE]; //Pointer generated to be at the start of each block.
         emptyQueue.push(bufIndex);
     }
-    status_led.Blink(500, 500);
+    status_led.Blink(500, 500).Forever();
 
     chBegin(chMain);
 }
@@ -191,7 +191,8 @@ void fsmWriter() {
         STATE_LOGGING,
         STATE_WRITING_SD,
         STATE_STOPPING,
-        STATE_SIGNAL_SD_ERR
+        STATE_SIGNAL_SD_ERR,
+        STATE_INIT_LOGGING
     };
 
     //Handles debouncing of the logger toggle button.
@@ -201,7 +202,7 @@ void fsmWriter() {
     static state_e lastState = STATE_WAITING_TO_START;
 
     static SD_TYPE sd;
-    static RF24 radio(PIN_NRF_CE, PIN_NRF_CS); // using pin 7 for the CE pin, and pin 8 for the CSN pin
+    //static RF24 radio(PIN_NRF_CE, PIN_NRF_CS); // using pin 7 for the CE pin, and pin 8 for the CSN pin
 
     static FILE_TYPE file;
 
@@ -212,7 +213,7 @@ void fsmWriter() {
             ON_STATE_ENTER({
                                Serial.println("SD INITIALIZATION ERROR");
                                sd.printSdError(&Serial);
-                               logger_led.Blink(100, 100);
+                               logger_led.Blink(100, 100).Forever();
                                timeout = millis() + 1000;
                            });
             SET_STATE_IF(millis() > timeout, STATE_WAITING_TO_START);
@@ -223,36 +224,33 @@ void fsmWriter() {
                                logger_led.Off();
                                isLogging = false;
                            });
-            SET_STATE_IF(loggerBtn.isTriggered(), STATE_LOGGING);
+            SET_STATE_IF(loggerBtn.isTriggered(), STATE_INIT_LOGGING);
             break;
         }
+        case STATE_INIT_LOGGING: {
+            debugl("Trying to initialize SD...");
+            SET_STATE_IF(!sd.begin(PIN_SD_CS), STATE_SIGNAL_SD_ERR)
 
+            char fileName[FILENAME_SIZE];
+            SelectNextFilename(fileName, &sd);
 
+            //Open the selected fileName. If there's an error, signal it.
+            SET_STATE_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_SIGNAL_SD_ERR);
+
+            //Initialize all sensors for this run.
+            for (int i = 0; i < numSensors; i++)
+                sensors[i]->start();
+
+            //Place all the previously populated blocks into the empty queue
+            for (int i = 0; i < writeQueue.count(); i++)
+                emptyQueue.push(writeQueue.pop());
+
+            logger_led.On();
+            isLogging = true;
+            SET_STATE(STATE_LOGGING);
+            break;
+        }
         case STATE_LOGGING: {
-            ON_STATE_ENTER(
-                    {
-                        debugl("Trying to initialize SD...");
-                        SET_STATE_IF(!sd.begin(PIN_SD_CS), STATE_SIGNAL_SD_ERR)
-
-                        char fileName[FILENAME_SIZE];
-                        SelectNextFilename(fileName, &sd);
-
-                        //Open the selected fileName. If there's an error, signal it.
-                        SET_STATE_IF(!file.open(fileName, O_RDWR | O_CREAT), STATE_SIGNAL_SD_ERR);
-
-                        //Initialize all sensors for this run.
-                        for (int i = 0; i < numSensors; i++)
-                            sensors[i]->start();
-
-                        //Place all the previously populated blocks into the empty queue
-                        for (int i = 0; i < writeQueue.count(); i++)
-                            emptyQueue.push(writeQueue.pop());
-
-                        logger_led.On();
-                        isLogging = true;
-                    }
-            );
-
             //If card not busy and data available, write.
             SET_STATE_IF(!sd.card()->isBusy() && writeQueue.count() > 0, STATE_WRITING_SD);
             SET_STATE_IF(loggerBtn.isTriggered(), STATE_STOPPING);

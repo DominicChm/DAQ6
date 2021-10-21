@@ -1,4 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=teensy35 -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\Domo2\CLionProjects\DAQ6
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Domo2/CLionProjects/DAQ6/cmake-build-teensy35

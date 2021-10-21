@@ -1,5 +1,0 @@
-C:/Users/Domo2/CLionProjects/DAQ6/cmake-build-teensy35/CMakeFiles/Production.dir
-C:/Users/Domo2/CLionProjects/DAQ6/cmake-build-teensy35/CMakeFiles/edit_cache.dir
-C:/Users/Domo2/CLionProjects/DAQ6/cmake-build-teensy35/CMakeFiles/Debug.dir
-C:/Users/Domo2/CLionProjects/DAQ6/cmake-build-teensy35/CMakeFiles/Z_DUMMY_TARGET.dir
-C:/Users/Domo2/CLionProjects/DAQ6/cmake-build-teensy35/CMakeFiles/rebuild_cache.dir
