@@ -12,8 +12,7 @@ private:
     Quaternion q;           // [w, x, y, z]         quaternion container
 
     VectorInt16 aa;         // [x, y, z]            accel sensor measurements
-    VectorInt16 aaReal;     // [x, y, z]            gravity-free accel sensor measurements
-    VectorInt16 aaWorld;    // [x, y, z]            world-frame accel sensor measurements
+    VectorInt16 gyro;     // [x, y, z]            Gyro measurements
 
     MPU6050 mpu;
     uint8_t devStatus;
@@ -90,14 +89,18 @@ public:
         i16bv[1] = aa.y;
         i16bv[2] = aa.z;
 
+        i16bv[3] = gyro.x;
+        i16bv[4] = gyro.y;
+        i16bv[5] = gyro.z;
+
         //New buffer view, at next empty index.
-        auto *f32bv = (float *) &buffer[1 + sizeof(int16_t) * 3];
+        auto *f32bv = (float *) &buffer[1 + sizeof(int16_t) * 6];
         f32bv[0] = q.x;
         f32bv[1] = q.y;
         f32bv[2] = q.z;
         f32bv[3] = q.w;
 
-        return 1 + sizeof(int16_t) * 3 + sizeof(float) * 4;
+        return 1 + sizeof(int16_t) * 6 + sizeof(float) * 4;
     }
 
     void dataReady() {
@@ -111,41 +114,31 @@ public:
     void stop() override { ; }
 
     void loop() override {
-        if (dmpReady) {
+        if (!dmpReady) return;
+
+        fifoCount = mpu.getFIFOCount();
+        if (dmpReadyFlag || fifoCount > packetSize) {
+            dmpReadyFlag = false;
+            mpuIntStatus = mpu.getIntStatus();
             fifoCount = mpu.getFIFOCount();
-            if (dmpReadyFlag || fifoCount > packetSize) {
-                dmpReadyFlag = false;
-                mpuIntStatus = mpu.getIntStatus();
+
+            if ((mpuIntStatus & _BV(MPU6050_INTERRUPT_FIFO_OFLOW_BIT)) || fifoCount >= 1024) {
+                // reset so we can continue cleanly
+                mpu.resetFIFO();
                 fifoCount = mpu.getFIFOCount();
+                Serial.println(F("FIFO overflow!"));
 
+            } else if (mpuIntStatus & _BV(MPU6050_INTERRUPT_DMP_INT_BIT)) {
+                while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
+                mpu.getFIFOBytes(fifoBuffer, packetSize);
+                fifoCount -= packetSize;
 
-                if ((mpuIntStatus & _BV(MPU6050_INTERRUPT_FIFO_OFLOW_BIT)) || fifoCount >= 1024) {
-                    // reset so we can continue cleanly
-                    mpu.resetFIFO();
-                    fifoCount = mpu.getFIFOCount();
-                    Serial.println(F("FIFO overflow!"));
-
-                } else if (mpuIntStatus & _BV(MPU6050_INTERRUPT_DMP_INT_BIT)) {
-                    while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
-
-                    mpu.getFIFOBytes(fifoBuffer, packetSize);
-
-                    fifoCount -= packetSize;
-
-
-                    mpu.dmpGetQuaternion(&q, fifoBuffer);
-                    mpu.dmpGetAccel(&aa, fifoBuffer);
-
-                    mpu.dmpGetGravity(&gravity, &q);
-
-                    mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
-
-                    mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
-
-                    mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
-                }
+                mpu.dmpGetQuaternion(&q, fifoBuffer);
+                mpu.dmpGetAccel(&aa, fifoBuffer);
+                mpu.dmpGetGyro(&gyro, fifoBuffer);
             }
         }
+
 
     }
 };
