@@ -33,14 +33,17 @@ uint8_t packetBuf[MAX_PACKET_SIZE];
 
 volatile bool isLogging = false;
 volatile bool radio_enabled = false;
+volatile bool radio_transmitting = false;
 //SensorManager<10, 512> manager;
 
 RF24 radio(PIN_NRF_CE, PIN_NRF_CS);
 
 /*Func defs*/
 void sd_writer_fsm();
+
 void nrf_writer();
 
+void IRQ_nrf();
 
 
 /*Reader Thread - every SAMPLE_INTERVAL ms this function will run, recording sensor data into the block buffer.*/
@@ -103,6 +106,16 @@ void setup() {
         radio.setPALevel(NRF_PA_LEVEL); // RF24_PA_MAX is default.
         radio.openWritingPipe((uint8_t *) NRF_CAR_ADDRESS);
         radio.stopListening();
+        radio.setAutoAck(false);
+        radio.setDataRate(RF24_1MBPS);
+        radio.setCRCLength(RF24_CRC_8);
+        radio.maskIRQ(false, true, true); //Only care about TX ok events.
+        radio.csDelay = 0;
+        radio.txDelay = 0;
+        radio.startListening();
+        radio.stopListening();
+
+        attachInterrupt(digitalPinToInterrupt(PIN_NRF_IRQ), IRQ_nrf, FALLING);
     } else debugl("Failed to init NRF24l01+ radio module. Continuing without.");
 
     /*Sensor setups*/
@@ -156,10 +169,19 @@ void setup() {
     chBegin(chMain);
 }
 
+void IRQ_nrf() {
+    radio_transmitting = false;
+    radio.txStandBy();
+    radio.startListening();                 // Put the radio into listening (RX) mode
+}
+
 void nrf_writer() {
-    if (nrf_blocker.available()) {
+    if (nrf_blocker.available() && !radio_transmitting) {
         uint8_t *block = nrf_blocker.checkout_block();
-        radio.write(block, nrf_blocker.size());
+        radio.stopListening();
+        radio.startFastWrite(block, nrf_blocker.size(), true);
+        radio_transmitting = true;
+
         nrf_blocker.return_block(block);
     }
 }
@@ -173,7 +195,6 @@ void sd_writer_fsm() {
         STATE_STOPPING,
         STATE_SIGNAL_SD_ERR,
         STATE_INIT_LOGGING,
-        STATE_WRITING_NRF
     };
 
     //Handles debouncing of the logger toggle button.
@@ -258,6 +279,12 @@ void sd_writer_fsm() {
 
         case STATE_STOPPING: {
             isLogging = false;
+
+            //Write remaining data to file.
+            uint8_t *block = sd_blocker.checkout_remainder_block();
+            file.write(block, sd_blocker.remainder_size());
+            sd_blocker.return_block(block);
+
             file.truncate();
             file.sync();
             file.close();
