@@ -18,11 +18,10 @@ public:
     uint16_t readPacketBlock(uint8_t *buffer) override {
         uint16_t p1 = analogRead(pin1);
         uint16_t p2 = analogRead(pin2);
+
         buffer[0] = id;
-        buffer[1] = hiByte(p1);
-        buffer[2] = lowByte(p1);
-        buffer[3] = hiByte(p2);
-        buffer[4] = lowByte(p2);
+        *((uint16_t *) &buffer[1]) = p1;
+        *((uint16_t *) &buffer[3]) = p2;
 
 
         sensorPrint("Sensor Pressure: ");
