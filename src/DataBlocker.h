@@ -16,7 +16,7 @@ private:
     Queue<T *> full_blocks = Queue<T *>(num_blocks);
     Queue<T *> empty_blocks = Queue<T *>(num_blocks);
     MUTEX_DECL(queue_mtx);
-
+    int block_remainder{};
     T *current_block;
     int block_head{};
 public:
@@ -73,6 +73,21 @@ public:
         chMtxLock(&queue_mtx);
         empty_blocks.push(block);
         chMtxUnlock(&queue_mtx);
+    }
+
+    T *checkout_remainder_block() {
+        T *block = current_block;
+        block_remainder = block_head;
+
+        chMtxLock(&queue_mtx);
+        this->current_block = empty_blocks.pop();
+        block_head = 0;
+        chMtxUnlock(&queue_mtx);
+        return block;
+    }
+
+    int remainder_size() {
+        return block_remainder;
     }
 };
 
