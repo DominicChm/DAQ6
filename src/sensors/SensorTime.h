@@ -9,10 +9,9 @@ public:
     uint16_t readPacketBlock(uint8_t *buffer) override {
         uint32_t time = millis() - offset;
         buffer[0] = 0x01;
-        buffer[1] = time >> 24;
-        buffer[2] = time >> 16;
-        buffer[3] = time >> 8;
-        buffer[4] = time;
+
+        //fugly way to write buffer bytes 1-4 as a single uint32_t.
+        *((uint32_t *) &buffer[1]) = time;
 
         sensorPrint("Time: ");
         sensorPrint(time);
