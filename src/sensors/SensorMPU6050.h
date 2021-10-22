@@ -6,10 +6,8 @@
 
 class SensorMPU6050 : public Sensor {
 private:
-    uint8_t id{};
     volatile bool dmpReadyFlag = false;
     float ypr[3]{};           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
-    float euler[3]{};         // [psi, theta, phi]    Euler angle container
     VectorFloat gravity;    // [x, y, z]            gravity vector
     Quaternion q;           // [w, x, y, z]         quaternion container
 
@@ -35,7 +33,7 @@ public:
 
         mpu = MPU6050(0x68, (void *) &Wire1);
         mpu.initialize();
-
+        mpu.setRate(10);
         Serial.println(F("Testing device connections..."));
         Serial.println(mpu.testConnection() ? F("MPU6050 connection successful") : F("MPU6050 connection failed"));
 
@@ -61,15 +59,20 @@ public:
 
         mpuIntStatus = mpu.getIntStatus();
 
-
-        mpuIntStatus = mpu.getIntStatus();
-
         packetSize = mpu.dmpGetFIFOPacketSize();
         dmpReady = true;
 
     }
 
     virtual uint16_t readPacketBlock(uint8_t *buffer) {
+        sensorPrint("Ax: ");
+        sensorPrint(aa.x);
+        sensorPrint(" Ay: ");
+        sensorPrint(aa.y);
+        sensorPrint(" Roll: ");
+        sensorPrint(aa.z);
+        sensorPrint("\t");
+
         sensorPrint("Yaw: ");
         sensorPrint(ypr[0]);
         sensorPrint(" Pitch: ");
@@ -79,15 +82,30 @@ public:
         sensorPrint("\t");
 
         buffer[0] = id;
-        return 0;
+
+        //Save quaternion and acceleration - other values are derived (check mpu6050 lib for functions)
+        //Define view of buffer to help with writing vars (i16bv = int 16 buffer view)
+        auto *i16bv = (int16_t *) &buffer[1];
+        i16bv[0] = aa.x;
+        i16bv[1] = aa.y;
+        i16bv[2] = aa.z;
+
+        //New buffer view, at next empty index.
+        auto *f32bv = (float *) &buffer[1 + sizeof(int16_t) * 3];
+        f32bv[0] = q.x;
+        f32bv[1] = q.y;
+        f32bv[2] = q.z;
+        f32bv[3] = q.w;
+
+        return 1 + sizeof(int16_t) * 3 + sizeof(float) * 4;
     }
 
     void dataReady() {
         dmpReadyFlag = true;
+        Serial.println("MPU DATA");
     }
 
     void start() override {
-        devStatus = mpu.dmpInitialize();
     }
 
     void stop() override { ; }
@@ -107,7 +125,6 @@ public:
                     fifoCount = mpu.getFIFOCount();
                     Serial.println(F("FIFO overflow!"));
 
-                    fifoCount = mpu.getFIFOCount();
                 } else if (mpuIntStatus & _BV(MPU6050_INTERRUPT_DMP_INT_BIT)) {
                     while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
 
@@ -118,9 +135,11 @@ public:
 
                     mpu.dmpGetQuaternion(&q, fifoBuffer);
                     mpu.dmpGetAccel(&aa, fifoBuffer);
+
                     mpu.dmpGetGravity(&gravity, &q);
 
                     mpu.dmpGetLinearAccel(&aaReal, &aa, &gravity);
+
                     mpu.dmpGetLinearAccelInWorld(&aaWorld, &aaReal, &q);
 
                     mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
