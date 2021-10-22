@@ -67,7 +67,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 #define PIN_BPRESSURE_R 33
 
 //MPU6050
-#define PIN_MPU6050_IRQ A17
+#define PIN_MPU6050_IRQ 41
 
 /*SENSOR CONFIG*/
 
