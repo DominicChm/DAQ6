@@ -4,7 +4,7 @@
 
 #define DEBUG
 
-#define PRINT_SENSORS
+//#define PRINT_SENSORS
 
 /*BUFFER QUEUE CONFIG*/
 #define SD_BLOCK_SIZE 512
@@ -67,12 +67,12 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 #define PIN_BPRESSURE_R 33
 
 //MPU6050
-#define PIN_MPU6050_IRQ 41
+#define PIN_MPU6050_IRQ 36
 
 /*SENSOR CONFIG*/
 
 //Sample interval in ms.
-#define SAMPLE_INTERVAL 1000/10
+#define SAMPLE_INTERVAL 1000/30
 
 //Comment a define to disable a sensor.
 #define SENSOR_TIME
@@ -83,7 +83,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 
 #define SENSOR_BRAKEPRESSURE
 
-//#define SENSOR_ROTATIONSPEEDS
+#define SENSOR_ROTATIONSPEEDS
 
 #define SENSOR_MPU6050
 
@@ -105,7 +105,7 @@ ABSPRIO	    Absolute priority level, highest reserved priority level. Above this
 //Defines size of contiguous buffer that holds blocks. Basically one big array accessed in chunks.
 #define BUFFER_SIZE SD_BLOCK_COUNT * SD_BLOCK_SIZE
 
-#define SERIAL_TIMEOUT 10000
+#define SERIAL_TIMEOUT 1000
 
 #define NRF_PA_LEVEL RF24_PA_LOW
 #define NRF_CAR_ADDRESS "baja1"

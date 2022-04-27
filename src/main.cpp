@@ -34,7 +34,11 @@ uint8_t packetBuf[MAX_PACKET_SIZE];
 volatile bool isLogging = false;
 volatile bool radio_enabled = false;
 volatile bool radio_transmitting = false;
+volatile bool interactive_serial = true;
 //SensorManager<10, 512> manager;
+#define INT_PRINTLN(arg) if(interactive_serial) Serial.println(arg)
+#define INT_PRINT(arg) if(interactive_serial) Serial.print(arg)
+
 
 RF24 radio(PIN_NRF_CE, PIN_NRF_CS);
 
@@ -44,6 +48,8 @@ void sd_writer_fsm();
 void nrf_writer();
 
 void IRQ_nrf();
+
+void serial_driver();
 
 
 /*Reader Thread - every SAMPLE_INTERVAL ms this function will run, recording sensor data into the block buffer.*/
@@ -78,6 +84,7 @@ THD_WORKING_AREA(readerWa, 512);
 
         nrf_writer();
         sd_writer_fsm();
+        serial_driver();
         status_led.Update();
     }
 }
@@ -140,15 +147,15 @@ void setup() {
         static uint16_t index = numSensors++; //Get an index to reference the rotationspeed sensor.
         sensors[index] = new SensorRotSpeeds(0x05);
 
-        auto engineISR = []() { ((SensorRotSpeeds *) sensors[index])->calcESpeed(); };
-        auto rWheelISR = []() { ((SensorRotSpeeds *) sensors[index])->calcRWheels(); };
-        auto lFrontISR = []() { ((SensorRotSpeeds *) sensors[index])->calcFLWheel(); };
-        auto rFrontISR = []() { ((SensorRotSpeeds *) sensors[index])->calcFRWheel(); };
+        auto engineISR = []() { ((SensorRotSpeeds *) sensors[index])->ePulseISR(); };
+        auto rWheelISR = []() { ((SensorRotSpeeds *) sensors[index])->rWheelPulseISR(); };
+//        auto lFrontISR = []() { ((SensorRotSpeeds *) sensors[index])->calcFLWheel(); };
+//        auto rFrontISR = []() { ((SensorRotSpeeds *) sensors[index])->calcFRWheel(); };
 
         attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_ENG), engineISR, RISING);
         attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_RGO), rWheelISR, RISING);
-        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFL), lFrontISR, RISING);
-        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFR), rFrontISR, RISING);
+//        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFL), lFrontISR, RISING);
+//        attachInterrupt(digitalPinToInterrupt(PIN_RSPEED_WFR), rFrontISR, RISING);
     }
 #endif
 
@@ -157,7 +164,7 @@ void setup() {
         static uint16_t index = numSensors++; //Get an index to reference the rotationspeed sensor.
         sensors[index] = new SensorMPU6050(0x06);
         auto mpuISR = []() { ((SensorMPU6050 *) sensors[index])->dataReady(); };
-        attachInterrupt(digitalPinToInterrupt(PIN_MPU6050_IRQ), mpuISR, RISING);
+        attachInterrupt(digitalPinToInterrupt(PIN_MPU6050_IRQ), mpuISR, FALLING);
     }
 #endif
 
@@ -174,6 +181,173 @@ void IRQ_nrf() {
     radio.txStandBy();
     radio.startListening();                 // Put the radio into listening (RX) mode
 }
+
+
+namespace serialcmd {
+    SD_TYPE sd;
+
+    bool init_sd() {
+        if (isLogging) {
+            Serial.println("CAN'T LIST - LOGGING IN PROGRESS");
+            return false;
+        }
+
+        if (!sd.begin(PIN_SD_CS)) {
+            Serial.println("FAILED TO OPEN SD");
+            return false;
+        }
+
+        return true;
+    }
+
+    void printDirectory(ExFile dir) {
+        ExFile entry = dir.openNextFile(); //Get rid of System Volume Information file
+        while (true) {
+            entry = dir.openNextFile();
+            if (!entry)
+                break;
+
+            char name[127]{};
+            entry.getName(name, 127);
+            if (interactive_serial) {
+                Serial.print(name);
+
+                if (!entry.isDirectory()) {
+                    Serial.print("    ");
+                    Serial.print(entry.size(), DEC);
+                    Serial.print(" bytes");
+                }
+                Serial.println();
+            } else {
+                Serial.println(name);
+            }
+            entry.close();
+        }
+    }
+
+    void list(char *command) {
+        INT_PRINTLN("LIST COMMAND");
+        if (!init_sd()) return;
+
+
+        ExFile root = sd.open("/");
+        serialcmd::printDirectory(root);
+    }
+
+    void download_bin(char *buf) {
+        if (!init_sd()) return;
+        char *dirArg = strtok(nullptr, " "); //Use strtok setup from calling fn.
+
+        if (dirArg == nullptr) {
+            INT_PRINTLN("No directory argument passed!");
+            return;
+        } else if (!sd.exists(dirArg)) {
+            INT_PRINT("Couldn't find file ");
+            INT_PRINTLN(dirArg);
+
+            return;
+        }
+
+        INT_PRINTLN("START");
+
+        ExFile f = sd.open(dirArg);
+
+        while (f.available())
+            Serial.write(f.read());
+
+        INT_PRINTLN("DONE");
+
+
+
+        //if(!sd.exists())
+
+    }
+
+    void download_csv(char *buf) {
+        INT_PRINTLN("DL_CSV");
+        INT_PRINTLN("DL-CSV UNIMPLEMENTED");
+        if (!init_sd()) return;
+    }
+
+    void help(char *buf) {
+        INT_PRINTLN("HELP:");
+        INT_PRINTLN("list - Lists all files on SD");
+        INT_PRINTLN("dl <FILE> - downloads file in CSV (UNIMPLEMENTED)");
+        INT_PRINTLN("dl-bin <FILE> - downloads file in BIN");
+        INT_PRINTLN("clear-sd - CAUTION: Deletes all stored files");
+
+    }
+
+    void set_interactive(char *buf) {
+        char *keyword = strtok(nullptr, " ");
+        interactive_serial = !!strcmp(keyword, "off");
+    }
+
+    void clear_sd(char *buf) {
+        if (!init_sd()) return;
+        INT_PRINTLN("DELETING ALL FILES...!");
+
+        ExFile root = sd.open("/");
+        ExFile f = root.openNextFile();
+        while (f) {
+            f.remove();
+        }
+        INT_PRINTLN("DONE!");
+
+    }
+}
+
+void parse_serial_command(char *buf) {
+/* get the first token */
+    char *token = strtok(buf, " ");
+
+    INT_PRINTLN(token);
+
+    if (!strcmp(token, "list"))
+        serialcmd::list(buf);
+
+    else if (!strcmp(token, "dl-bin"))
+        serialcmd::download_bin(buf);
+
+    else if (!strcmp(token, "dl"))
+        serialcmd::download_csv(buf);
+
+    else if (!strcmp(token, "help"))
+        serialcmd::help(buf);
+
+    else if (!strcmp(token, "int"))
+        serialcmd::set_interactive(buf);
+
+    else if (!strcmp(token, "clear-sd"))
+        serialcmd::clear_sd(buf);
+
+    else INT_PRINTLN("Unrecognized command");
+}
+
+void serial_driver() {
+    static char buf[256];
+    static int head = 0;
+
+    if (!Serial.available()) return;
+    char c = Serial.read();
+
+    switch (c) {
+        case '\r':
+        case '\n':
+            if (head <= 0) break; //Don't parse empty buffers.
+
+            buf[head++] = '\0';
+            parse_serial_command(buf);
+
+            head = 0;
+            break;
+        default:
+            buf[head++] = c;
+    }
+
+
+}
+
 
 void nrf_writer() {
     if (nrf_blocker.available() && !radio_transmitting) {

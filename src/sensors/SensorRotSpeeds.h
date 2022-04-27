@@ -6,86 +6,42 @@
 
 class SensorRotSpeeds : public Sensor {
 private:
-    int pin{};
-    const uint8_t id = 0x04;
-    WheelSpeed *eWheelSpeed;
-    WheelSpeed *rWheelsSpeed;
-    WheelSpeed *flWheelSpeed;
-    WheelSpeed *frWheelSpeed;
+    uint32_t ePulses{};
+    uint32_t rWheelPulses{};
 public:
-    explicit SensorRotSpeeds(uint8_t id) : Sensor(id) {
-        eWheelSpeed = new WheelSpeed(8);
-        rWheelsSpeed = new WheelSpeed(24);
-        flWheelSpeed = new WheelSpeed(24);
-        frWheelSpeed = new WheelSpeed(24);
-    };
+    explicit SensorRotSpeeds(uint8_t id) : Sensor(id) {};
 
-
-    virtual uint16_t readPacketBlock(uint8_t *buffer) {
-        static uint16_t ews = 0;
-        static uint16_t rws = 0;
-        static uint16_t flws = 0;
-        static uint16_t frws = 0;
-
-        uint16_t tews = ews;
-        uint16_t trws = rws;
-        uint16_t tflws = flws;
-        uint16_t tfrws = frws;
+    uint16_t readPacketBlock(uint8_t *buffer) override {
+        buffer[0] = id;
 
         noInterrupts();
-        ews = eWheelSpeed->read();
-        rws = rWheelsSpeed->read();
-        flws = flWheelSpeed->read();
-        frws = frWheelSpeed->read();
+        *((uint32_t *) &buffer[1]) = ePulses;
+        *((uint32_t *) &buffer[5]) = rWheelPulses;
         interrupts();
 
-        if (ews != tews || rws != trws || flws != tflws || frws != tfrws || true) { //Only write if somthing's changed
+        sensorPrint(ePulses);
+        sensorPrint(";\tFRONT:");
 
-            buffer[0] = id;
+        sensorPrint(rWheelPulses);
+        sensorPrint(";\t");
 
-            buffer[1] = hiByte(ews);
-            buffer[2] = loByte(ews);
-
-            buffer[3] = hiByte(rws);
-            buffer[4] = loByte(rws);
-
-            buffer[5] = hiByte(flws);
-            buffer[6] = loByte(flws);
-
-            buffer[7] = hiByte(frws);
-            buffer[8] = loByte(frws);
-
-
-            sensorPrint("RotSpeeds: ");
-            sensorPrint(ews);
-            sensorPrint(", ");
-            sensorPrint(rws);
-            sensorPrint(", ");
-            sensorPrint(flws);
-            sensorPrint(", ");
-            sensorPrint(frws);
-            sensorPrint(";\t");
-
-            sensorPrint(digitalRead(PIN_RSPEED_RGO));
-
-            return 9;
-        }
-
-        return 0;
-
+        return 9;
     } //Writes a packet to the buffer, returns the size of data written.
 
-    void calcESpeed() { eWheelSpeed->calc(); }
+    void ePulseISR() {
+        ePulses++;
+    }
 
-    void calcRWheels() { rWheelsSpeed->calc(); }
+    void rWheelPulseISR() {
+        rWheelPulses++;
+    }
 
-    void calcFLWheel() { flWheelSpeed->calc(); }
+    void start() override {
+        ePulses = 0;
+        rWheelPulses = 0;
+    }
 
-    void calcFRWheel() { frWheelSpeed->calc(); }
+    void stop() override { ; }
 
-    virtual void start() { ; }
-
-    virtual void stop() { ; }
-
-    virtual void loop() { ; }
+    void loop() override { ; }
 };

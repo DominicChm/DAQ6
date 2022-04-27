@@ -7,18 +7,12 @@
 class SensorMPU6050 : public Sensor {
 private:
     volatile bool dmpReadyFlag = false;
-    float ypr[3]{};           // [yaw, pitch, roll]   yaw/pitch/roll container and gravity vector
-    VectorFloat gravity;    // [x, y, z]            gravity vector
     Quaternion q;           // [w, x, y, z]         quaternion container
-
     VectorInt16 aa;         // [x, y, z]            accel sensor measurements
     VectorInt16 gyro;     // [x, y, z]            Gyro measurements
 
     MPU6050 mpu;
-    uint8_t devStatus;
-    uint8_t mpuIntStatus;   // holds actual interrupt status byte from MPU
     uint16_t packetSize;    // expected DMP packet size (default is 42 bytes)
-    uint16_t fifoCount{};     // count of all bytes currently in FIFO
     uint8_t fifoBuffer[64]{}; // FIFO storage buffer
 
     bool dmpReady = false;
@@ -32,11 +26,12 @@ public:
 
         mpu = MPU6050(0x68, (void *) &Wire1);
         mpu.initialize();
-        mpu.setRate(10);
+        mpu.setIntDMPEnabled(true);
+        mpu.setIntDataReadyEnabled(true);
         Serial.println(F("Testing device connections..."));
         Serial.println(mpu.testConnection() ? F("MPU6050 connection successful") : F("MPU6050 connection failed"));
 
-        devStatus = mpu.dmpInitialize();
+        int devStatus = mpu.dmpInitialize();
 
         /*Set offsets*/
         mpu.setXGyroOffset(51);
@@ -55,15 +50,15 @@ public:
 
         Serial.println(F("Enabling DMP..."));
         mpu.setDMPEnabled(true);
-
-        mpuIntStatus = mpu.getIntStatus();
+        dmpReady = true;
 
         packetSize = mpu.dmpGetFIFOPacketSize();
-        dmpReady = true;
 
     }
 
-    virtual uint16_t readPacketBlock(uint8_t *buffer) {
+    uint16_t readPacketBlock(uint8_t *buffer) override {
+        if (!dmpReady) return 0;
+
         sensorPrint("Ax: ");
         sensorPrint(aa.x);
         sensorPrint(" Ay: ");
@@ -71,15 +66,6 @@ public:
         sensorPrint(" Roll: ");
         sensorPrint(aa.z);
         sensorPrint("\t");
-
-        sensorPrint("Yaw: ");
-        sensorPrint(ypr[0]);
-        sensorPrint(" Pitch: ");
-        sensorPrint(ypr[1]);
-        sensorPrint(" Roll: ");
-        sensorPrint(ypr[2]);
-        sensorPrint("\t");
-
         buffer[0] = id;
 
         //Save quaternion and acceleration - other values are derived (check mpu6050 lib for functions)
@@ -105,7 +91,6 @@ public:
 
     void dataReady() {
         dmpReadyFlag = true;
-        Serial.println("MPU DATA");
     }
 
     void start() override {
@@ -115,30 +100,28 @@ public:
 
     void loop() override {
         if (!dmpReady) return;
+        if (!dmpReadyFlag) return;
+        dmpReadyFlag = false;
 
-        fifoCount = mpu.getFIFOCount();
-        if (dmpReadyFlag || fifoCount > packetSize) {
-            dmpReadyFlag = false;
-            mpuIntStatus = mpu.getIntStatus();
-            fifoCount = mpu.getFIFOCount();
+        uint8_t mpuIntStatus = mpu.getIntStatus();
+        uint16_t fifoCount = mpu.getFIFOCount();
 
-            if ((mpuIntStatus & _BV(MPU6050_INTERRUPT_FIFO_OFLOW_BIT)) || fifoCount >= 1024) {
-                // reset so we can continue cleanly
-                mpu.resetFIFO();
-                fifoCount = mpu.getFIFOCount();
-                Serial.println(F("FIFO overflow!"));
+        if ((mpuIntStatus & _BV(MPU6050_INTERRUPT_FIFO_OFLOW_BIT)) || fifoCount >= 1024) {
+            // reset so we can continue cleanly
+            mpu.resetFIFO();
+            Serial.println(F("FIFO overflow!"));
 
-            } else if (mpuIntStatus & _BV(MPU6050_INTERRUPT_DMP_INT_BIT)) {
-                while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
-                mpu.getFIFOBytes(fifoBuffer, packetSize);
-                fifoCount -= packetSize;
+        } else if (mpuIntStatus & _BV(MPU6050_INTERRUPT_DMP_INT_BIT)) {
+            //Wait until FIFO is full enough to read (if IRQ triggered)
+            while (fifoCount < packetSize) fifoCount = mpu.getFIFOCount();
 
-                mpu.dmpGetQuaternion(&q, fifoBuffer);
-                mpu.dmpGetAccel(&aa, fifoBuffer);
-                mpu.dmpGetGyro(&gyro, fifoBuffer);
-            }
+            mpu.getFIFOBytes(fifoBuffer, packetSize);
+            fifoCount -= packetSize;
+
+            //Extract base values and log them.
+            mpu.dmpGetQuaternion(&q, fifoBuffer);
+            mpu.dmpGetAccel(&aa, fifoBuffer);
+            mpu.dmpGetGyro(&gyro, fifoBuffer);
         }
-
-
     }
 };

@@ -14,7 +14,7 @@
     #define sensorPrint(s) {debug(s);}
 #else
     #define sensorPrintl(s) {}
-    #define sensorPrintl(s) {}
+    #define sensorPrint(s) {}
 #endif
 
 

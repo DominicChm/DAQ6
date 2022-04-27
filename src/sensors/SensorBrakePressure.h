@@ -13,6 +13,7 @@ public:
         pinMode(pin2, INPUT);
         this->pin1 = pin1;
         this->pin2 = pin2;
+        analogReadResolution(16);
     };
 
     uint16_t readPacketBlock(uint8_t *buffer) override {
